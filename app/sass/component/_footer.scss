@@ -1,0 +1,126 @@
+.main-footer {
+  border-top: 1px solid #1d1d1d;
+  padding: 0 0 48px 0;
+}
+.main-footer-social {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #1d1d1d;
+  margin-bottom: 48px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
+.main-footer-logo {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  color: #1d1d1d;
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 24px;
+  }
+}
+.main-footer-social-inner {
+  display: flex;
+  margin-left: auto;
+  @media screen and (max-width: $mobile-bp) {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+.main-footer-social-item {
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1d1d1d;
+  margin-right: 40px;
+  transition: color $base-duration $base-timing;
+  &:hover {
+    color: rgba($color: #1d1d1d, $alpha: 0.5);
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 24px;
+    margin-right: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.svg-icon--footer-social {
+  width: 36px;
+  height: 36px;
+  margin-right: 16px;
+}
+.main-footer-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 48px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
+.main-footer-nav-col {
+  margin-right: 70px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
+}
+.main-footer-nav-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1d1d1d;
+  margin-bottom: 16px;
+}
+.main-footer-nav-item {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1d1d1d;
+  margin-bottom: 16px;
+  @media screen and (max-width: $mobile-bp) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+a.main-footer-nav-item {
+  transition: color $base-duration $base-timing;
+  &:hover {
+    color: rgba($color: #1d1d1d, $alpha: 0.5);
+  }
+}
+.main-footer-copyright {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1d1d1d;
+}
+.main-footer-copyright-text {
+  font-weight: bold;
+  @media screen and (max-width: $mobile-bp) {
+    display: block;
+  }
+}
+.main-footer-copyright-link {
+  color: #1d1d1d;
+  transition: color $base-duration $base-timing;
+  &:hover {
+    color: rgba($color: #1d1d1d, $alpha: 0.5);
+  }
+}
+.main-footer-copyright-sep {
+  @media screen and (max-width: $mobile-bp) {
+    display: none;
+  }
+}

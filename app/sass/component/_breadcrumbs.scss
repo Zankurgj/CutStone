@@ -1,0 +1,27 @@
+.breadcrumb-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  li {
+    white-space: nowrap;
+    &:first-child {
+      .breadcrumb-item {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.breadcrumb-item {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  margin-left: 4px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+a.breadcrumb-item {
+  transition: color $base-duration $base-timing;
+  &:hover {
+    color: rgba($color: #000000, $alpha: 0.8);
+  }
+}

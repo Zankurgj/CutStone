@@ -1,0 +1,70 @@
+.base-search-input {
+  border: none;
+  transition: box-shadow $base-duration $base-timing;
+  box-shadow: 0px 1px 0px 0px #bfbfbf;
+  &:focus {
+    box-shadow: 0px 2px 0px 0px #bfbfbf;
+  }
+}
+.base-text-input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #1d1d1d;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1d1d1d;
+  &::placeholder {
+    color: rgba($color: #1d1d1d, $alpha: 0.8);
+  }
+}
+.base-text-input--err {
+  border-color: #ff2800;
+}
+.base-input-title {
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba($color: #1d1d1d, $alpha: 0.5);
+  margin-bottom: 4px;
+}
+.base-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+.base-input-err {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ff2800;
+}
+.checkbox-wrapper {
+  display: flex;
+}
+.checkbox-input {
+  @extend .visually-hidden;
+  &:checked + .checkbox {
+    background-color: #0a9bcd;
+  }
+}
+.checkbox {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  margin-right: 6px;
+  transition: background-color $base-duration $base-timing;
+  cursor: pointer;
+}
+.base-legend {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba($color: #1d1d1d, $alpha: 0.5);
+}

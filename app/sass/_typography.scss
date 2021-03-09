@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+  font-family: $mainfamily;
+}
+.h1-base {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: rem(30);
+  line-height: lh(35, 30);
+  color: #000;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: rem(22);
+  }
+}
+.h2-base {
+  display: inline;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  color: #1d1d1d;
+}
+p {
+  margin: 0;
+}
+label {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  transition: color $base-duration $base-timing;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.base-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.normalcase {
+  text-transform: inherit;
+}

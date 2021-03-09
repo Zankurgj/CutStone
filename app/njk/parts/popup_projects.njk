@@ -1,0 +1,123 @@
+<div class="popup-wrapper" id="popupProject">
+  <div class="popup-overlay" onclick="onTogglePopUp('popupProject')"></div>
+  <section class="project-popup container container--no-padding">
+    <div class="project-popup-head">
+      <p class="project-popup-title">Проекты</p>
+      <button class="btn--popup-close" onclick="onTogglePopUp('popupProject')">
+        <span class="btn--popup-close-text">Закрыть</span>
+        <svg class="svg-icon svg-icon--btn--popup-close">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="project-popup-nav-slider-wrapper">
+      <button class="slider-arrow-project slider-arrow-project--prew">
+        <span class="visually-hidden">Назад</span>
+        <svg class="svg-icon svg-icon--slider-arrow-project">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-prew"></use>
+        </svg>
+      </button>
+      <button class="slider-arrow-project slider-arrow-project--next">
+        <span class="visually-hidden">Вперед</span>
+        <svg class="svg-icon svg-icon--slider-arrow-project">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-next"></use>
+        </svg>
+      </button>
+      <div class="project-popup-nav-slider js--project-popup-nav-slider">
+        {% for i in range(0, 9) %}
+          <div class="project-popup-nav-slide">
+            <label class="project-popup-nav-slide-input-inner">
+              <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+              <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="project-popup-main-slider-wrapper">
+      <div class="project-popup-main-slider js--project-popup-main-slider">
+        <div class="project-popup-main-slide" data-image="./images/dest/img/s_project1.jpg">
+          <div class="project-popup-main-slide-row">
+            <div class="project-popup-main-slide-img-col">
+              <div class="project-popup-main-slide-img" style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
+              <p class="project-popup-main-slide-title">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="project-popup-main-slide-material">
+              <a href="#" class="project-popup-main-slide-material-item">
+                <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material1.jpg');"></div>
+                <div class="project-popup-main-slide-material-text">
+                  <p class="project-popup-main-slide-material-item-name-wrapper">
+                    <span class="project-popup-main-slide-material-item-name">
+                      Имперадор Лайт
+                    </span>
+                    <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Emperador Light</span>
+                  </p>
+                  <p class="project-popup-main-slide-material-item-cost">от $ 110 за м2</p>
+                  <p class="project-popup-main-slide-material-item-cost-thin">от 8 383.90 ₽ за м2</p>
+                </div>
+              </a>
+
+              <a href="#" class="project-popup-main-slide-material-item">
+                <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material2.jpg');"></div>
+                <div class="project-popup-main-slide-material-text">
+                  <p class="project-popup-main-slide-material-item-name-wrapper">
+                    <span class="project-popup-main-slide-material-item-name">
+                      Санни Дарк
+                    </span>
+                    <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Sunny Dark</span>
+                  </p>
+                  <p class="project-popup-main-slide-material-item-cost">от $ 90 за м2</p>
+                  <p class="project-popup-main-slide-material-item-cost-thin">от 6 824,54 ₽ за м2</p>
+                </div>
+              </a>
+
+              <a href="#" class="project-popup-main-slide-material-item">
+                <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material3.jpg');"></div>
+                <div class="project-popup-main-slide-material-text">
+                  <p class="project-popup-main-slide-material-item-name-wrapper">
+                    <span class="project-popup-main-slide-material-item-name">
+                      Абсолют Блэк
+                    </span>
+                    <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Absolute Black</span>
+                  </p>
+                  <p class="project-popup-main-slide-material-item-cost">от $ 120 за м2</p>
+                  <p class="project-popup-main-slide-material-item-cost-thin">от 6 824,54 ₽ за м2</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-popup-main-slide" data-image="./images/dest/img/s_project2.jpg">
+          <div class="project-popup-main-slide-row">
+            <div class="project-popup-main-slide-img-col">
+              <div class="project-popup-main-slide-img" style="background-image: url('./images/dest/img/s_project2.jpg');"></div>
+            </div>
+            <div class="project-popup-main-slide-material">
+              <a href="#" class="project-popup-main-slide-material-item">
+                <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material4.jpg');"></div>
+                <div class="project-popup-main-slide-material-text">
+                  <p class="project-popup-main-slide-material-item-name-wrapper">
+                    <span class="project-popup-main-slide-material-item-name">
+                      Имперадор Лайт
+                    </span>
+                    <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Emperador Light</span>
+                  </p>
+                  <p class="project-popup-main-slide-material-item-cost">от $ 110 за м2</p>
+                  <p class="project-popup-main-slide-material-item-cost-thin">от 8 383.90 ₽ за м2</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

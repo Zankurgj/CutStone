@@ -1,0 +1,64 @@
+{% extends "app/njk/layout/main.njk" %}
+{% block content %}
+  <div class="catalog-head">
+    <div class="container">
+      <h1 class="catalog-head-title">каталог</h1>
+      <p class="catalog-head-text">галерея камня</p>
+    </div>
+  </div>
+  <div class="catalog-section">
+    <section class="catalog-section-head-block">
+      <div class="container">
+        <div class="catalog-section-head">
+          <p class="catalog-title">
+            Разновидностей:
+            <span class="catalog-title-quantity">16</span>
+          </p>
+          <form class="catalog-search-form">
+            <label class="catalog-search-input-wrapper">
+              <span class="visually-hidden">Поиск</span>
+              <input type="text" class="catalog-search-input" placeholder="Поиск">
+            </label>
+            <button class="btn--catalog-search">
+              <span class="visually-hidden">Искать</span>
+              <svg class="svg-icon svg-icon--catalog-search">
+                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="container catalog-main-nav"></div>
+    <div class="container catalog-main-inner">
+      <div class="row row--wrap">
+        {% for i in range(0, 16) %}
+          <div class="catalog-item-col">
+            <a href="#" class="catalog-item">
+              <div class="catalog-item-img" style="background-image: url('./images/dest/img/gal6.jpg');"></div>
+              <div class="catalog-item-text-block">
+                <p class="catalog-item-name">
+                  <span class="catalog-item-country-icon">
+                    <img src="./images/dest/icons/spain.svg" alt="страна производитель">
+                  </span>
+                  <span class="catalog-item-name">айвори</span>
+                  <span class="catalog-item-name catalog-item-name--gray">ivory</span>
+                </p>
+                <div class="catalog-item-description">
+                  <div>
+                    <p class="catalog-item-cost">от $ 350 за м2</p>
+                    <p class="catalog-item-cost-gray">от 27 045,02 ₽ за м2</p>
+                  </div>
+                  <p class="catalog-item-status">
+                    В наличии
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

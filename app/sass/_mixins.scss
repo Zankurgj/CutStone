@@ -1,0 +1,25 @@
+// rem convert
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
+}
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $base-font-size;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
+@function lh($lh-px-val, $font-px-val) {
+  @if not unitless($lh-px-val) {
+    $lh-px-val: strip-units($lh-px-val);
+  }
+  @if not unitless($font-px-val) {
+    $font-px-val: strip-units($font-px-val);
+  }
+  @return ($lh-px-val / $font-px-val);
+}

@@ -1,0 +1,117 @@
+<header class="main-header">
+  <div class="container container--no-padding main-header-inner">
+    <button class="btn--main-header-menu" onclick="onToggleMobileMenu()">
+      <span class="visually-hidden">Мобильное меню</span>
+      <svg class="svg-icon svg-icon--main-header-menu">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mob_menu"></use>
+      </svg>
+    </button>
+    <a href="#" class="main-header-logo">
+      <span class="visually-hidden">Логотип CutStone</span>
+      <svg class="svg-icon svg-icon--header-logo">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="main-header-nav">
+      <div class="main-header-nav-item-dropdown">
+        <a href="#" class="main-header-nav-item">каталог</a>
+        <div class="main-header-dropdown">
+          <img src="./images/dest/img/hov1.jpg" alt="гранит" id="hov1" class="main-header-dropdown-bg">
+          <img src="./images/dest/img/hov2.jpg" alt="гранит" id="hov2" class="main-header-dropdown-bg">
+          <img src="./images/dest/img/hov3.jpg" alt="гранит" id="hov3" class="main-header-dropdown-bg">
+          <img src="./images/dest/img/hov4.jpg" alt="гранит" id="hov4" class="main-header-dropdown-bg">
+          <img src="./images/dest/img/hov5.jpg" alt="гранит" id="hov5" class="main-header-dropdown-bg">
+          <img src="./images/dest/img/hov6.jpg" alt="гранит" id="hov6" class="main-header-dropdown-bg">
+          <div class="container container--no-padding container--header-dropdown">
+            <div class="row row--wrap">
+              <div class="main-header-dropdown-col">
+                <p class="main-header-dropdown-title">камни</p>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                  <span>гранит</span>
+                  <span class="main-header-dropdown-item-quantity">298</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                  <span>мрамор</span>
+                  <span class="main-header-dropdown-item-quantity">176</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                  <span>оникс</span>
+                  <span class="main-header-dropdown-item-quantity">25</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                  <span>кварцит</span>
+                  <span class="main-header-dropdown-item-quantity">15</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                  <span>травертин</span>
+                  <span class="main-header-dropdown-item-quantity">38</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                  <span>агломерат</span>
+                  <span class="main-header-dropdown-item-quantity">300</span>
+                </a>
+                <a href="#" class="main-header-dropdown-link">
+                  <span>смотреть весь каталог</span>
+                  <svg class="svg-icon svg-icon--header-dropdown-link">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="main-header-dropdown-col">
+                <p class="main-header-dropdown-title">изделия</p>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                  <span>столешницы</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                  <span>камины</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                  <span>лестницы</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                  <span>камины</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                  <span>полы</span>
+                </a>
+                <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                  <span>подоконники</span>
+                </a>
+                <a href="#" class="main-header-dropdown-link">
+                  <span>цены на издели</span>
+                  <svg class="svg-icon svg-icon--header-dropdown-link">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="main-header-dropdown-col">
+                <a href="#" class="main-header-dropdown-title">цены</a>
+                <a href="#" class="main-header-dropdown-title">сотрудничество</a>
+                <a href="#" class="main-header-dropdown-title">о нас</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="main-header-nav-item">цены</a>
+      <a href="#" class="main-header-nav-item">сотрудничество</a>
+      <a href="#" class="main-header-nav-item">о нас</a>
+    </nav>
+    <div class="main-header-panel">
+      <button class="btn--header-panel">
+        <span class="visually-hidden">Просмотренные</span>
+        <svg class="svg-icon svg-icon--header-panel">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#eye"></use>
+        </svg>
+      </button>
+      <a href="tel:+7(800)4440633" class="main-header-panel-link">+7 (800) 444 06 33</a>
+      <button class="btn--main-header-close" onclick="onToggleMobileMenu()">
+        <span class="visually-hidden">закрыть меню</span>
+        <svg class="svg-icon svg-icon--main-header-close">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

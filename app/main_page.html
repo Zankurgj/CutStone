@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CutStone</title>
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="css/app.min.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container--no-padding main-header-inner">
+            <button class="btn--main-header-menu" onclick="onToggleMobileMenu()">
+                <span class="visually-hidden">Мобильное меню</span>
+                <svg class="svg-icon svg-icon--main-header-menu">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mob_menu"></use>
+                </svg>
+            </button>
+            <a href="#" class="main-header-logo">
+                <span class="visually-hidden">Логотип CutStone</span>
+                <svg class="svg-icon svg-icon--header-logo">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#logo"></use>
+                </svg>
+            </a>
+            <nav class="main-header-nav">
+                <div class="main-header-nav-item-dropdown">
+                    <a href="#" class="main-header-nav-item">каталог</a>
+                    <div class="main-header-dropdown">
+                        <img src="./images/dest/img/hov1.jpg" alt="гранит" id="hov1" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov2.jpg" alt="гранит" id="hov2" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov3.jpg" alt="гранит" id="hov3" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov4.jpg" alt="гранит" id="hov4" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov5.jpg" alt="гранит" id="hov5" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov6.jpg" alt="гранит" id="hov6" class="main-header-dropdown-bg">
+                        <div class="container container--no-padding container--header-dropdown">
+                            <div class="row row--wrap">
+                                <div class="main-header-dropdown-col">
+                                    <p class="main-header-dropdown-title">камни</p>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                                        <span>гранит</span>
+                                        <span class="main-header-dropdown-item-quantity">298</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                                        <span>мрамор</span>
+                                        <span class="main-header-dropdown-item-quantity">176</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                                        <span>оникс</span>
+                                        <span class="main-header-dropdown-item-quantity">25</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                                        <span>кварцит</span>
+                                        <span class="main-header-dropdown-item-quantity">15</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                                        <span>травертин</span>
+                                        <span class="main-header-dropdown-item-quantity">38</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                                        <span>агломерат</span>
+                                        <span class="main-header-dropdown-item-quantity">300</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-link">
+                                        <span>смотреть весь каталог</span>
+                                        <svg class="svg-icon svg-icon--header-dropdown-link">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <div class="main-header-dropdown-col">
+                                    <p class="main-header-dropdown-title">изделия</p>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                                        <span>столешницы</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                                        <span>камины</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                                        <span>лестницы</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                                        <span>камины</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                                        <span>полы</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                                        <span>подоконники</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-link">
+                                        <span>цены на издели</span>
+                                        <svg class="svg-icon svg-icon--header-dropdown-link">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="main-header-dropdown-col">
+                                    <a href="#" class="main-header-dropdown-title">цены</a>
+                                    <a href="#" class="main-header-dropdown-title">сотрудничество</a>
+                                    <a href="#" class="main-header-dropdown-title">о нас</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="main-header-nav-item">цены</a>
+                <a href="#" class="main-header-nav-item">сотрудничество</a>
+                <a href="#" class="main-header-nav-item">о нас</a>
+            </nav>
+            <div class="main-header-panel">
+                <button class="btn--header-panel">
+                    <span class="visually-hidden">Просмотренные</span>
+                    <svg class="svg-icon svg-icon--header-panel">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#eye"></use>
+                    </svg>
+                </button>
+                <a href="tel:+7(800)4440633" class="main-header-panel-link">+7 (800) 444 06 33</a>
+                <button class="btn--main-header-close" onclick="onToggleMobileMenu()">
+                    <span class="visually-hidden">закрыть меню</span>
+                    <svg class="svg-icon svg-icon--main-header-close">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="page">
+
+        <main class="mp-main">
+            <div class="mp-main-inner">
+                <div class="mp-main-mobile">
+                    <p class="mp-main-mobile-title">Мы знаем камень</p>
+                    <p class="mp-main-mobile-subtitle">
+                        Любых размеров и форм.
+                        <br>Так, как нужно вам.
+                    </p>
+                    <a href="#" class="btn btn--white">
+          Посмотреть каталог
+          <svg class="svg-icon svg-icon--mp-main-left-btn">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </a>
+                </div>
+                <div class="mp-main-left">
+                    <p class="mp-main-left-title">
+                        Любых размеров и форм.
+                        <br>Так, как нужно вам.
+                    </p>
+                    <a href="#" class="btn btn--white btn--white--mp-main-left">
+          Посмотреть каталог
+          <svg class="svg-icon svg-icon--mp-main-left-btn">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </a>
+                </div>
+                <div class="mp-main-right">
+                    <img src="./images/dest/img/stone-text.svg" alt="stone" class="mp-main-right-title-img">
+                    <p class="mp-main-right-title">Мы знаем камень</p>
+                </div>
+            </div>
+        </main>
+        <section class="mp-product-gallery">
+            <div class="container container--no-padding">
+                <a href="#" class="mp-block-title mp-block-title--padding">
+                    <h2 class="h2-base">Галерея камня</h2>
+                    <span class="mp-block-title-quantity">852</span>
+                    <svg class="svg-icon svg-icon--title-quantity">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
+                    </svg>
+                </a>
+                <div class="row row--wrap row--gal-hover">
+
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <img src="./images/dest/img/gal1.jpg" alt="гранит" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">гранит</span>
+                                <span class="product-gallery-item-title-quantity">298</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>
+                    перейти в каталог
+                    гранитa
+                  </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <img src="./images/dest/img/gal2.jpg" alt="мрамор" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">мрамор</span>
+                                <span class="product-gallery-item-title-quantity">176</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>
+                    перейти в каталог
+                    мраморa
+                  </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <img src="./images/dest/img/gal3.jpg" alt="оникс" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">оникс</span>
+                                <span class="product-gallery-item-title-quantity">25</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>
+                    перейти в каталог
+                    ониксa
+                  </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <img src="./images/dest/img/gal4.jpg" alt="травертин" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">травертин</span>
+                                <span class="product-gallery-item-title-quantity">38</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>
+                    перейти в каталог
+                    травертинa
+                  </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <img src="./images/dest/img/gal5.jpg" alt="агломерат" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">агломерат</span>
+                                <span class="product-gallery-item-title-quantity">300</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>
+                    перейти в каталог
+                    агломератa
+                  </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <img src="./images/dest/img/gal6.jpg" alt="кварцит" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">кварцит</span>
+                                <span class="product-gallery-item-title-quantity">15</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>
+                    перейти в каталог
+                    кварцитa
+                  </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+                <a href="#" class="btn btn--big-black">
+                    <span>Смотреть весь каталог
+          <svg class="svg-icon svg-icon--btn--big-black">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="mp-project">
+            <div class="container">
+                <div class="mp-block-title">
+                    <h2 class="h2-base">Проекты</h2>
+                </div>
+                <div class="row row--wrap row--mp-project-top">
+
+                    <div class="mp-project-col mp-project-col--big">
+                        <div class="mp-project-item mp-project-item--text">
+                            <div class="mp-project-item-text-block">
+                                <p class="mp-project-item-title">БЦ «Якиманка 26»</p>
+                                <p class="mp-project-item-subtitle">Москва​, Большая Якиманка, 26</p>
+                            </div>
+                            <div class="mp-project-item-text-block">
+                                <p class="mp-project-item-subtitle">Пилоны</p>
+                                <p class="mp-project-item-text">Португальский песчаник Мока Крем</p>
+                            </div>
+                            <div class="mp-project-item-text-block">
+                                <p class="mp-project-item-subtitle">Общий объём работ</p>
+                                <p class="mp-project-item-text">~ 1500 м2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mp-project-col mp-project-col--big">
+                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project1.jpg');"></div>
+                    </div>
+                </div>
+                <div class="row row--mp-project-bottom js--mp-project-mobile" id="projectSlider">
+
+
+                    <div class="mp-project-col mp-project-col--small">
+                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project2.jpg');"></div>
+                    </div>
+
+                    <div class="mp-project-col mp-project-col--small">
+                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project3.jpg');"></div>
+                    </div>
+
+                    <div class="mp-project-col mp-project-col--small">
+                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project4.jpg');"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="mp-product-gallery">
+            <div class="container container--no-padding">
+                <a href="#" class="mp-block-title mp-block-title--padding">
+                    <h2 class="h2-base">Изделия</h2>
+                    <svg class="svg-icon svg-icon--title-quantity">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
+                    </svg>
+                </a>
+                <div class="row row--wrap row--gal-hover">
+
+
+                    <div class="product-gallery-col">
+                        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+                            <img src="./images/dest/img/gal7.jpg" alt="стены" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">стены</span>
+                                <span class="product-gallery-item-title-quantity">298</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>просмотреть портфолио</span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+                            <img src="./images/dest/img/gal8.jpg" alt="лестницы" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">лестницы</span>
+                                <span class="product-gallery-item-title-quantity">176</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>просмотреть портфолио</span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+                            <img src="./images/dest/img/gal9.jpg" alt="камины" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">камины</span>
+                                <span class="product-gallery-item-title-quantity">25</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>просмотреть портфолио</span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+                            <img src="./images/dest/img/gal10.jpg" alt="подоконники" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">подоконники</span>
+                                <span class="product-gallery-item-title-quantity">38</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>просмотреть портфолио</span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+                            <img src="./images/dest/img/gal11.jpg" alt="полы" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">полы</span>
+                                <span class="product-gallery-item-title-quantity">300</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>просмотреть портфолио</span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+                            <img src="./images/dest/img/gal12.jpg" alt="столешницы" class="product-gallery-item-img">
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">столешницы</span>
+                                <span class="product-gallery-item-title-quantity">15</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+                  <span>просмотреть портфолио</span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#" class="btn btn--big-black">
+                    <span>Смотреть весь каталог
+          <svg class="svg-icon svg-icon--btn--big-black">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </span>
+                </a>
+            </div>
+        </section>
+        <section class="mp-pricing">
+            <div class="container">
+                <div class="mp-block-title">
+                    <h2 class="h2-base">Расценки на изделия*</h2>
+                </div>
+                <button class="btn-arrowed btn-arrowed--mp" onclick="onTogglePopUp('popupSlab')">
+                    <span>Как правильно выбрать слэб?</span>
+                    <svg class="svg-icon svg-icon--btn-arrowed">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
+                    </svg>
+                </button>
+                <div class="mp-pricing-inner">
+
+                    <div class="mp-pricin-item js--spoiler-pricing-parent">
+                        <button class="mp-pricin-btn js--spoiler-pricing" onclick="onToggleSpoilerPricin(this)">
+                            <span class="mp-pricin-btn-text">камины</span>
+                            <br>
+                            <span class="mp-pricin-btn-cost">от 69 000 ₽/шт</span>
+                            <svg class="svg-icon svg-icon--mp-pricin-btn">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_more"></use>
+                            </svg>
+                        </button>
+                        <div class="row row--mp-pricin-item">
+                            <div class="mp-pricin-item-col">
+                                <div class="mp-pricin-item-info">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                        <span>Заказать расчёт и выезд замерщика</span>
+                                        <svg class="svg-icon svg-icon--btn--main-arrow">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="btn--border btn--border--mp-pricin--top" onclick="onTogglePopUp('popupProfileOption')">
+                                        <span>Варианты профилей</span>
+                                        <svg class="svg-icon svg-icon--btn--border">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <p class="mp-pricin-item-text">
+                                        Любая форма
+                                        <br>Нестандартные профили
+                                        <br>Подготовка основания
+                                        <br>Расходные материалы с завода изготовителя
+                                        <br>Сложные элементы
+                                    </p>
+                                    <p class="mp-pricin-item-text">
+                                        Укладка крупногабаритными деталями
+                                        <br>Эффект монолитного изделия за счёт сохранения рисунка
+                                    </p>
+                                    <div class="mp-pricin-item-btn-block">
+                                        <button class="btn--border btn--mp-pricin-item">
+                                            <span>Расчёт столешницы 2 см</span>
+                                        </button>
+                                        <button class="btn--border">
+                                            <span>Расчёт столешницы 3 см</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mp-pricin-item-col mp-pricin-item-col--img">
+                                <img src="./images/dest/img/pricing1.jpg" alt="Продукция" class="mp-pricin-item-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mp-pricin-item js--spoiler-pricing-parent">
+                        <button class="mp-pricin-btn js--spoiler-pricing" onclick="onToggleSpoilerPricin(this)">
+                            <span class="mp-pricin-btn-text">камины</span>
+                            <br>
+                            <span class="mp-pricin-btn-cost">от 69 000 ₽/шт</span>
+                            <svg class="svg-icon svg-icon--mp-pricin-btn">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_more"></use>
+                            </svg>
+                        </button>
+                        <div class="row row--mp-pricin-item">
+                            <div class="mp-pricin-item-col">
+                                <div class="mp-pricin-item-info">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                        <span>Заказать расчёт и выезд замерщика</span>
+                                        <svg class="svg-icon svg-icon--btn--main-arrow">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="btn--border btn--border--mp-pricin--top" onclick="onTogglePopUp('popupProfileOption')">
+                                        <span>Варианты профилей</span>
+                                        <svg class="svg-icon svg-icon--btn--border">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <p class="mp-pricin-item-text">
+                                        Любая форма
+                                        <br>Нестандартные профили
+                                        <br>Подготовка основания
+                                        <br>Расходные материалы с завода изготовителя
+                                        <br>Сложные элементы
+                                    </p>
+                                    <p class="mp-pricin-item-text">
+                                        Укладка крупногабаритными деталями
+                                        <br>Эффект монолитного изделия за счёт сохранения рисунка
+                                    </p>
+                                    <div class="mp-pricin-item-btn-block">
+                                        <button class="btn--border btn--mp-pricin-item">
+                                            <span>Расчёт столешницы 2 см</span>
+                                        </button>
+                                        <button class="btn--border">
+                                            <span>Расчёт столешницы 3 см</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mp-pricin-item-col mp-pricin-item-col--img">
+                                <img src="./images/dest/img/pricing1.jpg" alt="Продукция" class="mp-pricin-item-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mp-pricin-item js--spoiler-pricing-parent">
+                        <button class="mp-pricin-btn js--spoiler-pricing" onclick="onToggleSpoilerPricin(this)">
+                            <span class="mp-pricin-btn-text">камины</span>
+                            <br>
+                            <span class="mp-pricin-btn-cost">от 69 000 ₽/шт</span>
+                            <svg class="svg-icon svg-icon--mp-pricin-btn">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_more"></use>
+                            </svg>
+                        </button>
+                        <div class="row row--mp-pricin-item">
+                            <div class="mp-pricin-item-col">
+                                <div class="mp-pricin-item-info">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                        <span>Заказать расчёт и выезд замерщика</span>
+                                        <svg class="svg-icon svg-icon--btn--main-arrow">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="btn--border btn--border--mp-pricin--top" onclick="onTogglePopUp('popupProfileOption')">
+                                        <span>Варианты профилей</span>
+                                        <svg class="svg-icon svg-icon--btn--border">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <p class="mp-pricin-item-text">
+                                        Любая форма
+                                        <br>Нестандартные профили
+                                        <br>Подготовка основания
+                                        <br>Расходные материалы с завода изготовителя
+                                        <br>Сложные элементы
+                                    </p>
+                                    <p class="mp-pricin-item-text">
+                                        Укладка крупногабаритными деталями
+                                        <br>Эффект монолитного изделия за счёт сохранения рисунка
+                                    </p>
+                                    <div class="mp-pricin-item-btn-block">
+                                        <button class="btn--border btn--mp-pricin-item">
+                                            <span>Расчёт столешницы 2 см</span>
+                                        </button>
+                                        <button class="btn--border">
+                                            <span>Расчёт столешницы 3 см</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mp-pricin-item-col mp-pricin-item-col--img">
+                                <img src="./images/dest/img/pricing1.jpg" alt="Продукция" class="mp-pricin-item-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mp-pricin-item js--spoiler-pricing-parent">
+                        <button class="mp-pricin-btn js--spoiler-pricing" onclick="onToggleSpoilerPricin(this)">
+                            <span class="mp-pricin-btn-text">камины</span>
+                            <br>
+                            <span class="mp-pricin-btn-cost">от 69 000 ₽/шт</span>
+                            <svg class="svg-icon svg-icon--mp-pricin-btn">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_more"></use>
+                            </svg>
+                        </button>
+                        <div class="row row--mp-pricin-item">
+                            <div class="mp-pricin-item-col">
+                                <div class="mp-pricin-item-info">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                        <span>Заказать расчёт и выезд замерщика</span>
+                                        <svg class="svg-icon svg-icon--btn--main-arrow">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="btn--border btn--border--mp-pricin--top" onclick="onTogglePopUp('popupProfileOption')">
+                                        <span>Варианты профилей</span>
+                                        <svg class="svg-icon svg-icon--btn--border">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </button>
+                                    <p class="mp-pricin-item-text">
+                                        Любая форма
+                                        <br>Нестандартные профили
+                                        <br>Подготовка основания
+                                        <br>Расходные материалы с завода изготовителя
+                                        <br>Сложные элементы
+                                    </p>
+                                    <p class="mp-pricin-item-text">
+                                        Укладка крупногабаритными деталями
+                                        <br>Эффект монолитного изделия за счёт сохранения рисунка
+                                    </p>
+                                    <div class="mp-pricin-item-btn-block">
+                                        <button class="btn--border btn--mp-pricin-item">
+                                            <span>Расчёт столешницы 2 см</span>
+                                        </button>
+                                        <button class="btn--border">
+                                            <span>Расчёт столешницы 3 см</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mp-pricin-item-col mp-pricin-item-col--img">
+                                <img src="./images/dest/img/pricing1.jpg" alt="Продукция" class="mp-pricin-item-img">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn--main btn--main-arrow" onclick="onTogglePopUp('popupCalculationOrder')">
+                    <span>Заказать расчёт и выезд замерщика</span>
+                    <svg class="svg-icon svg-icon--btn--main-arrow">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                    </svg>
+                </button>
+                <div class="row row--mp-pricing-description">
+                    <div class="mp-pricing-description-col">
+                        <p class="mp-pricing-description">
+                            * — Расценки на изделия указаны только приблизительные, финальный расчет производится исходя из множества факторов, начиная с проекта и заканчивая монтажными работами.
+                            <br>Приведены приблизительные расценки на изделия.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mp-contacts">
+            <div class="container">
+                <div class="row row--wrap row--mp-contacts">
+                    <div class="mp-contacts-col">
+                        <div class="mp-block-title">
+                            <h2 class="h2-base">Контакты</h2>
+                        </div>
+                        <div class="mp-contacts-item">
+                            <a href="tel:+7(800)4440633" class="mp-contacts-item-link">+7 (800) 444 06 33</a>
+                        </div>
+                        <div class="mp-contacts-item">
+                            <a href="mailto:info@cutstone.ru" class="mp-contacts-item-link">info@cutstone.ru</a>
+                        </div>
+                        <div class="mp-contacts-item">
+                            <p class="mp-contacts-item-text">
+                                Московская область
+                                <br>дер. Грибки,
+                                <br>ул. Ангарская, владение 8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mp-contacts-col mp-contacts-col--map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8895220616b000d438ab3786c3ab3886939675156962bd23a8b74c6cc8c4fd19&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="popup-wrapper" id="popupProject">
+            <div class="popup-overlay" onclick="onTogglePopUp('popupProject')"></div>
+            <section class="project-popup container container--no-padding">
+                <div class="project-popup-head">
+                    <p class="project-popup-title">Проекты</p>
+                    <button class="btn--popup-close" onclick="onTogglePopUp('popupProject')">
+                        <span class="btn--popup-close-text">Закрыть</span>
+                        <svg class="svg-icon svg-icon--btn--popup-close">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="project-popup-nav-slider-wrapper">
+                    <button class="slider-arrow-project slider-arrow-project--prew">
+                        <span class="visually-hidden">Назад</span>
+                        <svg class="svg-icon svg-icon--slider-arrow-project">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-prew"></use>
+                        </svg>
+                    </button>
+                    <button class="slider-arrow-project slider-arrow-project--next">
+                        <span class="visually-hidden">Вперед</span>
+                        <svg class="svg-icon svg-icon--slider-arrow-project">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-next"></use>
+                        </svg>
+                    </button>
+                    <div class="project-popup-nav-slider js--project-popup-nav-slider">
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                        <div class="project-popup-nav-slide">
+                            <label class="project-popup-nav-slide-input-inner">
+                                <input type="radio" class="project-popup-nav-slide-input" name="project-popup-nav">
+                                <span class="project-popup-nav-slide-text">
+                <b>дер. Поведникик</b>
+                <br>
+                частный дом
+              </span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="project-popup-main-slider-wrapper">
+                    <div class="project-popup-main-slider js--project-popup-main-slider">
+                        <div class="project-popup-main-slide" data-image="./images/dest/img/s_project1.jpg">
+                            <div class="project-popup-main-slide-row">
+                                <div class="project-popup-main-slide-img-col">
+                                    <div class="project-popup-main-slide-img" style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
+                                    <p class="project-popup-main-slide-title">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                                <div class="project-popup-main-slide-material">
+                                    <a href="#" class="project-popup-main-slide-material-item">
+                                        <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material1.jpg');"></div>
+                                        <div class="project-popup-main-slide-material-text">
+                                            <p class="project-popup-main-slide-material-item-name-wrapper">
+                                                <span class="project-popup-main-slide-material-item-name">
+                      Имперадор Лайт
+                    </span>
+                                                <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Emperador Light</span>
+                                            </p>
+                                            <p class="project-popup-main-slide-material-item-cost">от $ 110 за м2</p>
+                                            <p class="project-popup-main-slide-material-item-cost-thin">от 8 383.90 ₽ за м2</p>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="project-popup-main-slide-material-item">
+                                        <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material2.jpg');"></div>
+                                        <div class="project-popup-main-slide-material-text">
+                                            <p class="project-popup-main-slide-material-item-name-wrapper">
+                                                <span class="project-popup-main-slide-material-item-name">
+                      Санни Дарк
+                    </span>
+                                                <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Sunny Dark</span>
+                                            </p>
+                                            <p class="project-popup-main-slide-material-item-cost">от $ 90 за м2</p>
+                                            <p class="project-popup-main-slide-material-item-cost-thin">от 6 824,54 ₽ за м2</p>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="project-popup-main-slide-material-item">
+                                        <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material3.jpg');"></div>
+                                        <div class="project-popup-main-slide-material-text">
+                                            <p class="project-popup-main-slide-material-item-name-wrapper">
+                                                <span class="project-popup-main-slide-material-item-name">
+                      Абсолют Блэк
+                    </span>
+                                                <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Absolute Black</span>
+                                            </p>
+                                            <p class="project-popup-main-slide-material-item-cost">от $ 120 за м2</p>
+                                            <p class="project-popup-main-slide-material-item-cost-thin">от 6 824,54 ₽ за м2</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-popup-main-slide" data-image="./images/dest/img/s_project2.jpg">
+                            <div class="project-popup-main-slide-row">
+                                <div class="project-popup-main-slide-img-col">
+                                    <div class="project-popup-main-slide-img" style="background-image: url('./images/dest/img/s_project2.jpg');"></div>
+                                </div>
+                                <div class="project-popup-main-slide-material">
+                                    <a href="#" class="project-popup-main-slide-material-item">
+                                        <div class="project-popup-main-slide-material-item-img" style="background-image: url('./images/dest/img/material4.jpg');"></div>
+                                        <div class="project-popup-main-slide-material-text">
+                                            <p class="project-popup-main-slide-material-item-name-wrapper">
+                                                <span class="project-popup-main-slide-material-item-name">
+                      Имперадор Лайт
+                    </span>
+                                                <span class="project-popup-main-slide-material-item-name project-popup-main-slide-material-item-name--gray">Emperador Light</span>
+                                            </p>
+                                            <p class="project-popup-main-slide-material-item-cost">от $ 110 за м2</p>
+                                            <p class="project-popup-main-slide-material-item-cost-thin">от 8 383.90 ₽ за м2</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="popup-wrapper popup-wrapper--animate" id="popupSlab">
+            <div class="popup-overlay" onclick="onTogglePopUp('popupSlab')"></div>
+            <section class="slab-popup popup-right popup-right-animate container container--no-padding">
+                <div class="base-popup-head">
+                    <p class="base-popup-head-title">Как правильно выбрать слэб?</p>
+                    <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupSlab')">
+                        <span class="visually-hidden">закрыть</span>
+                        <svg class="svg-icon svg-icon--btn--popup-close">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="base-popup-inner base-popup-inner--scroll">
+                    <p class="base-popup-text">
+                        <b>Слэб</b>
+                        (слеб, сляб) — это продукт распиловки блока на канатном или дисковом станке, фактически заготовка того или иного природного камня, из которой в процессе распиловки и обработки получаются конечные изделия разнообразной формы и размеров.
+                    </p>
+                    <p class="base-popup-text">При самостоятельном выборе слэба во избежании отбора некачественного материала обратите внимание на следующие моменты:</p>
+                    <ul class="base-popup-list">
+                        <li>
+                            <div class="base-popup-list-counter">1</div>
+                            <p class="base-popup-text">Большие включения другой породы, отличающиеся от основного цвета (пятна, полосы и т.п.)</p>
+                        </li>
+                        <li>
+                            <div class="base-popup-list-counter">2</div>
+                            <p class="base-popup-text">Заводские залечки слэбов — результат заполнения пустот и трещин блоков эпоксидным клеем</p>
+                        </li>
+                        <li>
+                            <div class="base-popup-list-counter">3</div>
+                            <p class="base-popup-text">Трещины и «живые жилы» (если их не видно, то обнаружить можно двумя способами: провести ладонью по всей поверхности или посмотреть на слэб под углом – трещины и жилы обычно преломляют отражение)</p>
+                        </li>
+                        <li>
+                            <div class="base-popup-list-counter">4</div>
+                            <p class="base-popup-text">Глубокие царапины и недополированные участки поверхности слэба. Являются результатом некачественной упаковки или недобросовестной транспортировки слэбов от карьера до продающей компании</p>
+                        </li>
+                        <li>
+                            <div class="base-popup-list-counter">5</div>
+                            <p class="base-popup-text">Сломанные или сколотые углы (могут помешать оптимальному раскрою слэбов)</p>
+                        </li>
+                        <li>
+                            <div class="base-popup-list-counter">6</div>
+                            <p class="base-popup-text">Штробы или дыры, располагающиеся на рабочей поверхности слэба. Обычно встречаются на первых или последних слэбах пачки</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="popup-wrapper popup-wrapper--animate" id="popupProfileOption">
+            <div class="popup-overlay" onclick="onTogglePopUp('popupProfileOption')"></div>
+            <section class="profile-option-popup popup-right popup-right-animate container container--no-padding">
+                <div class="base-popup-head">
+                    <p class="base-popup-head-title">Обработка торцов</p>
+                    <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupProfileOption')">
+                        <span class="visually-hidden">закрыть</span>
+                        <svg class="svg-icon svg-icon--btn--popup-close">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="base-popup-inner base-popup-inner--scroll">
+                    <p class="base-popup-text">
+                        Вы можете выбрать не только материал и цвет изделия, но и один из 16 видов торцевого профиля, либо заказать индивидуальный
+                    </p>
+                    <img src="./images/dest/img/profile_option1.png" alt="Обработка торцов" class="profile-iption-img">
+                    <img src="./images/dest/img/profile_option2.png" alt="Обработка торцов" class="profile-iption-img">
+                    <img src="./images/dest/img/profile_option3.png" alt="Обработка торцов" class="profile-iption-img">
+                    <img src="./images/dest/img/profile_option4.png" alt="Обработка торцов" class="profile-iption-img">
+                    <img src="./images/dest/img/profile_option5.png" alt="Обработка торцов" class="profile-iption-img">
+                    <img src="./images/dest/img/profile_option6.png" alt="Обработка торцов" class="profile-iption-img">
+                    <p class="base-popup-text">
+                        Не нашли подходящий профиль? Позвоните нам, решим вопрос производством
+                    </p>
+                </div>
+                <div class="base-popup-bts-bottom">
+                    <button class="btn--main btn--main-arrow">
+                        <span>Заказать расчёт</span>
+                        <svg class="svg-icon svg-icon--btn--main-arrow">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <div class="popup-wrapper popup-wrapper--animate" id="popupCalculationOrder">
+            <div class="popup-overlay" onclick="onTogglePopUp('popupCalculationOrder')"></div>
+            <form class="calculation-order-popup popup-right popup-right-animate container container--no-padding">
+                <div class="base-popup-head">
+                    <p class="base-popup-head-title">Заказ расчёта</p>
+                    <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupCalculationOrder')" type="button">
+                        <span class="visually-hidden">закрыть</span>
+                        <svg class="svg-icon svg-icon--btn--popup-close">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="base-popup-inner base-popup-inner--scroll">
+                    <fieldset>
+                        <legend class="base-legend base-legend--calculation-order">контактные данные</legend>
+                        <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                            <p class="base-input-title">Имя</p>
+                            <input type="text" class="base-text-input">
+                        </label>
+                        <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                            <p class="base-input-title">Телефон</p>
+                            <input type="text" class="base-text-input" id="phone">
+                        </label>
+                        <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                            <p class="base-input-title">Email</p>
+                            <input type="text" class="base-text-input base-text-input--err">
+                            <span class="base-input-err">Адрес указан неверно, чего-то не хватает</span>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="base-legend base-legend--calculation-order">детали заказа</legend>
+                        <div class="row row--wrap">
+                            <div class="calculation-order-col2">
+                                <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                    <p class="base-input-title">Камень</p>
+                                    <input type="text" class="base-text-input">
+                                </label>
+                            </div>
+                            <div class="calculation-order-col2">
+                                <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                    <p class="base-input-title">Сколько камня потребуется?</p>
+                                    <input type="text" class="base-text-input">
+                                </label>
+                            </div>
+                            <div class="calculation-order-col2">
+                                <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                    <p class="base-input-title">Желаемая дата замера</p>
+                                    <input type="text" class="base-text-input">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="base-popup-bts-bottom">
+                    <button class="btn--main btn--main-arrow" type="submit">
+                        <span>Заказать расчёт</span>
+                        <svg class="svg-icon svg-icon--btn--main-arrow">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="main-footer-social">
+                <p class="main-footer-logo">CUTSTONE</p>
+                <div class="main-footer-social-inner">
+                    <a href="#" class="main-footer-social-item" target="_blank">
+                        <svg class="svg-icon svg-icon--footer-social">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#inst"></use>
+                        </svg>
+                        <span>instagram</span>
+                    </a>
+                    <a href="#" class="main-footer-social-item" target="_blank">
+                        <svg class="svg-icon svg-icon--footer-social">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#pinterest"></use>
+                        </svg>
+                        <span>pinterest</span>
+                    </a>
+                    <a href="#" class="main-footer-social-item" target="_blank">
+                        <svg class="svg-icon svg-icon--footer-social">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#fb"></use>
+                        </svg>
+                        <span>facebook</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="main-footer-nav">
+                <div class="main-footer-nav-col">
+                    <p class="main-footer-nav-title">контакты</p>
+
+                    <a href="tel:+7(800)4440633" class="main-footer-nav-item">+7 (800) 444 06 33</a>
+                    <a href="mailto:info@cutstone.ru" class="main-footer-nav-item">info@cutstone.ru</a>
+                    <p class="main-footer-nav-item">
+                        Московская область
+                        <br>дер. Грибки,
+                        <br>ул. Ангарская, владение 8
+                    </p>
+                </div>
+                <div class="main-footer-nav-col">
+                    <p class="main-footer-nav-title">полезное</p>
+                    <a href="#" class="main-footer-nav-item">О нас</a>
+                    <a href="#" class="main-footer-nav-item">Портфолио</a>
+                    <a href="#" class="main-footer-nav-item">Галерея камня</a>
+                    <a href="#" class="main-footer-nav-item">Варианты обработки торцов</a>
+                    <a href="#" class="main-footer-nav-item">Обучающие уроки по выбору камня</a>
+                    <a href="#" class="main-footer-nav-item">Наши дизайнеры и архитекторы</a>
+                    <a href="#" class="main-footer-nav-item">Сотрудничество</a>
+                    <a href="#" class="main-footer-nav-item">Изделия</a>
+                </div>
+
+                <div class="main-footer-nav-col">
+                    <p class="main-footer-nav-title">изделия</p>
+                    <a href="#" class="main-footer-nav-item">Столешницы</a>
+                    <a href="#" class="main-footer-nav-item">Камины</a>
+                    <a href="#" class="main-footer-nav-item">Полы</a>
+                    <a href="#" class="main-footer-nav-item">Лестницы</a>
+                    <a href="#" class="main-footer-nav-item">Подоконники</a>
+                </div>
+            </nav>
+            <div class="main-footer-copyright">
+                <span class="main-footer-copyright-text">© 2021, CUTstone</span>
+                <span class="main-footer-copyright-sep">|</span>
+                <a href="#" class="main-footer-copyright-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
