@@ -6,12 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.main-header-dropdown-bg').removeClass('show');
     $(`#hov${imgId}`).addClass('show');
   });
+
   $('.js--header-dropdown-item').on('mouseleave', function (event) {
     const wrapper = $('.main-header-dropdown');
     $('.main-header-dropdown-bg').removeClass('show');
     wrapper.removeClass('active');
   });
+
   $('#phone').mask('(999) 999-99-99');
+  initDropDownHandler();
   initSliderProject();
 });
 
@@ -20,19 +23,23 @@ const onToggleSpoilerPricin = (el) => {
   $(el).toggleClass('mp-pricin-btn--opened');
   spoilerParent.toggleClass('mp-pricin-item--opened');
 };
+
 const onShowProjectPopUp = (id) => {
   onTogglePopUp(id);
   initProjectPopupSlider();
 };
+
 const onTogglePopUp = (id) => {
   $(`#${id}`).toggleClass('show');
   $('body').toggleClass('body--no-scroll');
 };
+
 const onToggleMobileMenu = () => {
   $('.main-header-nav').toggleClass('show');
   $('.main-header').toggleClass('opened');
   $('body').toggleClass('body--no-scroll');
 };
+
 const initProjectPopupSlider = () => {
   $('.js--project-popup-nav-slider').slick({
     dots: false,
@@ -90,4 +97,31 @@ const initSliderProject = () => {
         showSliderScreen(widthScreen);
       });
   }
+};
+const initDropDownHandler = () => {
+  dropDownClickHandler();
+  clickSelectOutsideDropDown();
+};
+const dropDownClickHandler = () => {
+  $('.js--dd-btn').on('click', function (event) {
+    const parent = $(this).parents('.js--dd-parent');
+    if ($(this).hasClass('opened')) {
+      parent.toggleClass('opened');
+      $(this).toggleClass('opened');
+    } else {
+      $('.js--dd-parent.opened').removeClass('opened');
+      $('.js--dd-btn.opened').removeClass('opened');
+      parent.toggleClass('opened');
+      $(this).toggleClass('opened');
+    }
+  });
+};
+
+const clickSelectOutsideDropDown = () => {
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest($('.js--dd-parent.opened')).length) {
+      $('.js--dd-parent.opened').removeClass('opened');
+      $('.js--dd-btn.opened').removeClass('opened');
+    
+  });
 };
