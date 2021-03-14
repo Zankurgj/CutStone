@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+  initheaderMenuHandler();
+  initDropDownHandler();
+  initSliderProject();
+  initPrductSlider();
+  initPromoProductSlider();
+  $('#phone').mask('(999) 999-99-99');
+});
+
+const initheaderMenuHandler = () => {
   $('.js--header-dropdown-item').on('mouseenter', function (event) {
     const imgId = $(event.currentTarget).attr('data-hov-img-id');
     const wrapper = $('.main-header-dropdown');
@@ -12,12 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.main-header-dropdown-bg').removeClass('show');
     wrapper.removeClass('active');
   });
-
-  $('#phone').mask('(999) 999-99-99');
-  initDropDownHandler();
-  initSliderProject();
-});
-
+};
 const onToggleSpoilerPricin = (el) => {
   const spoilerParent = $(el).parents('.js--spoiler-pricing-parent');
   $(el).toggleClass('mp-pricin-btn--opened');
@@ -58,7 +62,6 @@ const initProjectPopupSlider = () => {
     dots: true,
     fade: true,
     customPaging: function (slider, i) {
-      console.log(slider.$slides[i]);
       const thumb = $(slider.$slides[i]).data('image');
       return `<div style="background-image: url('${thumb}');" class="project-popup-main-pagin"></div>`;
     },
@@ -98,10 +101,40 @@ const initSliderProject = () => {
       });
   }
 };
+const initPrductSlider = () => {
+  $('.js--product-card-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    dots: true,
+    fade: true,
+    customPaging: function (slider, i) {
+      const thumb = $(slider.$slides[i]).data('image');
+      return `<div style="background-image: url('${thumb}');" class="product-card-slider-pagin"></div>`;
+    },
+  });
+};
+const initPromoProductSlider = () => {
+  $('.js--product-promo-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    prevArrow: $('.slider-arrow-product--prew'),
+    nextArrow: $('.slider-arrow-product--next'),
+    customPaging: function (slider, i) {
+      const thumb = $(slider.$slides[i]).data('image');
+      return `<div style="background-image: url('${thumb}');" class="product-card-slider-pagin"></div>`;
+    },
+  });
+};
+
 const initDropDownHandler = () => {
   dropDownClickHandler();
   clickSelectOutsideDropDown();
 };
+
 const dropDownClickHandler = () => {
   $('.js--dd-btn').on('click', function (event) {
     const parent = $(this).parents('.js--dd-parent');
@@ -122,6 +155,6 @@ const clickSelectOutsideDropDown = () => {
     if (!$(e.target).closest($('.js--dd-parent.opened')).length) {
       $('.js--dd-parent.opened').removeClass('opened');
       $('.js--dd-btn.opened').removeClass('opened');
-    
+    }
   });
 };

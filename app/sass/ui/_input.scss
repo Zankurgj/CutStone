@@ -40,27 +40,6 @@
   line-height: 20px;
   color: #ff2800;
 }
-.checkbox-wrapper {
-  display: flex;
-}
-.checkbox-input {
-  @extend .visually-hidden;
-  &:checked + .checkbox {
-    background-color: #0a9bcd;
-  }
-}
-.checkbox {
-  position: relative;
-  display: block;
-  background-color: #fff;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #dcdcdc;
-  border-radius: 3px;
-  margin-right: 6px;
-  transition: background-color $base-duration $base-timing;
-  cursor: pointer;
-}
 .base-legend {
   font-size: 12px;
   line-height: 15px;

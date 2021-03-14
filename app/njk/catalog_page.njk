@@ -71,87 +71,160 @@
           {% endfor %}
         </div>
       </div>
-      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-stone-dd js--dd-parent">
+      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-color-dd js--dd-parent">
         <button class="btn--dd js--dd-btn">
           <span class="btn-dd-text">Цвет</span>
           <svg class="svg-icon svg-icon--btn-dd">
             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
           </svg>
         </button>
-        <div class="dd-inner">
-          {% set stoneItems = [
-            [
-              'Гранит', '298'
-            ],
-            [
-              'Мрамор', '176'
-            ],
-            [
-              'Оникс', '25'
-            ],
-            [
-              'Травертин', '38'
-            ],
-            [
-              'Кварцит', '15'
-            ],
-            [
-              'Агломерат', '300'
-            ]
-          ] %}
-          {% for name, number in stoneItems %}
-            <div class="dd-item">
-              <label class="base-checkbox-wrapper">
-                <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
-                <span class="base-checkbox-fake"></span>
-                <span class="base-checkbox-text">{{name}}</span>
-                <span class="base-checkbox-sub-text">{{number}}</span>
-              </label>
-            </div>
-          {% endfor %}
+        <div class="dd-inner row">
+          <div class="dd-inner-col">
+            {% set stoneItems = [
+              [
+                'Белый', 'white'
+              ],
+              [
+                'Серый', 'gray'
+              ],
+              [
+                'Чёрный', 'black'
+              ],
+              [
+                'Бежевый', 'beige'
+              ],
+              [
+                'Коричневый', 'brown'
+              ]
+            ] %}
+            {% for name, class in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake-color base-checkbox-fake-color--{{class}}"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="dd-inner-col">
+            {% set stoneItems = [
+              [
+                'Красный', 'red'
+              ],
+              [
+                'Зелёный', 'green'
+              ],
+              [
+                'Синий', 'blue'
+              ],
+              [
+                'Жёлтый', 'yellow'
+              ],
+              [
+                'Оранжевый', 'orange'
+              ]
+            ] %}
+            {% for name, class in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake-color base-checkbox-fake-color--{{class}}"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="dd-inner-col">
+            {% set stoneItems = [
+              [
+                'Розовый', 'pink'
+              ],
+              [
+                'Мультиколор', 'multi'
+              ]
+            ] %}
+            {% for name, class in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake-color base-checkbox-fake-color--{{class}}"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
-      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-stone-dd js--dd-parent">
+      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-country-dd js--dd-parent">
         <button class="btn--dd js--dd-btn">
           <span class="btn-dd-text">Страна</span>
           <svg class="svg-icon svg-icon--btn-dd">
             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
           </svg>
         </button>
-        <div class="dd-inner">
-          {% set stoneItems = [
-            [
-              'Гранит', '298'
-            ],
-            [
-              'Мрамор', '176'
-            ],
-            [
-              'Оникс', '25'
-            ],
-            [
-              'Травертин', '38'
-            ],
-            [
-              'Кварцит', '15'
-            ],
-            [
-              'Агломерат', '300'
-            ]
-          ] %}
-          {% for name, number in stoneItems %}
-            <div class="dd-item">
-              <label class="base-checkbox-wrapper">
-                <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
-                <span class="base-checkbox-fake"></span>
-                <span class="base-checkbox-text">{{name}}</span>
-                <span class="base-checkbox-sub-text">{{number}}</span>
-              </label>
-            </div>
-          {% endfor %}
+        <div class="dd-inner row">
+          <div class="dd-inner-col">
+            {% set stoneItems = [
+              [
+                'Бразилия', '🇧🇷'
+              ],
+              [
+                'Греция', '🇬🇷'
+              ],
+              [
+                'Индия', '🇮🇳'
+              ],
+              [
+                'Испания', '🇪🇸'
+              ],
+              [
+                'Италия', '🇮🇹'
+              ]
+            ] %}
+            {% for name, country in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                  <span class="base-checkbox-country">{{country}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="dd-inner-col">
+            {% set stoneItems = [
+              [
+                'Китай', '🇨🇳'
+              ],
+              [
+                'Россия', '🇷🇺'
+              ],
+              [
+                'Турция', '🇹🇷'
+              ],
+              [
+                'Украина', '🇺🇦'
+              ],
+              [
+                'Чехия', '🇨🇿'
+              ]
+            ] %}
+            {% for name, country in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                  <span class="base-checkbox-country">{{country}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
-      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-stone-dd js--dd-parent">
+      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-cost-dd js--dd-parent">
         <button class="btn--dd js--dd-btn">
           <span class="btn-dd-text">Цена</span>
           <svg class="svg-icon svg-icon--btn-dd">
@@ -159,76 +232,80 @@
           </svg>
         </button>
         <div class="dd-inner">
-          {% set stoneItems = [
-            [
-              'Гранит', '298'
-            ],
-            [
-              'Мрамор', '176'
-            ],
-            [
-              'Оникс', '25'
-            ],
-            [
-              'Травертин', '38'
-            ],
-            [
-              'Кварцит', '15'
-            ],
-            [
-              'Агломерат', '300'
-            ]
-          ] %}
-          {% for name, number in stoneItems %}
-            <div class="dd-item">
-              <label class="base-checkbox-wrapper">
-                <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
-                <span class="base-checkbox-fake"></span>
-                <span class="base-checkbox-text">{{name}}</span>
-                <span class="base-checkbox-sub-text">{{number}}</span>
-              </label>
-            </div>
-          {% endfor %}
+          <div class="dd-inner-cost row">
+            <label class="dd-inner-cost-wrapper">
+              <span class="dd-inner-cost-text">От</span>
+              <input type="number" class="dd-inner-cost-input" placeholder="3000">
+            </label>
+            <label class="dd-inner-cost-wrapper">
+              <span class="dd-inner-cost-text">До</span>
+              <input type="text" class="dd-inner-cost-input" placeholder="375000">
+            </label>
+          </div>
         </div>
       </div>
-      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-stone-dd js--dd-parent">
+      <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-application-dd js--dd-parent">
         <button class="btn--dd js--dd-btn">
           <span class="btn-dd-text">Применение</span>
           <svg class="svg-icon svg-icon--btn-dd">
             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
           </svg>
         </button>
+        <div class="dd-inner row">
+          <div class="dd-inner-col">
+            {% set stoneItems = [['Входные группы'], ['Камины'], ['Лестницы'], ['Панно'], ['Плинтуса']] %}
+            {% for name in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="dd-inner-col">
+            {% set stoneItems = [['Плиты, пол'], ['Плиты, стены'], ['Подоконники'], ['Стены'], ['Столешницы']] %}
+            {% for name in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="dd-inner-col">
+            {% set stoneItems = [['Столешницы, барбекю'], ['Столешницы, кухня'], ['Столешницы, санузел'], ['Ступени']] %}
+            {% for name in stoneItems %}
+              <div class="dd-item">
+                <label class="base-checkbox-wrapper">
+                  <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
+                  <span class="base-checkbox-fake"></span>
+                  <span class="base-checkbox-text">{{name}}</span>
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="dd-wrapper dd-wrapper--catalog-main-nav dd-wrapper--catalog-main-nav--right js--dd-parent">
+        <button class="btn--dd js--dd-btn">
+          <span class="btn-dd-text">А→Я Название</span>
+          <svg class="svg-icon svg-icon--btn-dd">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
+          </svg>
+        </button>
         <div class="dd-inner">
-          {% set stoneItems = [
-            [
-              'Гранит', '298'
-            ],
-            [
-              'Мрамор', '176'
-            ],
-            [
-              'Оникс', '25'
-            ],
-            [
-              'Травертин', '38'
-            ],
-            [
-              'Кварцит', '15'
-            ],
-            [
-              'Агломерат', '300'
-            ]
-          ] %}
-          {% for name, number in stoneItems %}
-            <div class="dd-item">
-              <label class="base-checkbox-wrapper">
-                <input type="checkbox" class="base-checkbox" {% if loop.index == '3'%} disabled="disabled" {%endif%}>
-                <span class="base-checkbox-fake"></span>
-                <span class="base-checkbox-text">{{name}}</span>
-                <span class="base-checkbox-sub-text">{{number}}</span>
-              </label>
-            </div>
-          {% endfor %}
+          <div class="dd-item">
+            <label class="base-checkbox-wrapper">
+              <input type="checkbox" class="base-checkbox">
+              <span class="base-checkbox-fake"></span>
+              <span class="base-checkbox-text">Название А→Я
+              </span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -241,7 +318,7 @@
               <div class="catalog-item-text-block">
                 <p class="catalog-item-name">
                   <span class="catalog-item-country-icon">
-                    <img src="./images/dest/icons/spain.svg" alt="страна производитель">
+                    🇮🇹
                   </span>
                   <span class="catalog-item-name">айвори</span>
                   <span class="catalog-item-name catalog-item-name--gray">ivory</span>
