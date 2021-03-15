@@ -27,9 +27,10 @@
   "dependencies": {
     "gulp-html-prettify": "0.0.1",
     "gulp-nunjucks-render": "^2.2.3",
+    "inputmask": "^5.0.5",
+    "jquery-sticky": "^1.0.4",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
-    "jquery.maskedinput": "^1.4.1",
     "slick-carousel": "^1.8.1"
   }
 }

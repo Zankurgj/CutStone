@@ -4,8 +4,101 @@ document.addEventListener('DOMContentLoaded', function () {
   initSliderProject();
   initPrductSlider();
   initPromoProductSlider();
-  $('#phone').mask('(999) 999-99-99');
+  initPhonePhotoValidation();
+  initEmailPhotoValidation();
+  initPhoneCalc();
+  clickOutsideShowViewed();
+  aboutSpilerToggle();
+  const initStickyCostHandler = new InitSticky();
 });
+
+class InitSticky {
+  constructor() {
+      this.isStickyInit = false;
+      this.screenWidth = $(window).width();
+      this.stickyElementSelector = $("#stickyMobile");
+      this.windowResizeHandler();
+  }
+  windowResizeHandler() {
+    $(window)
+    .ready(this.initStickyCost(this.screenWidth))
+    .resize(() => {
+      this.screenWidth = $(window).width();
+      this.initStickyCost(this.screenWidth);
+    });
+  }
+
+  initStickyCost(widthScreen) {
+    if (widthScreen <= '992' && !this.isStickyInit) {
+      this.stickyElementSelector.sticky({
+        topSpacing:57,
+        widthFromWrapper: false,
+        responsiveWidth: true,
+        zIndex: 10
+      });
+      this.isStickyInit = true;
+    } else if (widthScreen > 992) {
+      this.stickyElementSelector.unstick();
+      this.isStickyInit = false;
+    }
+  }
+}
+const initPhoneCalc = () => {
+  const phoneInput = document.querySelector('.js--phone-calc');
+  if (!phoneInput) {
+    return
+  }
+  Inputmask({ mask: '+7(999)999-99-99' }).mask(phoneInput);
+}
+const initPhonePhotoValidation = () => {
+  const phoneSelector = document.querySelector('.js--photo-phone');
+  if (!phoneSelector) {
+    return
+  }
+  Inputmask({ mask: '+7(999)999-99-99' }).mask(phoneSelector);
+  phoneSelector.oninput = (e) => {
+    const rawVal = getRawTelNumber(e.target.value);
+    if (isValidPhoneNumber(rawVal)) {
+      document.querySelector('.js--btn-get-photo').disabled = false;
+    } else {
+      document.querySelector('.js--btn-get-photo').disabled = true;
+    }
+  }
+}
+
+const initEmailPhotoValidation = () => {
+  const emailSelector = document.querySelector('.js--photo-email');
+  if (!emailSelector) {
+    return
+  }
+  emailSelector.oninput = (e) => {
+    if (isValidEmail(e.target.value)) {
+      document.querySelector('.js--btn-get-photo-email').disabled = false;
+    } else {
+      document.querySelector('.js--btn-get-photo-email').disabled = true;
+    }
+  }
+}
+
+const isValidEmail = (value) => {
+  var reg = /^[^\@]+@.*\.[a-z]{2,6}$/i;
+  return reg.test(value);
+}
+
+const isValidPhoneNumber = (value) => {
+  if (value.length === 12) {
+    return true;
+  }
+  return false;
+}
+
+const getRawTelNumber = (val) => {
+  return val
+    .replace(/-/g, '')
+    .replace(/_/g, '')
+    .replace(/\(/g, '')
+    .replace(/\)/g, '');
+}
 
 const initheaderMenuHandler = () => {
   $('.js--header-dropdown-item').on('mouseenter', function (event) {
@@ -102,7 +195,17 @@ const initSliderProject = () => {
   }
 };
 const initPrductSlider = () => {
-  $('.js--product-card-slider').slick({
+  const productSlider = $('.js--product-card-slider');
+  productSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  const widthScreen = $(window).width();
+    if ( widthScreen > '992' ){
+      $('.product-card-slider-info').text(``);
+      return
+    } 
+    const currentSlideNum = (currentSlide ? currentSlide : 0) + 1;
+    $('.product-card-slider-info').text(`${currentSlideNum} из ${slick.$slides.length}`);
+  });
+  productSlider.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
@@ -113,8 +216,18 @@ const initPrductSlider = () => {
       const thumb = $(slider.$slides[i]).data('image');
       return `<div style="background-image: url('${thumb}');" class="product-card-slider-pagin"></div>`;
     },
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          dots: false,
+          fade: false,
+        },
+      },
+    ],
   });
 };
+
 const initPromoProductSlider = () => {
   $('.js--product-promo-slider').slick({
     slidesToShow: 4,
@@ -123,10 +236,19 @@ const initPromoProductSlider = () => {
     arrows: true,
     prevArrow: $('.slider-arrow-product--prew'),
     nextArrow: $('.slider-arrow-product--next'),
-    customPaging: function (slider, i) {
-      const thumb = $(slider.$slides[i]).data('image');
-      return `<div style="background-image: url('${thumb}');" class="product-card-slider-pagin"></div>`;
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      },
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+      },
     },
+  ],
   });
 };
 
@@ -158,3 +280,24 @@ const clickSelectOutsideDropDown = () => {
     }
   });
 };
+
+const onShowViewed = (el) => {
+    $(el).toggleClass('active');
+    $('.js--viewed-inner-parent').toggleClass('opened');
+}
+
+const clickOutsideShowViewed = () => {
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest($('.js--viewed-inner-parent.opened')).length) {
+      $('.js--viewed-inner-parent.opened').removeClass('opened');
+      $('.btn--header-panel.active').removeClass('active');
+    }
+  });
+};
+
+const aboutSpilerToggle = () => {
+  $('.js--about-spoiler').on('click', function (event) {
+    $(this).toggleClass('opened');
+    $(this).siblings('.about-base-text--feature').slideToggle(200);
+  });
+}

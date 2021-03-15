@@ -1,7 +1,7 @@
 <div class="popup-wrapper" id="popupGetPhoto">
   <div class="popup-overlay" onclick="onTogglePopUp('popupGetPhoto')"></div>
   <section class="get-photo-popup container container--no-padding">
-    <div class="base-popup-head">
+    <div class="get-photo-popup-head">
       <p class="base-popup-head-title">Получить фото в WhatsApp</p>
       <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupGetPhoto')">
         <span class="visually-hidden">закрыть</span>
@@ -10,8 +10,19 @@
         </svg>
       </button>
     </div>
-    <div class="base-popup-inner">
+    <form class="base-popup-inner base-popup-inner--get-photo">
       <p class="base-popup-text">Пришлём вам фото со склада и поможем выбрать материал для проекта</p>
-    </div>
+      <label class="get-photo-input-tel-wrapper">
+        <span class="visually-hidden">Ваш номер телефона</span>
+        <input type="text" class="get-photo-input-tel js--photo-phone" placeholder="+7 (495) 268-06-19">
+        <span class="get-photo-input-err">Неверно указан номер</span>
+      </label>
+      <button class="btn--main btn--main-arrow js--btn-get-photo" type="submit" disabled>
+        <span>Запросить фото</span>
+        <svg class="svg-icon svg-icon--btn--main-arrow">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </button>
+    </form>
   </section>
 </div>

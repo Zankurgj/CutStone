@@ -62,7 +62,8 @@ function scripts() {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/jquery-ui-dist/jquery-ui.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
-    'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+    'node_modules/inputmask/dist/inputmask.js',
+    'node_modules/jquery-sticky/jquery.sticky.js',
     'app/js/app.js', // app.js. Always at the end
   ])
     .pipe(concat('app.min.js'))

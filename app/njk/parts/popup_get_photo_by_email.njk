@@ -1,0 +1,28 @@
+<div class="popup-wrapper" id="popupGetPhotoByEmail">
+    <div class="popup-overlay" onclick="onTogglePopUp('popupGetPhotoByEmail')"></div>
+    <section class="get-photo-popup container container--no-padding">
+      <div class="get-photo-popup-head">
+        <p class="base-popup-head-title">Получить фото в WhatsApp</p>
+        <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupGetPhotoByEmail')">
+          <span class="visually-hidden">закрыть</span>
+          <svg class="svg-icon svg-icon--btn--popup-close">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+          </svg>
+        </button>
+      </div>
+      <form class="base-popup-inner base-popup-inner--get-photo">
+        <p class="base-popup-text">Пришлём вам фото в большом разрешении для создания дизайн-концепции</p>
+        <label class="get-photo-input-tel-wrapper">
+          <span class="visually-hidden">Ваш email</span>
+          <input type="text" class="get-photo-input-tel js--photo-email" placeholder="email@email.com">
+          <span class="get-photo-input-err">Неверно указан адрес электронной почты</span>
+        </label>
+        <button class="btn--main btn--main-arrow js--btn-get-photo-email" type="submit" disabled>
+          <span>Запросить фото</span>
+          <svg class="svg-icon svg-icon--btn--main-arrow">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </button>
+      </form>
+    </section>
+  </div>

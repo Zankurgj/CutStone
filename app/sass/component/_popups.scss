@@ -364,5 +364,44 @@
   transform: translate(-50%, -50%);
   z-index: 10;
   max-width: 488px;
+  width: 100%;
   background-color: #fff;
+}
+.get-photo-input-tel-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 36px;
+}
+.get-photo-input-tel {
+  width: 100%;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  border: none;
+  &::placeholder {
+    color: #e5e5e5;
+  }
+  &.error {
+    color: #FF2800;
+    & + .get-photo-input-err {
+      display: block;
+    }
+  }
+}
+.get-photo-input-err {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF2800;
+}
+.get-photo-popup-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 24px 24px 24px;
+}
+.base-popup-inner--get-photo {
+  padding: 0 24px 32px 24px;
 }

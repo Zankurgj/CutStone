@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CutStone</title>
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="css/app.min.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container--no-padding main-header-inner">
+            <button class="btn--main-header-menu" onclick="onToggleMobileMenu()">
+                <span class="visually-hidden">Мобильное меню</span>
+                <svg class="svg-icon svg-icon--main-header-menu">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mob_menu"></use>
+                </svg>
+            </button>
+            <a href="#" class="main-header-logo">
+                <span class="visually-hidden">Логотип CutStone</span>
+                <svg class="svg-icon svg-icon--header-logo">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#logo"></use>
+                </svg>
+            </a>
+            <nav class="main-header-nav">
+                <div class="main-header-nav-item-dropdown">
+                    <a href="#" class="main-header-nav-item">каталог</a>
+                    <div class="main-header-dropdown">
+                        <img src="./images/dest/img/hov1.jpg" alt="гранит" id="hov1" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov2.jpg" alt="гранит" id="hov2" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov3.jpg" alt="гранит" id="hov3" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov4.jpg" alt="гранит" id="hov4" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov5.jpg" alt="гранит" id="hov5" class="main-header-dropdown-bg">
+                        <img src="./images/dest/img/hov6.jpg" alt="гранит" id="hov6" class="main-header-dropdown-bg">
+                        <div class="container container--no-padding container--header-dropdown">
+                            <div class="row row--wrap">
+                                <div class="main-header-dropdown-col">
+                                    <p class="main-header-dropdown-title">камни</p>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                                        <span>гранит</span>
+                                        <span class="main-header-dropdown-item-quantity">298</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                                        <span>мрамор</span>
+                                        <span class="main-header-dropdown-item-quantity">176</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                                        <span>оникс</span>
+                                        <span class="main-header-dropdown-item-quantity">25</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                                        <span>кварцит</span>
+                                        <span class="main-header-dropdown-item-quantity">15</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                                        <span>травертин</span>
+                                        <span class="main-header-dropdown-item-quantity">38</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                                        <span>агломерат</span>
+                                        <span class="main-header-dropdown-item-quantity">300</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-link">
+                                        <span>смотреть весь каталог</span>
+                                        <svg class="svg-icon svg-icon--header-dropdown-link">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <div class="main-header-dropdown-col">
+                                    <p class="main-header-dropdown-title">изделия</p>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                                        <span>столешницы</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                                        <span>камины</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                                        <span>лестницы</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                                        <span>камины</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                                        <span>полы</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                                        <span>подоконники</span>
+                                    </a>
+                                    <a href="#" class="main-header-dropdown-link">
+                                        <span>цены на издели</span>
+                                        <svg class="svg-icon svg-icon--header-dropdown-link">
+                                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="main-header-dropdown-col main-header-dropdown-col--mobile">
+                                    <a href="#" class="main-header-dropdown-title">цены</a>
+                                    <a href="#" class="main-header-dropdown-title">сотрудничество</a>
+                                    <a href="#" class="main-header-dropdown-title">о нас</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="main-header-nav-item">цены</a>
+                <a href="#" class="main-header-nav-item">сотрудничество</a>
+                <a href="#" class="main-header-nav-item">о нас</a>
+            </nav>
+            <div class="main-header-panel">
+                <div class="header-dropdown-viewed js--viewed-inner-parent">
+                    <button class="btn--header-panel" onclick="onShowViewed(this)">
+                        <span class="visually-hidden">Просмотренные</span>
+                        <span class="btn--header-panel-counter">10</span>
+                        <svg class="svg-icon svg-icon--header-panel">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#eye"></use>
+                        </svg>
+                    </button>
+                    <div class="header-dropdown-viewed-inner js--viewed-inner">
+                        <div class="header-dropdown-viewed-head">
+                            <p class="header-dropdown-viewed-title">
+                                Вы смотрели
+                            </p>
+                            <button class="btn--popup-close btn--popup-close--base btn--header-dropdown-viewed-close" onclick="onShowViewed(this)">
+                                <span class="visually-hidden">закрыть</span>
+                                <svg class="svg-icon svg-icon--btn--popup-close svg-icon--header-dropdown-viewed-close">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="header-dropdown-viewed-item-wrapper">
+                            <p class="header-dropdown-viewed-item-stubs">
+                                Список просмотренных товаров пока пуст. Вы можете начать свой выбор с каталога камня, если ищете что-то конкретное.
+                            </p>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="header-dropdown-viewed-btn-block">
+                            <a href="#" class="btn--main btn--main-arrow">
+                                <span>Перейти в каталог</span>
+                                <svg class="svg-icon svg-icon--btn--main-arrow">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="tel:+7(800)4440633" class="main-header-panel-link">+7 (800) 444 06 33</a>
+                <button class="btn--main-header-close" onclick="onToggleMobileMenu()">
+                    <span class="visually-hidden">закрыть меню</span>
+                    <svg class="svg-icon svg-icon--main-header-close">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="page">
+
+        <section class="about-head">
+            <div class="container">
+                <h1 class="about-head-h1">Выполняем работы <br>
+            из натурального <br>
+            и искусственного камня</h1>
+                <p class="about-head-text">Изготовим и установим изделия любой сложности и легко
+                    <br>сможем воплотить в жизнь вашу самую смелую идею</p>
+            </div>
+        </section>
+        <section class="about-text-block">
+            <div class="container">
+                <div class="row row--wrap">
+                    <div class="about-text-col about-text-col--left">
+                        <h2 class="about-head-h2">О нас</h2>
+                    </div>
+                    <div class="about-text-col about-text-col--right">
+                        <p class="about-base-text about-base-text--about">Компания CUTstone на протяжении 15 лет успешно занимается изготовлением и установкой изделий из натурального и искусственного камня. Мы выполняем работы любой сложности и легко сможем воплотить в жизнь вашу самую смелую идею. В
+                            штате компании специалисты с огромным опытом работы в данной сфере, по настоящему любящие свое дело. Если Вам необходимы кухонные столешницы, подоконники, оформление лестниц как в доме, так и на улице, столешницы и душевые
+                            поддоны в ванных комнатах, облицовка каминных порталов, укладка полов плитами любых размеров, оформление декоративных ниш ониксом, облицовка цоколя и фасадов зданий – мы готовы Вам в этом помочь.</p>
+                        <p class=" about-base-text about-base-text--about">Благодаря удобному расположению, современному оборудованию и отлично технически обученному персоналу, даже эксклюзивные материалы мы реализуем по разумным ценам. Мы работаем с сотнями типов гранита, мрамора и других видов камня
+                            из Бразилии, Турции, Испании, Италии, Индии, Китая, Украины, РФ и других стран во всем мире. Правильно подобранные акценты из натуральных природных камней в интерьере вашего дома или офиса помогут создать уникальный дизайн,
+                            который несомненно увеличит стоимость недвижимости.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-partners">
+            <div class="container">
+                <div class="row row--wrap">
+                    <div class="about-partners-col about-partners-col--left">
+                        <h3 class="about-head-h3">Мы работаем с крупнейшими поставщиками <br> 
+                    натурального и искусственного <br> камня</h3>
+                        <p class="about-partners-subtitle">Более чем из 20 стран</p>
+                    </div>
+                    <div class="about-partners-col about-partners-col--right">
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner1.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner2.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner3.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner4.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner5.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner6.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner7.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner8.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner9.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner10.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner11.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner12.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner13.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner14.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner15.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner16.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner17.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner18.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner19.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner20.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner21.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner22.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner23.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner24.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner25.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                        <div class="about-partners-item-col">
+                            <img src="./images/dest/img/partner26.png" alt="Партнер" class="about-partners-item-img">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-feature">
+            <div class="container">
+                <div class="row row--wrap">
+                    <div class="about-feature-col about-feature-col--left">
+                        <h2 class="about-head-h2">Преимущества работы с нами</h2>
+                    </div>
+                    <div class="about-feature-col about-feature-col--right">
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Личный менеджер. Мы понимаем и ценим наших клиентов</p>
+                            <p class="about-base-text about-base-text--feature">Работая не первый год в камне, мы знаем как в больших компаниях происходит процесс работы с клиентом, где менеджер отвечает только за то, что находится в пределах его рабочего места, каждый кладовщик отвечает только за свой
+                                участок склада, цех и монтажные бригады не контактируют, что в итоге приводят к не состыковкам на объекте. У клиентов компании CUTstone таких проблем не возникает, потому что от первого звонка до подписания документов о
+                                выполненных работах у вас будет Личный менеджер, который будет Вас сопровождать во всех вопросах на каждом этапе заказа.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Гибкость. Мы достанем для Вас что угодно</p>
+                            <p class="about-base-text about-base-text--feature">Помимо своих запасов у нас есть доступ ко всем складам натурального и искусственного камня в московском регионе. Поэтому Вы не услышите в ответ на вопрос о наличии какого-либо материала, что его у нас нет. Мы достанем для Вас
+                                что угодно.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Нет привязки к одному конкретному складу</p>
+                            <p class="about-base-text about-base-text--feature">Если вопрос с утверждением материала не получается решить во время замеров на объекте, то мы предлагаем подъехать для решения этого вопроса на тот склад, который будет Вам наиболее удобным. Мы подстраиваемся под наших клиентов.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Без привязки к слэбам. Мы не предлагаем Вам купить больше материала чем надо</p>
+                            <p class="about-base-text about-base-text--feature">По большинству позиций мы готовы взять деньги только то количество материала, которое необходимо для изготовления вашего изделия и Вам не нужно покупать весь слэб целиком. У нас все по-честному.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Низкие эксклюзивные цены</p>
+                            <p class="about-base-text about-base-text--feature">Только у нас самые низкие цены на весь материал, так как ежемесячно со всех складов мы вывозим по несколько тысяч м2 натурального и искусственного камня. Мы готовы Вам предложить эксклюзивные цены.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Бесплатно доставим</p>
+                            <p class="about-base-text about-base-text--feature">Нашим клиентам не нужно тратить время в поисках транспортной компании, вникать в нюансы погрузки, выгрузки и транспортировки изделий, решать проблемы, связанные с возможной порчей изделий из натурального и искусственного камня
+                                при перевозке. Все это мы берем на себя, причем вы за это ничего не платите. Бесплатная доставка по Москве при заказе от 100 000 рублей – мелочь, а приятно.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Нет привязки к слэбам</p>
+                            <p class="about-base-text about-base-text--feature">По большинству складских позиций мы готовы принять оплату только за то количество материала, которое необходимо для изготовления вашего изделия с учетом коэффициента раскроя, и Вам не нужно покупать весь слэб целиком. Мы не
+                                предлагаем Вам купить больше материала чем надо — у нас все по честному.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Изготовим дополнительные изделия из остатков</p>
+                            <p class="about-base-text about-base-text--feature">Если после выполнения заказа от ваших слэбов остались куски и Вы не знаете, что с ними делать — мы готовы из них по себестоимости сделать Вам дополнительные изделия (декоративные рамки, журнальный столик, подставка под чайник).
+                                Практически безотходное производство.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title js--about-spoiler">Скидки и подарки от наших партнеров</p>
+                            <p class="about-base-text about-base-text--feature">За 15 лет успешной работы в каменном бизнесе мы обзавелись проверенными партнерами во многих сферах торговли и услуг. Мы готовы поделиться нашими надежными партнерами с Вами, а они предоставят Вам дополнительные скидки. Взаимовыгодное
+                                сотрудничество во всем.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title">Мы работаем 7 дней в неделю</p>
+                            <p class="about-base-text about-base-text--feature">Мы живем и работаем в столице и зная ее проблемы с пробками и постоянным дефицитом свободного времени, понимаем что в будни все не успеть. Мы работаем для Вас и в выходные дни, причем не только в субботу, но и в ВОСКРЕСЕНЬЕ.
+                                Мы такие же потребители как и Вы.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <p class="about-feature-title">Гарантия 5 лет</p>
+                            <p class="about-base-text about-base-text--feature">Мы работаем с лучшим материалом, наши специалисты высококвалифицированные мастера своего дела, мы используем только качественные расходные материалы с заводов изготовителей, мы уверены в качестве наших работ, поэтому даем гарантию
+                                на них 5 лет. Уверенность в своем деле.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-clients">
+            <div class="container">
+                <div class="row row--wrap">
+                    <div class="about-clients-col">
+                        <h2 class="about-head-h2">Наши клиенты</h2>
+                    </div>
+                    <div class="about-clients-col about-clients-col--right">
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client1.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client2.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client3.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client4.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client5.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client6.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client7.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client8.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client9.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                        <div class="about-clients-item-col">
+                            <img src="./images/dest/img/client10.png" alt="Клиент" class="about-clients-item-img">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-advantage">
+            <div class="container">
+                <div class="row row--wrap">
+                    <div class="about-advantage-col">
+                        <h2 class="about-head-h2">Индивидуальный подход</h2>
+                    </div>
+                    <div class="about-advantage-col about-advantage-col--right">
+                        <p class="about-base-text about-base-text--advantage">Работа сотрудников компании «CUTstone» прежде всего строится на удовлетворении индивидуальных запросов клиента, внимательном учёте и точном выполнении всех его пожеланий. Каковы бы ни были ваши задумки, условия, финансовые возможности,
+                            специфика конкретного заказа, Вы в любом случае можете рассчитывать на понимание с нашей стороны, готовность пойти навстречу и итоговую реализацию ваших задумок в камне.</p>
+                        <p class="about-base-text about-base-text--advantage">Каждый человек индивидуален, каждый проект особенный — более чем за 15 лет работы мы научились понимать наших клиентов с полуслова и по-настоящему гордимся этим. Мы заботимся о том, чтобы каждый наш клиент остался доволен проделанной
+                            нами работой и полученным итоговым результатом, который является нашим общим успехом. Мы гордимся своей работой.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="main-footer-social">
+                <p class="main-footer-logo">CUTSTONE</p>
+                <div class="main-footer-social-inner">
+                    <a href="#" class="main-footer-social-item" target="_blank">
+                        <svg class="svg-icon svg-icon--footer-social">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#inst"></use>
+                        </svg>
+                        <span>instagram</span>
+                    </a>
+                    <a href="#" class="main-footer-social-item" target="_blank">
+                        <svg class="svg-icon svg-icon--footer-social">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#pinterest"></use>
+                        </svg>
+                        <span>pinterest</span>
+                    </a>
+                    <a href="#" class="main-footer-social-item" target="_blank">
+                        <svg class="svg-icon svg-icon--footer-social">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#fb"></use>
+                        </svg>
+                        <span>facebook</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="main-footer-nav">
+                <div class="main-footer-nav-col">
+                    <p class="main-footer-nav-title">контакты</p>
+
+                    <a href="tel:+7(800)4440633" class="main-footer-nav-item">+7 (800) 444 06 33</a>
+                    <a href="mailto:info@cutstone.ru" class="main-footer-nav-item">info@cutstone.ru</a>
+                    <p class="main-footer-nav-item">
+                        Московская область
+                        <br>дер. Грибки,
+                        <br>ул. Ангарская, владение 8
+                    </p>
+                </div>
+                <div class="main-footer-nav-col">
+                    <p class="main-footer-nav-title">полезное</p>
+                    <a href="#" class="main-footer-nav-item">О нас</a>
+                    <a href="#" class="main-footer-nav-item">Портфолио</a>
+                    <a href="#" class="main-footer-nav-item">Галерея камня</a>
+                    <a href="#" class="main-footer-nav-item">Варианты обработки торцов</a>
+                    <a href="#" class="main-footer-nav-item">Обучающие уроки по выбору камня</a>
+                    <a href="#" class="main-footer-nav-item">Наши дизайнеры и архитекторы</a>
+                    <a href="#" class="main-footer-nav-item">Сотрудничество</a>
+                    <a href="#" class="main-footer-nav-item">Изделия</a>
+                </div>
+
+                <div class="main-footer-nav-col">
+                    <p class="main-footer-nav-title">изделия</p>
+                    <a href="#" class="main-footer-nav-item">Столешницы</a>
+                    <a href="#" class="main-footer-nav-item">Камины</a>
+                    <a href="#" class="main-footer-nav-item">Полы</a>
+                    <a href="#" class="main-footer-nav-item">Лестницы</a>
+                    <a href="#" class="main-footer-nav-item">Подоконники</a>
+                </div>
+            </nav>
+            <div class="main-footer-copyright">
+                <span class="main-footer-copyright-text">© 2021, CUTstone</span>
+                <span class="main-footer-copyright-sep">|</span>
+                <a href="#" class="main-footer-copyright-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

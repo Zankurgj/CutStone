@@ -50,7 +50,8 @@
             </div>
           {% endfor %}
         </div>
-        <div class="product-card-slider-slider-btns">
+        <p class="product-card-slider-info"></p>
+        <div class="product-card-slider-btns product-card-slider-btns--desktop">
           <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
             <span>Скачать в большом разрешении</span>
             <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
@@ -58,7 +59,7 @@
             </svg>
           </button>
 
-          <button class="btn--border btn--product-card-slider">
+          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
             Запросить актуальные фото
           </button>
         </div>
@@ -85,16 +86,31 @@
             </div>
           </div>
         </div>
-        <div class="product-card-cost-block">
-          <p class="product-card-cost">от $440 за м2</p>
-          <p class="product-card-cost-sub">от 33,535.61 ₽ за м2</p>
+        <div class="product-card-slider-btns product-card-slider-btns--mobile">
+          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
+            <span>Скачать в большом разрешении</span>
+            <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
+              <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+            </svg>
+          </button>
+
+          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
+            Запросить актуальные фото
+          </button>
         </div>
-        <button class="btn--main btn--main-arrow btn--main--big btn--main--card-cost" onclick="onTogglePopUp('popupCalculationOrder')">
-          <span>Заказать расчёт</span>
-          <svg class="svg-icon svg-icon--btn--main-arrow">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </button>
+        <div class="product-card-cost-block-wrapper" id="stickyMobile">
+          <div class="product-card-cost-block">
+            <p class="product-card-cost">от $440 за м2</p>
+            <p class="product-card-cost-sub">от 33,535.61 ₽ за м2</p>
+          </div>
+          <button class="btn--main btn--main-arrow btn--main--big btn--main--card-cost" onclick="onTogglePopUp('popupCalculationOrder')">
+            <span>Заказать расчёт</span>
+            <svg class="svg-icon svg-icon--btn--main-arrow">
+              <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+            </svg>
+          </button>
+        </div>
+
         <div class="product-card-description-block">
           {% set descriptionItem = [
             [
@@ -148,7 +164,7 @@
         </div>
         <div class="product-card-description-project">
           <div class="product-card-description-project-img-col">
-            <div class="product-card-description-project-img" style="background-image: url('./images/dest/img/gal6.jpg');"></div>
+            <div class="product-card-description-project-img" style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
           </div>
           <div class="product-card-description-project-text-col">
             <p class="product-card-description-project-title">камень в проекте</p>
@@ -210,10 +226,12 @@
             </div>
           {% endfor %}
         </div>
+
       </div>
     </div>
   </section>
   {% include "app/njk/parts/popup_projects.njk" %}
   {% include "app/njk/parts/popup_get_photo.njk" %}
   {% include "app/njk/parts/popup_calculation_order.njk" %}
+  {% include "app/njk/parts/popup_get_photo_by_email.njk" %}
 {% endblock %}

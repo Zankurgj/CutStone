@@ -154,6 +154,7 @@
   line-height: 17px;
   color: #1d1d1d;
   transition: color $base-duration $base-timing;
+  white-space: nowrap;
 }
 .catalog-item-description {
   display: flex;
@@ -166,6 +167,9 @@
   padding: 16px;
   background-color: #fff;
   border-bottom: 1px solid #1d1d1d;
+  @media screen and (max-width: $mobile-bp) {
+    display: none;
+  }
 }
 .dd-wrapper--catalog-main-nav {
   margin-right: 8px;
@@ -199,9 +203,4 @@
 .svg-icon--btn--border-bottom {
   transform: rotate(90deg);
 }
-.btn--product-card-slider {
-  margin-right: 8px;
-  &:last-child {
-    margin-right: 0;
-  }
-}
+

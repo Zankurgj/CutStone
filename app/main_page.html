@@ -111,12 +111,114 @@
                 <a href="#" class="main-header-nav-item">о нас</a>
             </nav>
             <div class="main-header-panel">
-                <button class="btn--header-panel">
-                    <span class="visually-hidden">Просмотренные</span>
-                    <svg class="svg-icon svg-icon--header-panel">
-                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#eye"></use>
-                    </svg>
-                </button>
+                <div class="header-dropdown-viewed js--viewed-inner-parent">
+                    <button class="btn--header-panel" onclick="onShowViewed(this)">
+                        <span class="visually-hidden">Просмотренные</span>
+                        <span class="btn--header-panel-counter">10</span>
+                        <svg class="svg-icon svg-icon--header-panel">
+                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#eye"></use>
+                        </svg>
+                    </button>
+                    <div class="header-dropdown-viewed-inner js--viewed-inner">
+                        <div class="header-dropdown-viewed-head">
+                            <p class="header-dropdown-viewed-title">
+                                Вы смотрели
+                            </p>
+                            <button class="btn--popup-close btn--popup-close--base btn--header-dropdown-viewed-close" onclick="onShowViewed(this)">
+                                <span class="visually-hidden">закрыть</span>
+                                <svg class="svg-icon svg-icon--btn--popup-close svg-icon--header-dropdown-viewed-close">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="header-dropdown-viewed-item-wrapper">
+                            <p class="header-dropdown-viewed-item-stubs">
+                                Список просмотренных товаров пока пуст. Вы можете начать свой выбор с каталога камня, если ищете что-то конкретное.
+                            </p>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="header-dropdown-viewed-item">
+                                <div class="header-dropdown-viewed-item-img-col">
+                                    <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                                    </div>
+                                </div>
+                                <div class="header-dropdown-viewed-item-text-col">
+                                    <p class="header-dropdown-viewed-item-text-title">гранит</p>
+                                    <p class="header-dropdown-viewed-item-text-name">
+                                        <span class="header-dropdown-viewed-item-text-name-black">Абсолют Блэк </span>
+                                        <span class="header-dropdown-viewed-item-text-name-gray">Abrolius Black</span>
+                                    </p>
+                                    <div class="header-dropdown-viewed-item-cost">
+                                        <p class="header-dropdown-viewed-item-cost-black">от $300 за м2</p>
+                                        <p class="header-dropdown-viewed-item-cost-thin">от 23,255.25 ₽ за м2</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="header-dropdown-viewed-btn-block">
+                            <a href="#" class="btn--main btn--main-arrow">
+                                <span>Перейти в каталог</span>
+                                <svg class="svg-icon svg-icon--btn--main-arrow">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="tel:+7(800)4440633" class="main-header-panel-link">+7 (800) 444 06 33</a>
                 <button class="btn--main-header-close" onclick="onToggleMobileMenu()">
                     <span class="visually-hidden">закрыть меню</span>
@@ -1052,7 +1154,7 @@
                         </label>
                         <label class="base-input-wrapper base-input-wrapper--calculation-order">
                             <p class="base-input-title">Телефон</p>
-                            <input type="text" class="base-text-input" id="phone">
+                            <input type="text" class="base-text-input js--phone-calc" placeholder="+7 (495) 268-06-19">
                         </label>
                         <label class="base-input-wrapper base-input-wrapper--calculation-order">
                             <p class="base-input-title">Email</p>
