@@ -105,13 +105,16 @@
 .project-popup-nav-slide-input {
   @extend .visually-hidden;
   &:checked + .project-popup-nav-slide-text {
-    color: #808080;
+    color: #1d1d1d;
+    &:hover {
+      color: #1d1d1d;
+    }
   }
 }
 .project-popup-nav-slide-text {
   font-size: 16px;
   line-height: 20px;
-  color: #1d1d1d;
+  color: #808080;
   transition: color $base-duration $base-timing;
   &:hover {
     color: rgba($color: #1d1d1d, $alpha: 0.8);
