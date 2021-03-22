@@ -260,469 +260,523 @@
                     </div>
                 </div>
             </section>
-
             <div class="container container--no-padding catalog-main-nav">
-                <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-stone-dd js--dd-parent">
+                <div class="catalog-main-nav-filter-wrapper">
+                    <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-stone-dd js--dd-parent">
+                        <button class="btn--dd js--dd-btn">
+                            <span class="btn-dd-text">Камень</span>
+                            <span class="btn-dd-text-sep">:</span>
+                            <span class="js--dd-selected-inner"></span>
+                            <svg class="svg-icon svg-icon--btn-dd">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="btn--dd-clear js--dd-clear-filter" data-filter-id="filterStone">
+                            <span class="visually-hidden">очистить</span>
+                        </button>
+                        <div class="dd-inner">
+
+
+                            <div class="dd-item">
+                                <label class="base-checkbox-wrapper">
+                                    <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Гранит" data-filter-id="filterStone" data-filter-type="string">
+                                    <span class="base-checkbox-fake"></span>
+                                    <span class="base-checkbox-text">Гранит</span>
+                                    <span class="base-checkbox-sub-text">298</span>
+                                </label>
+                            </div>
+
+                            <div class="dd-item">
+                                <label class="base-checkbox-wrapper">
+                                    <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Мрамор" data-filter-id="filterStone" data-filter-type="string">
+                                    <span class="base-checkbox-fake"></span>
+                                    <span class="base-checkbox-text">Мрамор</span>
+                                    <span class="base-checkbox-sub-text">176</span>
+                                </label>
+                            </div>
+
+                            <div class="dd-item">
+                                <label class="base-checkbox-wrapper">
+                                    <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Оникс" data-filter-id="filterStone" data-filter-type="string">
+                                    <span class="base-checkbox-fake"></span>
+                                    <span class="base-checkbox-text">Оникс</span>
+                                    <span class="base-checkbox-sub-text">25</span>
+                                </label>
+                            </div>
+
+                            <div class="dd-item">
+                                <label class="base-checkbox-wrapper">
+                                    <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Травертин" data-filter-id="filterStone" data-filter-type="string">
+                                    <span class="base-checkbox-fake"></span>
+                                    <span class="base-checkbox-text">Травертин</span>
+                                    <span class="base-checkbox-sub-text">38</span>
+                                </label>
+                            </div>
+
+                            <div class="dd-item">
+                                <label class="base-checkbox-wrapper">
+                                    <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Кварцит" data-filter-id="filterStone" data-filter-type="string">
+                                    <span class="base-checkbox-fake"></span>
+                                    <span class="base-checkbox-text">Кварцит</span>
+                                    <span class="base-checkbox-sub-text">15</span>
+                                </label>
+                            </div>
+
+                            <div class="dd-item">
+                                <label class="base-checkbox-wrapper">
+                                    <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Агломерат" data-filter-id="filterStone" data-filter-type="string">
+                                    <span class="base-checkbox-fake"></span>
+                                    <span class="base-checkbox-text">Агломерат</span>
+                                    <span class="base-checkbox-sub-text">300</span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-color-dd js--dd-parent">
+                        <button class="btn--dd js--dd-btn">
+                            <span class="btn-dd-text">Цвет</span>
+                            <span class="btn-dd-text-sep">:</span>
+                            <span class="js--dd-selected-inner"></span>
+                            <svg class="svg-icon svg-icon--btn-dd">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="btn--dd-clear js--dd-clear-filter" data-filter-id="filterColor">
+                            <span class="visually-hidden">очистить</span>
+                        </button>
+                        <div class="dd-inner row">
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Белый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--white"></span>
+                                        <span class="base-checkbox-text">Белый</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Серый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--gray"></span>
+                                        <span class="base-checkbox-text">Серый</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Чёрный" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--black"></span>
+                                        <span class="base-checkbox-text">Чёрный</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Бежевый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--beige"></span>
+                                        <span class="base-checkbox-text">Бежевый</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Коричневый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--brown"></span>
+                                        <span class="base-checkbox-text">Коричневый</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Красный" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--red"></span>
+                                        <span class="base-checkbox-text">Красный</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Зелёный" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--green"></span>
+                                        <span class="base-checkbox-text">Зелёный</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Синий" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--blue"></span>
+                                        <span class="base-checkbox-text">Синий</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Жёлтый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--yellow"></span>
+                                        <span class="base-checkbox-text">Жёлтый</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Оранжевый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--orange"></span>
+                                        <span class="base-checkbox-text">Оранжевый</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Розовый" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--pink"></span>
+                                        <span class="base-checkbox-text">Розовый</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Мультиколор" data-filter-id="filterColor" data-filter-type="string">
+                                        <span class="base-checkbox-fake-color base-checkbox-fake-color--multi"></span>
+                                        <span class="base-checkbox-text">Мультиколор</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-country-dd js--dd-parent">
+                        <button class="btn--dd js--dd-btn">
+                            <span class="btn-dd-text">Страна</span>
+                            <span class="btn-dd-text-sep">:</span>
+                            <span class="js--dd-selected-inner"></span>
+                            <svg class="svg-icon svg-icon--btn-dd">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="btn--dd-clear js--dd-clear-filter" data-filter-id="filterCountry">
+                            <span class="visually-hidden">очистить</span>
+                        </button>
+                        <div class="dd-inner row">
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Бразилия" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Бразилия</span>
+                                        <span class="base-checkbox-country">🇧🇷</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Греция" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Греция</span>
+                                        <span class="base-checkbox-country">🇬🇷</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Индия" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Индия</span>
+                                        <span class="base-checkbox-country">🇮🇳</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Испания" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Испания</span>
+                                        <span class="base-checkbox-country">🇪🇸</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Италия" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Италия</span>
+                                        <span class="base-checkbox-country">🇮🇹</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Китай" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Китай</span>
+                                        <span class="base-checkbox-country">🇨🇳</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Россия" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Россия</span>
+                                        <span class="base-checkbox-country">🇷🇺</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Турция" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Турция</span>
+                                        <span class="base-checkbox-country">🇹🇷</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Украина" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Украина</span>
+                                        <span class="base-checkbox-country">🇺🇦</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Чехия" data-filter-id="filterCountry" data-filter-type="string">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Чехия</span>
+                                        <span class="base-checkbox-country">🇨🇿</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-cost-dd js--dd-parent">
+                        <button class="btn--dd js--dd-btn">
+                            <span class="btn-dd-text">Цена</span>
+                            <span class="btn-dd-text-sep">:</span>
+                            <span class="dd-selected-inner">
+            <span class="js--dd-input-inner" data-filter-id="costStart"></span>
+                            <span class="btn-dd-text-sep">-</span>
+                            <span class="js--dd-input-inner" data-filter-id="costEnd"></span>
+                            </span>
+                            <svg class="svg-icon svg-icon--btn-dd">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="btn--dd-clear js--dd-clear-cost-filter">
+                            <span class="visually-hidden">очистить</span>
+                        </button>
+                        <div class="dd-inner">
+                            <div class="dd-inner-cost row">
+                                <label class="dd-inner-cost-wrapper">
+                                    <span class="dd-inner-cost-text">От</span>
+                                    <input type="number" class="dd-inner-cost-input js--filter-cost-input" placeholder="3000" data-filter-id="costStart" data-filter-type="costInput">
+                                </label>
+                                <label class="dd-inner-cost-wrapper">
+                                    <span class="dd-inner-cost-text">До</span>
+                                    <input type="number" class="dd-inner-cost-input js--filter-cost-input" placeholder="375000" data-filter-id="costEnd" data-filter-type="costInput">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-application-dd js--dd-parent">
+                        <button class="btn--dd js--dd-btn">
+                            <span class="btn-dd-text">Применение</span>
+                            <span class="btn-dd-text-sep">:</span>
+                            <span class="js--dd-selected-inner"></span>
+                            <svg class="svg-icon svg-icon--btn-dd">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="btn--dd-clear js--dd-clear-filter" data-filter-id="filterUsage">
+                            <span class="visually-hidden">очистить</span>
+                        </button>
+                        <div class="dd-inner row">
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Входные группы" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Входные группы</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Камины" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Камины</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Лестницы" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Лестницы</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Панно" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Панно</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Плинтуса" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Плинтуса</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Плиты, пол" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Плиты, пол</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Плиты, стены" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Плиты, стены</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Подоконники" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Подоконники</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Стены" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Стены</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Столешницы" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Столешницы</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="dd-inner-col">
+
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Столешницы, барбекю" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Столешницы, барбекю</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Столешницы, кухня" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Столешницы, кухня</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" disabled="disabled" value="Столешницы, санузел" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Столешницы, санузел</span>
+                                    </label>
+                                </div>
+
+                                <div class="dd-item">
+                                    <label class="base-checkbox-wrapper">
+                                        <input type="checkbox" class="js--filter-checkbox base-checkbox" value="Ступени" data-filter-id="filterUsage" data-filter-type="quantity">
+                                        <span class="base-checkbox-fake"></span>
+                                        <span class="base-checkbox-text">Ступени</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn--catalog-clear-filter js--clear-all-filter">
+                    Очистить фильтры
+                </button>
+                <div class="dd-wrapper dd-wrapper--select dd-wrapper--catalog-main-nav--right js--dd-parent">
                     <button class="btn--dd js--dd-btn">
-                        <span class="btn-dd-text">Камень</span>
+                        <span class="btn-dd-text js--dd-select-inner">А→Я Название</span>
                         <svg class="svg-icon svg-icon--btn-dd">
                             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
                         </svg>
                     </button>
                     <div class="dd-inner">
-
-
                         <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Гранит</span>
-                                <span class="base-checkbox-sub-text">298</span>
-                            </label>
+                            <button class="btn--select js--btn-select">
+                                <span>Название А→Я</span>
+                            </button>
                         </div>
-
                         <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Мрамор</span>
-                                <span class="base-checkbox-sub-text">176</span>
-                            </label>
+                            <button class="btn--select js--btn-select">
+                                <span>Название Я→А </span>
+                            </button>
                         </div>
-
                         <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Оникс</span>
-                                <span class="base-checkbox-sub-text">25</span>
-                            </label>
+                            <button class="btn--select js--btn-select">
+                                <span>
+              Дешевле
+              <svg class="svg-icon svg-icon--btn-dd-down">
+                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#filter_down"></use>
+              </svg></span>
+                            </button>
                         </div>
-
                         <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Травертин</span>
-                                <span class="base-checkbox-sub-text">38</span>
-                            </label>
-                        </div>
-
-                        <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Кварцит</span>
-                                <span class="base-checkbox-sub-text">15</span>
-                            </label>
-                        </div>
-
-                        <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Агломерат</span>
-                                <span class="base-checkbox-sub-text">300</span>
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-color-dd js--dd-parent">
-                    <button class="btn--dd js--dd-btn">
-                        <span class="btn-dd-text">Цвет</span>
-                        <svg class="svg-icon svg-icon--btn-dd">
-                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
-                        </svg>
-                    </button>
-                    <div class="dd-inner row">
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--white"></span>
-                                    <span class="base-checkbox-text">Белый</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--gray"></span>
-                                    <span class="base-checkbox-text">Серый</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--black"></span>
-                                    <span class="base-checkbox-text">Чёрный</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--beige"></span>
-                                    <span class="base-checkbox-text">Бежевый</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--brown"></span>
-                                    <span class="base-checkbox-text">Коричневый</span>
-                                </label>
-                            </div>
-
-                        </div>
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--red"></span>
-                                    <span class="base-checkbox-text">Красный</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--green"></span>
-                                    <span class="base-checkbox-text">Зелёный</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--blue"></span>
-                                    <span class="base-checkbox-text">Синий</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--yellow"></span>
-                                    <span class="base-checkbox-text">Жёлтый</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--orange"></span>
-                                    <span class="base-checkbox-text">Оранжевый</span>
-                                </label>
-                            </div>
-
-                        </div>
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--pink"></span>
-                                    <span class="base-checkbox-text">Розовый</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake-color base-checkbox-fake-color--multi"></span>
-                                    <span class="base-checkbox-text">Мультиколор</span>
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-country-dd js--dd-parent">
-                    <button class="btn--dd js--dd-btn">
-                        <span class="btn-dd-text">Страна</span>
-                        <svg class="svg-icon svg-icon--btn-dd">
-                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
-                        </svg>
-                    </button>
-                    <div class="dd-inner row">
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Бразилия</span>
-                                    <span class="base-checkbox-country">🇧🇷</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Греция</span>
-                                    <span class="base-checkbox-country">🇬🇷</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Индия</span>
-                                    <span class="base-checkbox-country">🇮🇳</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Испания</span>
-                                    <span class="base-checkbox-country">🇪🇸</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Италия</span>
-                                    <span class="base-checkbox-country">🇮🇹</span>
-                                </label>
-                            </div>
-
-                        </div>
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Китай</span>
-                                    <span class="base-checkbox-country">🇨🇳</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Россия</span>
-                                    <span class="base-checkbox-country">🇷🇺</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Турция</span>
-                                    <span class="base-checkbox-country">🇹🇷</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Украина</span>
-                                    <span class="base-checkbox-country">🇺🇦</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Чехия</span>
-                                    <span class="base-checkbox-country">🇨🇿</span>
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-cost-dd js--dd-parent">
-                    <button class="btn--dd js--dd-btn">
-                        <span class="btn-dd-text">Цена</span>
-                        <svg class="svg-icon svg-icon--btn-dd">
-                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
-                        </svg>
-                    </button>
-                    <div class="dd-inner">
-                        <div class="dd-inner-cost row">
-                            <label class="dd-inner-cost-wrapper">
-                                <span class="dd-inner-cost-text">От</span>
-                                <input type="number" class="dd-inner-cost-input" placeholder="3000">
-                            </label>
-                            <label class="dd-inner-cost-wrapper">
-                                <span class="dd-inner-cost-text">До</span>
-                                <input type="text" class="dd-inner-cost-input" placeholder="375000">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="dd-wrapper dd-wrapper--catalog-main-nav catalog-application-dd js--dd-parent">
-                    <button class="btn--dd js--dd-btn">
-                        <span class="btn-dd-text">Применение</span>
-                        <svg class="svg-icon svg-icon--btn-dd">
-                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
-                        </svg>
-                    </button>
-                    <div class="dd-inner row">
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Входные группы</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Камины</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Лестницы</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Панно</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Плинтуса</span>
-                                </label>
-                            </div>
-
-                        </div>
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Плиты, пол</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Плиты, стены</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Подоконники</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Стены</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Столешницы</span>
-                                </label>
-                            </div>
-
-                        </div>
-                        <div class="dd-inner-col">
-
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Столешницы, барбекю</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Столешницы, кухня</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox" disabled="disabled">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Столешницы, санузел</span>
-                                </label>
-                            </div>
-
-                            <div class="dd-item">
-                                <label class="base-checkbox-wrapper">
-                                    <input type="checkbox" class="base-checkbox">
-                                    <span class="base-checkbox-fake"></span>
-                                    <span class="base-checkbox-text">Ступени</span>
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="dd-wrapper dd-wrapper--catalog-main-nav dd-wrapper--catalog-main-nav--right js--dd-parent">
-                    <button class="btn--dd js--dd-btn">
-                        <span class="btn-dd-text">А→Я Название</span>
-                        <svg class="svg-icon svg-icon--btn-dd">
-                            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#dd_arrow"></use>
-                        </svg>
-                    </button>
-                    <div class="dd-inner">
-                        <div class="dd-item">
-                            <label class="base-checkbox-wrapper">
-                                <input type="checkbox" class="base-checkbox">
-                                <span class="base-checkbox-fake"></span>
-                                <span class="base-checkbox-text">Название А→Я
-              </span>
-                            </label>
+                            <button class="btn--select js--btn-select">
+                                <span>
+              Дороже
+              <svg class="svg-icon svg-icon--btn-dd-up">
+                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#filter_up"></use>
+              </svg></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -736,8 +790,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -760,8 +814,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -784,8 +838,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -808,8 +862,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -832,8 +886,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -856,8 +910,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -880,8 +934,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -904,8 +958,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -928,8 +982,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -952,8 +1006,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -976,8 +1030,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -1000,8 +1054,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -1024,8 +1078,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -1048,8 +1102,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -1072,8 +1126,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>
@@ -1096,8 +1150,8 @@
                             <div class="catalog-item-text-block">
                                 <p class="catalog-item-name">
                                     <span class="catalog-item-country-icon">
-                    🇮🇹
-                  </span>
+                🇮🇹
+              </span>
                                     <span class="catalog-item-name">айвори</span>
                                     <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                 </p>

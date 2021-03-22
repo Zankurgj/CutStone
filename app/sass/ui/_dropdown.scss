@@ -7,6 +7,36 @@
       transform: translateY(0);
     }
   }
+  &.active {
+    .btn--dd {
+      background-color: #1d1d1d;
+      color: #fff;
+      padding: 4px 8px;
+    }
+    .svg-icon--btn-dd {
+      display: none;
+    }
+    .btn--dd-clear {
+      display: block;
+    }
+    .btn-dd-text-sep {
+      display: inline;
+    }
+  }
+  &.dd-wrapper--select {
+    .dd-inner {
+      left: auto;
+      right: 0;
+    }
+    &.active {
+      .btn--dd {
+        padding: 4px 28px 4px 8px;
+      }
+      .svg-icon--btn-dd {
+        display: block;
+      }
+    }
+  }
 }
 .btn--dd {
   position: relative;
@@ -20,6 +50,23 @@
     .svg-icon--btn-dd {
       transform: translate(0, -50%) rotate(180deg);
     }
+  }
+}
+.btn-dd-text-sep {
+  display: none;
+}
+.btn--dd-clear {
+  display: none;
+  background-color: #1d1d1d;
+  width: 28px;
+  height: 100%;
+  border-left: 1px solid #fff;
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.66041 6L11 1.66041L10.3396 1L6 5.33959L1.66041 1L1 1.66041L5.33959 6L1 10.3396L1.66041 11L6 6.66041L10.3396 11L11 10.3396L6.66041 6Z' fill='%23fff'/%3E%3C/svg%3E");
+  &:hover {
+    opacity: 0.8;
   }
 }
 .svg-icon--btn-dd {
@@ -44,7 +91,7 @@
   transition: opacity $base-duration $base-timing,
     visibility $base-duration $base-timing,
     transform $base-duration $base-timing;
-  z-index: 1;
+  z-index: 5;
 }
 .dd-item {
   display: flex;
@@ -71,11 +118,13 @@
     background-color: #1d1d1d;
     background-image: url("data:image/svg+xml,%3Csvg fill='none' height='11' viewBox='0 0 14 11' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m13.5304 1.53039-8.53034 8.53031-4.530333-4.53031 1.060663-1.06066 3.46967 3.46967 7.46964-7.469673z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
+
   &:checked + .base-checkbox-fake-color {
     &::after {
       opacity: 1;
     }
   }
+
   &:disabled + .base-checkbox-fake {
     border-color: #b3b3b3;
     cursor: default;
@@ -120,7 +169,7 @@
   vertical-align: middle;
   cursor: pointer;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -240,5 +289,13 @@
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+}
+.btn--select {
+  font-size: 14px;
+  line-height: 20px;
+  color: #1d1d1d;
+  &:hover {
+    color: #0066cc;
   }
 }

@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   clickOutsideShowViewed();
   aboutSpilerToggle();
   const initStickyCostHandler = new InitSticky();
+  const initFilter = new CatalogFilter();
+  const initSelect = new CatalogSelect();
 });
 
 class InitSticky {
@@ -388,3 +390,225 @@ const aboutSpilerToggle = () => {
     $(this).siblings(".about-base-text--feature").slideToggle(200);
   });
 };
+
+class CatalogFilter {
+  constructor() {
+    this.filterItemsArr = {
+      filterStone: [],
+      filterColor: [],
+      filterCountry: [],
+      filterUsage: [],
+    };
+    this.filterItemsInput = {
+      costStart: "",
+      costEnd: "",
+    };
+    this.checkBoxClass = ".js--filter-checkbox";
+    this.checkBoxSelectors = document.querySelectorAll(this.checkBoxClass);
+    this.inputCostSelector = document.querySelectorAll(
+      ".js--filter-cost-input"
+    );
+    this.inputInnerClass = ".js--dd-input-inner";
+    this.inputsInnerSelector = document.querySelectorAll(this.inputInnerClass);
+    this.claerFilterBtnsSelector = document.querySelectorAll(
+      ".js--dd-clear-filter"
+    );
+    this.claerFilterCostSelector = document.querySelector(
+      ".js--dd-clear-cost-filter"
+    );
+    this.clearAllFilterSelector = document.querySelector(
+      ".js--clear-all-filter"
+    );
+    this.init();
+  }
+
+  init() {
+    this.checkBoxHandler();
+    this.inputCostHandler();
+    this.clearFilterHandler();
+    this.clearFilterCostHandler();
+    this.clearAllFiltersHandler();
+  }
+
+  checkBoxHandler() {
+    for (let i = 0; i < this.checkBoxSelectors.length; i++) {
+      this.checkBoxSelectors[i].addEventListener("change", (event) => {
+        const content = event.target.value;
+        const filterId = event.target.dataset.filterId;
+
+        if (this.filterItemsArr[filterId].includes(content)) {
+          this.filterItemsArr[filterId] = this.filterItemsArr[filterId].filter(
+            (item) => item !== content
+          );
+        } else {
+          this.filterItemsArr[filterId].push(content);
+        }
+        this.changeStateItem(event.target, this.filterItemsArr[filterId]);
+      });
+    }
+  }
+
+  inputCostHandler() {
+    for (let i = 0; i < this.inputCostSelector.length; i++) {
+      this.inputCostSelector[i].addEventListener("input", (event) => {
+        const content = event.target.value;
+        const filterId = event.target.dataset.filterId;
+        const parentEl = event.target.closest(".js--dd-parent");
+        const inputInner = document.querySelector(
+          `${this.inputInnerClass}[data-filter-id="${filterId}"]`
+        );
+        inputInner.innerHTML = content;
+        this.filterItemsInput[filterId] = content;
+        this.showAllFiltersClearBtn();
+        if (content.length) {
+          parentEl.classList.add("active");
+        } else {
+          parentEl.classList.remove("active");
+        }
+      });
+    }
+  }
+
+  checkEmptyFilters() {
+    let isEmpty = true;
+    Object.keys(this.filterItemsArr).forEach((key) => {
+      if (this.filterItemsArr[key].length) {
+        isEmpty = false;
+      }
+    });
+    Object.keys(this.filterItemsInput).forEach((key) => {
+      if (this.filterItemsInput[key]) {
+        isEmpty = false;
+      }
+    });
+    return isEmpty;
+  }
+
+  changeStateItem(el, filterItem) {
+    const parentEl = el.closest(".js--dd-parent");
+    const contentEl = parentEl.querySelector(".js--dd-selected-inner");
+    const filterType = el.dataset.filterType;
+    console.log(filterItem);
+    if (filterItem.length) {
+      parentEl.classList.add("active");
+      if (filterType === "quantity") {
+        contentEl.innerHTML = filterItem.length;
+      } else {
+        contentEl.innerHTML = filterItem.join(", ");
+      }
+    } else {
+      parentEl.classList.remove("active");
+      contentEl.innerHTML = "";
+    }
+    this.showAllFiltersClearBtn();
+  }
+
+  showAllFiltersClearBtn() {
+    if (this.checkEmptyFilters()) {
+      this.clearAllFilterSelector.classList.remove("show");
+    } else {
+      this.clearAllFilterSelector.classList.add("show");
+    }
+  }
+
+  clearFilterCostHandler() {
+    this.claerFilterCostSelector.addEventListener(
+      "click",
+      this.clearFilterCost.bind(this)
+    );
+  }
+
+  clearFilterHandler() {
+    for (let i = 0; i < this.claerFilterBtnsSelector.length; i++) {
+      this.claerFilterBtnsSelector[i].addEventListener(
+        "click",
+        this.clearFilter.bind(this)
+      );
+    }
+  }
+
+  clearAllFiltersHandler() {
+    this.clearAllFilterSelector.addEventListener(
+      "click",
+      this.clearAllFilters.bind(this)
+    );
+  }
+
+  clearFilter(evt) {
+    const el = evt.target;
+    const filterItemId = el.dataset.filterId;
+    let filterItem = this.filterItemsArr[filterItemId];
+    for (let i = 0; i < filterItem.length; i++) {
+      for (let j = 0; j < this.checkBoxSelectors.length; j++) {
+        if (this.checkBoxSelectors[j].value === filterItem[i]) {
+          this.checkBoxSelectors[j].checked = false;
+        }
+      }
+    }
+    filterItem.splice(0, filterItem.length);
+    this.changeStateItem(el, filterItem);
+  }
+
+  clearAllFilters(evt) {
+    const parentEl = document.querySelectorAll(".js--dd-parent");
+    const contentEl = document.querySelectorAll(".js--dd-selected-inner");
+    const allCheckBox = this.checkBoxSelectors;
+    evt.target.classList.remove("show");
+    Object.keys(this.filterItemsArr).forEach((key) => {
+      this.filterItemsArr[key].splice(0, this.filterItemsArr[key].length);
+    });
+    for (let i = 0; i < parentEl.length; i++) {
+      parentEl[i].classList.remove("active");
+    }
+    for (let i = 0; i < contentEl.length; i++) {
+      contentEl[i].innerHTML = "";
+    }
+    for (let i = 0; i < allCheckBox.length; i++) {
+      allCheckBox[i].checked = false;
+    }
+    this.clearFilterCost();
+  }
+
+  clearFilterCost() {
+    this.claerFilterCostSelector
+      .closest(".js--dd-parent")
+      .classList.remove("active");
+    for (let i = 0; i < this.inputCostSelector.length; i++) {
+      this.inputCostSelector[i].value = "";
+    }
+    for (let i = 0; i < this.inputsInnerSelector.length; i++) {
+      this.inputsInnerSelector[i].innerHTML = "";
+    }
+    this.filterItemsInput.costStart = "";
+    this.filterItemsInput.costEnd = "";
+  }
+}
+
+class CatalogSelect {
+  constructor() {
+    this.selectItemSelectors = document.querySelectorAll(".js--btn-select");
+
+    this.init();
+  }
+
+  init() {
+    this.selectItemHandler();
+  }
+
+  selectItemHandler() {
+    for (let i = 0; i < this.selectItemSelectors.length; i++) {
+      this.selectItemSelectors[i].addEventListener("click", this.selectItem);
+    }
+  }
+
+  selectItem(evt) {
+    const parent = this.closest(".js--dd-parent");
+    const content = this.children[0];
+    const cloneEl = content.cloneNode(true);
+    const inner = parent.querySelector(".js--dd-select-inner");
+    inner.innerHTML = "";
+    inner.appendChild(cloneEl);
+    parent.classList.add("active");
+    parent.classList.remove("opened");
+  }
+}
