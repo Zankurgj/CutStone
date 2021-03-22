@@ -612,3 +612,9 @@ class CatalogSelect {
     parent.classList.remove("opened");
   }
 }
+
+const onToggleFilterPopUp = () => {
+  document.querySelector("#catalogFilterPopup").classList.toggle("show");
+  document.querySelector(".main-header").classList.toggle("hide");
+  $("body").toggleClass("body--no-scroll");
+};
