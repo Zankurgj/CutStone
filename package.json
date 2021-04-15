@@ -25,6 +25,7 @@
     "jquery": "^3.4.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "gulp-html-prettify": "0.0.1",
     "gulp-nunjucks-render": "^2.2.3",
     "inputmask": "^5.0.5",
@@ -32,7 +33,6 @@
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
     "picturefill": "^3.0.3",
-    "slick-carousel": "^1.8.1",
-    "webp-detect": "^1.0.4"
+    "slick-carousel": "^1.8.1"
   }
 }

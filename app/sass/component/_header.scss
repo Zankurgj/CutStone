@@ -31,32 +31,35 @@
   }
 }
 .main-header--animate {
-  background-color: transparent;
-  border-color: transparent;
-  transition: border-color $base-duration $base-timing,
-    background-color $base-duration $base-timing;
-  .main-header-logo,
-  .main-header-nav-item {
-    color: #fff;
-  }
-  .main-header-panel {
-    opacity: 0;
-    visibility: hidden;
-  }
-  &:hover,
-  &.animate {
-    background-color: #fff;
-    border-color: #1d1d1d;
+  @media screen and (min-width: 993px) {
+    background-color: transparent;
+    border-color: transparent;
+    transition: border-color $base-duration $base-timing,
+      background-color $base-duration $base-timing;
     .main-header-logo,
     .main-header-nav-item {
-      color: #1d1d1d;
-      &:hover {
-        color: #fff;
-      }
+      color: #fff;
     }
     .main-header-panel {
-      opacity: 1;
-      visibility: visible;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover,
+    &.animate {
+      background-color: #fff;
+      border-color: #1d1d1d;
+      .main-header-logo,
+      .main-header-nav-item {
+        color: #1d1d1d;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .main-header-panel {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
@@ -509,8 +512,10 @@
 .svg-icon--header-dropdown-link {
   width: 20px;
   height: 20px;
+  margin-bottom: 4px;
 }
 .main-header-dropdown-bg {
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -521,6 +526,11 @@
   transition: opacity $base-duration $base-timing;
   z-index: 1;
   opacity: 0;
+  img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
   &.show {
     opacity: 1;
   }

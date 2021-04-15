@@ -56,6 +56,10 @@
       transform: translate(0, -50%) rotate(180deg);
     }
   }
+  &:hover {
+    background-color: #1d1d1d;
+    color: #fff;
+  }
 }
 .btn-dd-text-sep {
   display: none;

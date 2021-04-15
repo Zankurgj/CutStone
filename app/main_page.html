@@ -258,7 +258,7 @@
             </div>
         </div>
     </header>
-    <div class="page">
+    <div class="page page--main">
 
         <main class="mp-main">
             <div class="mp-main-inner">
@@ -294,7 +294,7 @@
             </div>
         </main>
         <section class="mp-product-gallery">
-            <div class="container container--no-padding">
+            <div class="container--no-padding">
                 <a href="#" class="mp-block-title mp-block-title--padding">
                     <h2 class="h2-base">Галерея камня</h2>
                     <span class="mp-block-title-quantity">852</span>
@@ -307,10 +307,12 @@
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
-                            <img src="./images/dest/img/gal1.jpg" alt="гранит" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov1.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov1.jpeg" alt="гранит">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">гранит</span>
-                                <span class="product-gallery-item-title-quantity">298</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>
@@ -327,10 +329,12 @@
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
-                            <img src="./images/dest/img/gal2.jpg" alt="мрамор" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov2.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov2.jpeg" alt="мрамор">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">мрамор</span>
-                                <span class="product-gallery-item-title-quantity">176</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>
@@ -347,10 +351,12 @@
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
-                            <img src="./images/dest/img/gal3.jpg" alt="оникс" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov3.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov3.jpeg" alt="оникс">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">оникс</span>
-                                <span class="product-gallery-item-title-quantity">25</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>
@@ -367,10 +373,12 @@
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
-                            <img src="./images/dest/img/gal4.jpg" alt="травертин" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov4.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov4.jpeg" alt="травертин">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">травертин</span>
-                                <span class="product-gallery-item-title-quantity">38</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>
@@ -387,10 +395,12 @@
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
-                            <img src="./images/dest/img/gal5.jpg" alt="агломерат" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov5.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov5.jpeg" alt="агломерат">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">агломерат</span>
-                                <span class="product-gallery-item-title-quantity">300</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>
@@ -407,10 +417,12 @@
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
-                            <img src="./images/dest/img/gal6.jpg" alt="кварцит" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov6.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov6.jpeg" alt="кварцит">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">кварцит</span>
-                                <span class="product-gallery-item-title-quantity">15</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>
@@ -426,7 +438,7 @@
                     </div>
 
                 </div>
-                <a href="#" class="btn btn--big-black">
+                <a href="#" class="btn btn--big-black btn--big-black--arrow">
                     <span>Смотреть весь каталог
         <svg class="svg-icon svg-icon--btn--big-black">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -439,14 +451,14 @@
         <section class="mp-project">
             <div class="container">
                 <div class="mp-block-title">
-                    <h2 class="h2-base">Проекты</h2>
+                    <h2 class="h2-base h2-base--mp-project" onclick="onShowProjectPopUp('popupProject')">Проекты</h2>
                 </div>
                 <div class="row row--wrap row--mp-project-top">
 
                     <div class="mp-project-col mp-project-col--big">
                         <div class="mp-project-item mp-project-item--text">
                             <div class="mp-project-item-text-block">
-                                <p class="mp-project-item-title">БЦ «Якиманка 26»</p>
+                                <p class="mp-project-item-title" onclick="onShowProjectPopUp('popupProject')">БЦ «Якиманка 26»</p>
                                 <p class="mp-project-item-subtitle">Москва​, Большая Якиманка, 26</p>
                             </div>
                             <div class="mp-project-item-text-block">
@@ -460,23 +472,43 @@
                         </div>
                     </div>
 
-                    <div class="mp-project-col mp-project-col--big">
-                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project1.jpg');"></div>
+                    <div class="mp-project-col mp-project-col--big" onclick="onShowProjectPopUp('popupProject')">
+                        <div class="mp-project-item mp-project-item--img">
+                            <picture class="mp-project-item-img">
+                                <source srcset="./images/dest/img/project1.webp" type="image/webp">
+                                    <img src="./images/dest/img/project1.jpeg" alt="БЦ «Якиманка 26»">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="row row--mp-project-bottom js--mp-project-mobile" id="projectSlider">
 
 
-                    <div class="mp-project-col mp-project-col--small">
-                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project2.jpg');"></div>
+                    <div class="mp-project-col mp-project-col--small" onclick="onShowProjectPopUp('popupProject')">
+                        <div class="mp-project-item mp-project-item--img">
+                            <picture class="mp-project-item-img">
+                                <source srcset="./images/dest/img/project2.webp" type="image/webp">
+                                    <img src="./images/dest/img/project2.jpeg" alt="БЦ «Якиманка 26»">
+                            </picture>
+                        </div>
                     </div>
 
-                    <div class="mp-project-col mp-project-col--small">
-                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project3.jpg');"></div>
+                    <div class="mp-project-col mp-project-col--small" onclick="onShowProjectPopUp('popupProject')">
+                        <div class="mp-project-item mp-project-item--img">
+                            <picture class="mp-project-item-img">
+                                <source srcset="./images/dest/img/project3.webp" type="image/webp">
+                                    <img src="./images/dest/img/project3.jpeg" alt="БЦ «Якиманка 26»">
+                            </picture>
+                        </div>
                     </div>
 
-                    <div class="mp-project-col mp-project-col--small">
-                        <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project4.jpg');"></div>
+                    <div class="mp-project-col mp-project-col--small" onclick="onShowProjectPopUp('popupProject')">
+                        <div class="mp-project-item mp-project-item--img">
+                            <picture class="mp-project-item-img">
+                                <source srcset="./images/dest/img/project4.webp" type="image/webp">
+                                    <img src="./images/dest/img/project4.jpeg" alt="БЦ «Якиманка 26»">
+                            </picture>
+                        </div>
                     </div>
 
                 </div>
@@ -484,7 +516,7 @@
         </section>
 
         <section class="mp-product-gallery">
-            <div class="container container--no-padding">
+            <div class="container--no-padding">
                 <a href="#" class="mp-block-title mp-block-title--padding">
                     <h2 class="h2-base">Изделия</h2>
                     <svg class="svg-icon svg-icon--title-quantity">
@@ -496,10 +528,12 @@
 
                     <div class="product-gallery-col">
                         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-                            <img src="./images/dest/img/gal7.jpg" alt="стены" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/gal7.webp" type="image/webp">
+                                    <img src="./images/dest/img/gal7.jpeg" alt="стены">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">стены</span>
-                                <span class="product-gallery-item-title-quantity">298</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -513,10 +547,12 @@
 
                     <div class="product-gallery-col">
                         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-                            <img src="./images/dest/img/gal8.jpg" alt="лестницы" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/gal8.webp" type="image/webp">
+                                    <img src="./images/dest/img/gal8.jpeg" alt="лестницы">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">лестницы</span>
-                                <span class="product-gallery-item-title-quantity">176</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -530,10 +566,12 @@
 
                     <div class="product-gallery-col">
                         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-                            <img src="./images/dest/img/gal9.jpg" alt="камины" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/gal9.webp" type="image/webp">
+                                    <img src="./images/dest/img/gal9.jpeg" alt="камины">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">камины</span>
-                                <span class="product-gallery-item-title-quantity">25</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -547,10 +585,12 @@
 
                     <div class="product-gallery-col">
                         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-                            <img src="./images/dest/img/gal10.jpg" alt="подоконники" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/gal10.webp" type="image/webp">
+                                    <img src="./images/dest/img/gal10.jpeg" alt="подоконники">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">подоконники</span>
-                                <span class="product-gallery-item-title-quantity">38</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -564,10 +604,12 @@
 
                     <div class="product-gallery-col">
                         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-                            <img src="./images/dest/img/gal11.jpg" alt="полы" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/gal11.webp" type="image/webp">
+                                    <img src="./images/dest/img/gal11.jpeg" alt="полы">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">полы</span>
-                                <span class="product-gallery-item-title-quantity">300</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -581,10 +623,12 @@
 
                     <div class="product-gallery-col">
                         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-                            <img src="./images/dest/img/gal12.jpg" alt="столешницы" class="product-gallery-item-img">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/gal12.webp" type="image/webp">
+                                    <img src="./images/dest/img/gal12.jpeg" alt="столешницы">
+                            </picture>
                             <p class="product-gallery-item-title">
                                 <span class="product-gallery-item-name">столешницы</span>
-                                <span class="product-gallery-item-title-quantity">15</span>
                                 <br>
                                 <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -597,7 +641,7 @@
                     </div>
 
                 </div>
-                <a href="#" class="btn btn--big-black">
+                <a href="#" class="btn btn--big-black btn--big-black--arrow">
                     <span>Смотреть весь каталог
         <svg class="svg-icon svg-icon--btn--big-black">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -655,10 +699,10 @@
                                         <br>Эффект монолитного изделия за счёт сохранения рисунка
                                     </p>
                                     <div class="mp-pricin-item-btn-block">
-                                        <button class="btn--border btn--mp-pricin-item">
+                                        <button class="btn--border btn--mp-pricin-item" onclick="onToggleExample('popupCalculationExample', 'example1')">
                                             <span>Расчёт столешницы 2 см</span>
                                         </button>
-                                        <button class="btn--border">
+                                        <button class="btn--border" onclick="onToggleExample('popupCalculationExample', 'example2')">
                                             <span>Расчёт столешницы 3 см</span>
                                         </button>
                                     </div>
@@ -706,10 +750,10 @@
                                         <br>Эффект монолитного изделия за счёт сохранения рисунка
                                     </p>
                                     <div class="mp-pricin-item-btn-block">
-                                        <button class="btn--border btn--mp-pricin-item">
+                                        <button class="btn--border btn--mp-pricin-item" onclick="onToggleExample('popupCalculationExample', 'example1')">
                                             <span>Расчёт столешницы 2 см</span>
                                         </button>
-                                        <button class="btn--border">
+                                        <button class="btn--border" onclick="onToggleExample('popupCalculationExample', 'example2')">
                                             <span>Расчёт столешницы 3 см</span>
                                         </button>
                                     </div>
@@ -757,10 +801,10 @@
                                         <br>Эффект монолитного изделия за счёт сохранения рисунка
                                     </p>
                                     <div class="mp-pricin-item-btn-block">
-                                        <button class="btn--border btn--mp-pricin-item">
+                                        <button class="btn--border btn--mp-pricin-item" onclick="onToggleExample('popupCalculationExample', 'example1')">
                                             <span>Расчёт столешницы 2 см</span>
                                         </button>
-                                        <button class="btn--border">
+                                        <button class="btn--border" onclick="onToggleExample('popupCalculationExample', 'example2')">
                                             <span>Расчёт столешницы 3 см</span>
                                         </button>
                                     </div>
@@ -808,10 +852,10 @@
                                         <br>Эффект монолитного изделия за счёт сохранения рисунка
                                     </p>
                                     <div class="mp-pricin-item-btn-block">
-                                        <button class="btn--border btn--mp-pricin-item">
+                                        <button class="btn--border btn--mp-pricin-item" onclick="onToggleExample('popupCalculationExample', 'example1')">
                                             <span>Расчёт столешницы 2 см</span>
                                         </button>
-                                        <button class="btn--border">
+                                        <button class="btn--border" onclick="onToggleExample('popupCalculationExample', 'example2')">
                                             <span>Расчёт столешницы 3 см</span>
                                         </button>
                                     </div>
@@ -1493,6 +1537,106 @@
                         </button>
                     </div>
                 </form>
+            </div>
+            <div class="popup-wrapper popup-wrapper--animate" id="popupCalculationExample">
+                <div class="popup-overlay" onclick="onTogglePopUp('popupCalculationExample')"></div>
+                <div class="calculation-example-img-inner">
+
+
+                    <picture class="calculation-example-img js--example-img show" id="example1">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Столешница, 2 см">
+                    </picture>
+
+                    <picture class="calculation-example-img js--example-img " id="example2">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Столешница, 3 см">
+                    </picture>
+
+                    <picture class="calculation-example-img js--example-img " id="example3">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Камин">
+                    </picture>
+
+                    <picture class="calculation-example-img js--example-img " id="example4">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Подоконник">
+                    </picture>
+
+                    <picture class="calculation-example-img js--example-img " id="example5">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Пол">
+                    </picture>
+
+                    <picture class="calculation-example-img js--example-img " id="example6">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Стена">
+                    </picture>
+
+                    <picture class="calculation-example-img js--example-img " id="example7">
+                        <source srcset="./images/dest/img/example1.webp" type="image/webp">
+                            <img src="./images/dest/img/example1.jpeg" alt="Лестница">
+                    </picture>
+
+                </div>
+                <div class="calculation-example-popup popup-right popup-right-animate container container--no-padding">
+                    <div class="base-popup-head">
+                        <p class="base-popup-head-title">Пример расчёта</p>
+                        <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupCalculationExample')" type="button">
+                            <span class="visually-hidden">закрыть</span>
+                            <svg class="svg-icon svg-icon--btn--popup-close">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="base-popup-inner base-popup-inner--scroll">
+
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example1">
+                            <span class="calculation-example-item-text">Столешница, 2 см</span>
+                        </label>
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example2">
+                            <span class="calculation-example-item-text">Столешница, 3 см</span>
+                        </label>
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example3">
+                            <span class="calculation-example-item-text">Камин</span>
+                        </label>
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example4">
+                            <span class="calculation-example-item-text">Подоконник</span>
+                        </label>
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example5">
+                            <span class="calculation-example-item-text">Пол</span>
+                        </label>
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example6">
+                            <span class="calculation-example-item-text">Стена</span>
+                        </label>
+
+                        <label class="calculation-example-item">
+                            <input type="radio" class="calculation-example-item-input js--example-tab-input" name="calculation-example" data-tab-id="example7">
+                            <span class="calculation-example-item-text">Лестница</span>
+                        </label>
+
+                    </div>
+                    <div class="base-popup-bts-bottom">
+                        <button class="btn--main btn--main-arrow" type="submit">
+                            <span>Заказать расчёт</span>
+                            <svg class="svg-icon svg-icon--btn--main-arrow">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
 
             </div>

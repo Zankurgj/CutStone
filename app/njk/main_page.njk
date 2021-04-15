@@ -1,4 +1,5 @@
 {% set headerAnimate = true %}
+{% set pageClass= 'page--main' %}
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
 <main class="mp-main">
@@ -37,7 +38,7 @@
   </div>
 </main>
 <section class="mp-product-gallery">
-  <div class="container container--no-padding">
+  <div class="container--no-padding">
     <a href="#" class="mp-block-title mp-block-title--padding">
       <h2 class="h2-base">Галерея камня</h2>
       <span class="mp-block-title-quantity">852</span>
@@ -50,37 +51,39 @@
       {
       text: 'гранит',
       quantity: '298',
-      img: 'gal1.jpg'
+      img: 'menu_hov1'
       }, {
       text: 'мрамор',
       quantity: '176',
-      img: 'gal2.jpg'
+      img: 'menu_hov2'
       }, {
       text: 'оникс',
       quantity: '25',
-      img: 'gal3.jpg'
+      img: 'menu_hov3'
       }, {
       text: 'травертин',
       quantity: '38',
-      img: 'gal4.jpg'
+      img: 'menu_hov4'
       }, {
       text: 'агломерат',
       quantity: '300',
-      img: 'gal5.jpg'
+      img: 'menu_hov5'
       }, {
       text: 'кварцит',
       quantity: '15',
-      img: 'gal6.jpg'
+      img: 'menu_hov6'
       }
       ]
       %}
       {% for productItem in productItems %}
       <div class="product-gallery-col">
         <a href="#" class="product-gallery-item">
-          <img src="./images/dest/img/{{productItem.img}}" alt="{{productItem.text}}" class="product-gallery-item-img">
+          <picture class="product-gallery-item-img">
+            <source srcset="./images/dest/img/menu/{{productItem.img}}.webp" type="image/webp">
+            <img src="./images/dest/img/menu/{{productItem.img}}.jpeg" alt="{{productItem.text}}">
+          </picture>
           <p class="product-gallery-item-title">
             <span class="product-gallery-item-name">{{productItem.text}}</span>
-            <span class="product-gallery-item-title-quantity">{{productItem.quantity}}</span>
             <br>
             <span class="product-gallery-item-link">
               <span>
@@ -96,7 +99,7 @@
       </div>
       {% endfor %}
     </div>
-    <a href="#" class="btn btn--big-black">
+    <a href="#" class="btn btn--big-black btn--big-black--arrow">
       <span>Смотреть весь каталог
         <svg class="svg-icon svg-icon--btn--big-black">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -109,14 +112,14 @@
 <section class="mp-project">
   <div class="container">
     <div class="mp-block-title">
-      <h2 class="h2-base">Проекты</h2>
+      <h2 class="h2-base h2-base--mp-project" onclick="onShowProjectPopUp('popupProject')">Проекты</h2>
     </div>
     <div class="row row--wrap row--mp-project-top">
 
       <div class="mp-project-col mp-project-col--big">
         <div class="mp-project-item mp-project-item--text">
           <div class="mp-project-item-text-block">
-            <p class="mp-project-item-title">БЦ «Якиманка 26»</p>
+            <p class="mp-project-item-title" onclick="onShowProjectPopUp('popupProject')">БЦ «Якиманка 26»</p>
             <p class="mp-project-item-subtitle">Москва​, Большая Якиманка, 26</p>
           </div>
           <div class="mp-project-item-text-block">
@@ -130,26 +133,34 @@
         </div>
       </div>
 
-      <div class="mp-project-col mp-project-col--big">
-        <div class="mp-project-item mp-project-item--img"
-          style="background-image: url('./images/dest/img/project1.jpg');"></div>
+      <div class="mp-project-col mp-project-col--big" onclick="onShowProjectPopUp('popupProject')">
+        <div class="mp-project-item mp-project-item--img">
+          <picture class="mp-project-item-img">
+            <source srcset="./images/dest/img/project1.webp" type="image/webp">
+            <img src="./images/dest/img/project1.jpeg" alt="БЦ «Якиманка 26»">
+          </picture>
+        </div>
       </div>
     </div>
     <div class="row row--mp-project-bottom js--mp-project-mobile" id="projectSlider">
       {% set projectItems = [
       {
-      img: 'project2.jpg'
+      img: 'project2'
       }, {
-      img: 'project3.jpg'
+      img: 'project3'
       }, {
-      img: 'project4.jpg'
+      img: 'project4'
       }
       ]
       %}
       {% for projectItem in projectItems %}
-      <div class="mp-project-col mp-project-col--small">
-        <div class="mp-project-item mp-project-item--img"
-          style="background-image: url('./images/dest/img/{{projectItem.img}}');"></div>
+      <div class="mp-project-col mp-project-col--small" onclick="onShowProjectPopUp('popupProject')">
+        <div class="mp-project-item mp-project-item--img">
+          <picture class="mp-project-item-img">
+            <source srcset="./images/dest/img/{{projectItem.img}}.webp" type="image/webp">
+            <img src="./images/dest/img/{{projectItem.img}}.jpeg" alt="БЦ «Якиманка 26»">
+          </picture>
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -157,7 +168,7 @@
 </section>
 
 <section class="mp-product-gallery">
-  <div class="container container--no-padding">
+  <div class="container--no-padding">
     <a href="#" class="mp-block-title mp-block-title--padding">
       <h2 class="h2-base">Изделия</h2>
       <svg class="svg-icon svg-icon--title-quantity">
@@ -169,37 +180,39 @@
       {
       text: 'стены',
       quantity: '298',
-      img: 'gal7.jpg'
+      img: 'gal7'
       }, {
       text: 'лестницы',
       quantity: '176',
-      img: 'gal8.jpg'
+      img: 'gal8'
       }, {
       text: 'камины',
       quantity: '25',
-      img: 'gal9.jpg'
+      img: 'gal9'
       }, {
       text: 'подоконники',
       quantity: '38',
-      img: 'gal10.jpg'
+      img: 'gal10'
       }, {
       text: 'полы',
       quantity: '300',
-      img: 'gal11.jpg'
+      img: 'gal11'
       }, {
       text: 'столешницы',
       quantity: '15',
-      img: 'gal12.jpg'
+      img: 'gal12'
       }
       ]
       %}
       {% for productItem in productItems %}
       <div class="product-gallery-col">
         <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-          <img src="./images/dest/img/{{productItem.img}}" alt="{{productItem.text}}" class="product-gallery-item-img">
+          <picture class="product-gallery-item-img">
+            <source srcset="./images/dest/img/{{productItem.img}}.webp" type="image/webp">
+            <img src="./images/dest/img/{{productItem.img}}.jpeg" alt="{{productItem.text}}">
+          </picture>
           <p class="product-gallery-item-title">
             <span class="product-gallery-item-name">{{productItem.text}}</span>
-            <span class="product-gallery-item-title-quantity">{{productItem.quantity}}</span>
             <br>
             <span class="product-gallery-item-link">
               <span>просмотреть портфолио</span>
@@ -212,7 +225,7 @@
       </div>
       {% endfor %}
     </div>
-    <a href="#" class="btn btn--big-black">
+    <a href="#" class="btn btn--big-black btn--big-black--arrow">
       <span>Смотреть весь каталог
         <svg class="svg-icon svg-icon--btn--big-black">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -276,10 +289,11 @@
                 Эффект монолитного изделия за счёт сохранения рисунка
               </p>
               <div class="mp-pricin-item-btn-block">
-                <button class="btn--border btn--mp-pricin-item">
+                <button class="btn--border btn--mp-pricin-item"
+                  onclick="onToggleExample('popupCalculationExample', 'example1')">
                   <span>Расчёт столешницы 2 см</span>
                 </button>
-                <button class="btn--border">
+                <button class="btn--border" onclick="onToggleExample('popupCalculationExample', 'example2')">
                   <span>Расчёт столешницы 3 см</span>
                 </button>
               </div>
@@ -346,4 +360,5 @@
 {% include "app/njk/parts/popup_slab.njk" %}
 {% include "app/njk/parts/popup_profile_option.njk" %}
 {% include "app/njk/parts/popup_calculation_order.njk" %}
+{% include "app/njk/parts/popup_calculation_example.njk" %}
 {% endblock %}

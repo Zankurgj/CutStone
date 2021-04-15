@@ -1,10 +1,14 @@
+.page--main {
+  padding: 0;
+  @media screen and (max-width: $mobile-bp) {
+    padding-top: 56px;
+  }
+}
 .mp-main {
   position: relative;
   padding-top: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../images/dest/img/main-bg.jpg");
-  margin-top: -49px;
   margin-bottom: 160px;
   @media screen and (max-width: $mobile-bp) {
     padding-top: 0;
@@ -12,6 +16,12 @@
     background-image: url("../images/dest/img/mp-main-mob.jpg");
     margin-bottom: 80px;
   }
+}
+.no-webp .mp-main {
+  background-image: url("../images/dest/img/main-bg.jpeg");
+}
+.webp .mp-main {
+  background-image: url("../images/dest/img/main-bg.webp");
 }
 .mp-main--sroll-animate {
   .main-header-logo {
@@ -227,6 +237,7 @@
 }
 .product-gallery-item-link {
   font-size: 16px;
+  font-weight: normal;
   line-height: 19px;
   letter-spacing: 0.03em;
   color: #ffffff;
@@ -237,23 +248,37 @@
 .svg-icon--product-gallery-item-link {
   width: 12px;
   height: 12px;
+  margin-bottom: 2px;
 }
 .product-gallery-item-img {
+  display: flex;
   position: absolute;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  min-height: 100%;
-  min-width: 100%;
   transform: translate(-50%, -50%) scale(1.2);
-  object-fit: cover;
   transition: transform $base-duration $base-timing,
     opacity $base-duration $base-timing;
+  img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
 }
 
 .mp-project {
   margin-bottom: 160px;
+  overflow: hidden;
   @media screen and (max-width: $mobile-bp) {
     margin-bottom: 80px;
+  }
+}
+.h2-base--mp-project {
+  cursor: pointer;
+  transition: color $base-duration $base-timing;
+  &:hover {
+    color: rgba($color: #1d1d1d, $alpha: 0.8);
   }
 }
 .row--mp-project-top {
@@ -275,35 +300,65 @@
   }
 }
 .mp-project-col--small {
-  max-width: calc(100% / 3);
-  flex-basis: calc(100% / 3);
+  max-width: calc((100% - 4px * 2) / 3);
+  flex-basis: calc((100% - 4px * 2) / 3);
+  margin-right: 4px;
+  margin-bottom: 4px;
+  &:last-child {
+    margin-right: 0;
+  }
   @media screen and (max-width: $mobile-bp) {
     max-width: 100%;
     flex-basis: auto;
     padding: 0 5px;
   }
   .mp-project-item--img {
-    padding-bottom: 65%;
+    padding-bottom: 56%;
   }
 }
-
+.mp-project-col {
+  &:hover {
+    .mp-project-item-img {
+      cursor: pointer;
+      transform: translate3d(0, 0, 0) scale(1.2);
+    }
+  }
+}
 .mp-project-col--big {
-  max-width: calc(100% / 2);
-  flex-basis: calc(100% / 2);
+  max-width: calc((100% - 4px) / 2);
+  flex-basis: calc((100% - 4px) / 2);
+  margin-right: 4px;
+  margin-bottom: 4px;
   .mp-project-item--img {
-    padding-bottom: 65%;
+    padding-bottom: 56%;
   }
   @media screen and (max-width: $mobile-bp) {
     max-width: 100%;
     flex-basis: 100%;
   }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .mp-project-item--img {
   position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
+}
+.mp-project-item-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.4s $base-timing;
+  img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
 }
 .mp-project-item-text-block {
   margin-bottom: 32px;
@@ -313,6 +368,11 @@
   font-size: 44px;
   line-height: 53px;
   color: #1d1d1d;
+  transition: color $base-duration $base-timing;
+  cursor: pointer;
+  &:hover {
+    color: rgba($color: #1d1d1d, $alpha: 0.8);
+  }
   @media screen and (max-width: $mobile-bp) {
     font-size: 36px;
     line-height: 44px;
@@ -413,29 +473,45 @@
     flex-direction: column-reverse;
   }
 }
+.mp-pricing-inner {
+  margin-bottom: 24px;
+}
 .mp-pricin-item {
   position: relative;
-  height: 86px;
+  height: 102px;
+  padding: 24px 0;
   overflow: hidden;
-  margin-bottom: 24px;
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
     height: 1px;
     width: 50%;
     background-color: #1d1d1d;
-    transition: width $base-duration $base-timing;
     @media screen and (max-width: $mobile-bp) {
       width: 100%;
     }
   }
+  &::before {
+    top: -1px;
+  }
+  &::after {
+    bottom: 0;
+  }
+  &:first-child {
+    &::before {
+      display: none;
+    }
+  }
 }
 .mp-pricin-item--opened {
+  overflow: unset;
   height: auto;
+  &::before,
   &::after {
     width: 100%;
+    transition: width $base-duration $base-timing;
   }
   .mp-pricin-item-info,
   .mp-pricin-item-col--img {

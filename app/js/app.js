@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   clickOutsideShowViewed();
   aboutSpilerToggle();
   headerAnimateHandler();
+  catalogSearchHandler();
+  examplePopupTab();
+  examplePopupImgHandler();
   const initStickyCostHandler = new InitSticky();
   const initFilter = new CatalogFilter();
   const initSelect = new CatalogSelect();
@@ -466,8 +469,19 @@ class CatalogFilter {
         const inputInner = document.querySelector(
           `${this.inputInnerClass}[data-filter-id="${filterId}"]`
         );
+        const inputStart = document.querySelector(
+          `.js--filter-cost-input[data-filter-id="costStart"]`
+        );
+        const inputInnerStart = document.querySelector(
+          `${this.inputInnerClass}[data-filter-id="costStart"]`
+        );
+
         inputInner.innerHTML = content;
         this.filterItemsInput[filterId] = content;
+        if (!inputStart.value && filterId === "costEnd") {
+          inputInnerStart.innerHTML = 0;
+          this.filterItemsInput.costStart = 0;
+        }
         this.showAllFiltersClearBtn();
         if (content.length) {
           parentEl.classList.add("active");
@@ -643,4 +657,77 @@ const headerAnimateHandler = () => {
     checkWindowScroll();
     $(window).scroll(checkWindowScroll);
   }
+};
+
+const catalogSearchHandler = () => {
+  const input = document.querySelector(".js--seacrh-input");
+  const wrapper = document.querySelector(".js--seacrh-input-wrapper");
+  if (!input) {
+    return;
+  }
+  input.oninput = (e) => {
+    const val = e.target.value;
+    if (val.length >= 3) {
+      wrapper.classList.add("opened");
+    } else {
+      wrapper.classList.remove("opened");
+    }
+  };
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest($(".js--seacrh-input-wrapper.opened")).length) {
+      $(".js--seacrh-input-wrapper.opened").removeClass("opened");
+    }
+  });
+};
+
+const examplePopupTab = () => {
+  $(".js--example-tab-input").on("change", function (event) {
+    const widthScreen = $(window).width();
+    const element = $(event.target);
+    const activeItem = $(`#${element.data("tab-id")}`);
+    const prevActive = $(".js--example-img.show");
+    if (widthScreen > "992") {
+      prevActive.removeClass("show");
+      activeItem.addClass("show");
+    } else {
+      const imgSrc = $(activeItem).children("img").attr("src");
+      const imgSrcWP = $(activeItem)
+        .children("source[type='image/webp']")
+        .attr("srcset");
+      examplePopupImgFancyOpen(imgSrc, imgSrcWP);
+    }
+  });
+};
+
+const onToggleExample = (id, tabId) => {
+  onTogglePopUp(id);
+  const allInput = document.querySelectorAll(".js--example-tab-input");
+  const activeInput = document.querySelector(`[data-tab-id=${tabId}]`);
+  const activeTab = document.querySelector(`#${tabId}`);
+  const prevActive = document.querySelector(".js--example-img.show");
+
+  for (let i = 0; i < allInput.length; i++) {
+    allInput[i].checked = false;
+  }
+  activeInput.checked = true;
+  prevActive.classList.remove("show");
+  activeTab.classList.add("show");
+};
+const examplePopupImgHandler = () => {
+  $(".js--example-img").on("click", function () {
+    const imgSrc = $(this).children("img").attr("src");
+    const imgSrcWP = $(this)
+      .children("source[type='image/webp']")
+      .attr("srcset");
+    examplePopupImgFancyOpen(imgSrc, imgSrcWP);
+  });
+};
+
+const examplePopupImgFancyOpen = (src, webP) => {
+  $.fancybox.open(
+    `<picture class="calculation-fancy-example-img">
+      <source srcset="${webP}" type="image/webp">
+      <img src="${src}">
+    </picture>`
+  );
 };

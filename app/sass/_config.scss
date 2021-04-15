@@ -2,6 +2,15 @@
 @import "node_modules/bootstrap/scss/bootstrap-reboot.scss";
 @import "node_modules/slick-carousel/slick/slick.scss";
 @import "node_modules/jquery-ui-dist/jquery-ui";
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@import "node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
 
 // USER VARIABLES SECTION
 

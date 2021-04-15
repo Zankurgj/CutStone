@@ -1,0 +1,59 @@
+<div class="popup-wrapper popup-wrapper--animate" id="popupCalculationExample">
+    <div class="popup-overlay" onclick="onTogglePopUp('popupCalculationExample')"></div>
+    <div class="calculation-example-img-inner">
+        {% set exampleListImg = [
+        ['Столешница, 2 см', '1'],
+        ['Столешница, 3 см', '2'],
+        ['Камин', '3'],
+        ['Подоконник', '4'],
+        ['Пол', '5'],
+        ['Стена', '6'],
+        ['Лестница', '7']
+        ] %}
+        {% for name, id in exampleListImg %}
+        <picture class="calculation-example-img js--example-img {% if loop.index=='1' %}show{% endif %}"
+            id="example{{id}}">
+            <source srcset="./images/dest/img/example1.webp" type="image/webp">
+            <img src="./images/dest/img/example1.jpeg" alt="{{name}}">
+        </picture>
+        {% endfor %}
+    </div>
+    <div class="calculation-example-popup popup-right popup-right-animate container container--no-padding">
+        <div class="base-popup-head">
+            <p class="base-popup-head-title">Пример расчёта</p>
+            <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupCalculationExample')"
+                type="button">
+                <span class="visually-hidden">закрыть</span>
+                <svg class="svg-icon svg-icon--btn--popup-close">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="base-popup-inner base-popup-inner--scroll">
+            {% set exampleList = [
+            ['Столешница, 2 см', '1'],
+            ['Столешница, 3 см', '2'],
+            ['Камин', '3'],
+            ['Подоконник', '4'],
+            ['Пол', '5'],
+            ['Стена', '6'],
+            ['Лестница', '7']
+            ] %}
+            {% for name, id in exampleList %}
+            <label class="calculation-example-item">
+                <input type="radio" class="calculation-example-item-input js--example-tab-input"
+                    name="calculation-example" data-tab-id="example{{id}}">
+                <span class="calculation-example-item-text">{{name}}</span>
+            </label>
+            {% endfor %}
+        </div>
+        <div class="base-popup-bts-bottom">
+            <button class="btn--main btn--main-arrow" type="submit">
+                <span>Заказать расчёт</span>
+                <svg class="svg-icon svg-icon--btn--main-arrow">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

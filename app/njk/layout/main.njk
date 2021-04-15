@@ -11,7 +11,7 @@
 
 <body>
   {% include "../parts/header.njk" %}
-  <div class="page">
+  <div class="page {{pageClass}}">
     {% block content %}{% endblock %}
   </div>
   {% include "../parts/footer.njk" %}

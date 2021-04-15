@@ -14,10 +14,10 @@
           Разновидностей:
           <span class="catalog-title-quantity">16</span>
         </p>
-        <form class="catalog-search-form">
+        <form class="catalog-search-form js--seacrh-input-wrapper">
           <label class="catalog-search-input-wrapper">
             <span class="visually-hidden">Поиск</span>
-            <input type="text" class="catalog-search-input" placeholder="Поиск">
+            <input type="text" class="catalog-search-input js--seacrh-input" placeholder="Поиск">
           </label>
           <button class="btn--catalog-search">
             <span class="visually-hidden">Искать</span>
@@ -25,6 +25,23 @@
               <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_search"></use>
             </svg>
           </button>
+          <div class="catalog-search-inner">
+            {% for i in range(0, 10) %}
+            <a href="#" class="catalog-search-item">
+              <div class="catalog-search-col-img">
+                <picture class="catalog-search-img">
+                  <source srcset="./images/dest/img/seacrh_img.webp" type="image/webp">
+                  <img src="./images/dest/img/seacrh_img.png" alt="гранит">
+                </picture>
+              </div>
+              <div class="catalog-search-col-text">
+                <p class="catalog-search-title">гранит</p>
+                <p class="catalog-search-name">Абролиос <span class="catalog-search-name-gray">Abrolius</span>
+                </p>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
         </form>
       </div>
     </div>

@@ -1,6 +1,6 @@
 button,
 .btn,
-input[type='submit'] {
+input[type="submit"] {
   display: inline-block;
   background-color: transparent;
   border-style: none;
@@ -30,13 +30,22 @@ input[type='submit'] {
   }
   &:disabled {
     color: #fff;
-    background-color: #B3B3B3;
+    background-color: #b3b3b3;
+  }
+}
+.btn--main-arrow {
+  &:hover {
+    .svg-icon--btn--main-arrow {
+      transform: translateX(20%);
+    }
   }
 }
 .svg-icon--btn--main-arrow {
   width: 10px;
   height: 10px;
   margin-left: 4px;
+  margin-bottom: 2px;
+  transition: transform $base-duration $base-timing;
 }
 .btn--main--big {
   font-size: 16px;
@@ -73,9 +82,18 @@ input[type='submit'] {
     color: #fff;
   }
 }
+.btn--big-black--arrow {
+  &:hover {
+    .svg-icon--btn--big-black {
+      transform: translateX(20%);
+    }
+  }
+}
 .svg-icon--btn--big-black {
   width: 12px;
   height: 12px;
+  margin-bottom: 4px;
+  transition: transform $base-duration $base-timing;
 }
 .btn-arrowed {
   font-weight: bold;
@@ -114,6 +132,7 @@ input[type='submit'] {
   width: 10px;
   height: 10px;
   margin-left: 4px;
+  margin-bottom: 2px;
 }
 .btn--link {
   color: #1d1d1d;
