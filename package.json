@@ -31,6 +31,8 @@
     "jquery-sticky": "^1.0.4",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
-    "slick-carousel": "^1.8.1"
+    "picturefill": "^3.0.3",
+    "slick-carousel": "^1.8.1",
+    "webp-detect": "^1.0.4"
   }
 }

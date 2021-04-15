@@ -1,342 +1,349 @@
+{% set headerAnimate = true %}
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
-  <main class="mp-main">
-    <div class="mp-main-inner">
-      <div class="mp-main-mobile">
-        <p class="mp-main-mobile-title">Мы знаем камень</p>
-        <p class="mp-main-mobile-subtitle">
-          Любых размеров и форм.
-          <br>
-          Так, как нужно вам.
-        </p>
-        <a href="#" class="btn btn--white">
-          Посмотреть каталог
-          <svg class="svg-icon svg-icon--mp-main-left-btn">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="mp-main-left">
-        <p class="mp-main-left-title">
-          Любых размеров и форм.
-          <br>
-          Так, как нужно вам.
-        </p>
-        <a href="#" class="btn btn--white btn--white--mp-main-left">
-          Посмотреть каталог
-          <svg class="svg-icon svg-icon--mp-main-left-btn">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="mp-main-right">
-        <img src="./images/dest/img/stone-text.svg" alt="stone" class="mp-main-right-title-img">
-        <p class="mp-main-right-title">Мы знаем камень</p>
-      </div>
-    </div>
-  </main>
-  <section class="mp-product-gallery">
-    <div class="container container--no-padding">
-      <a href="#" class="mp-block-title mp-block-title--padding">
-        <h2 class="h2-base">Галерея камня</h2>
-        <span class="mp-block-title-quantity">852</span>
-        <svg class="svg-icon svg-icon--title-quantity">
-          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
-        </svg>
-      </a>
-      <div class="row row--wrap row--gal-hover">
-        {% set productItems = [
-          {
-            text: 'гранит',
-            quantity: '298',
-            img: 'gal1.jpg'
-          }, {
-            text: 'мрамор',
-            quantity: '176',
-            img: 'gal2.jpg'
-          }, {
-            text: 'оникс',
-            quantity: '25',
-            img: 'gal3.jpg'
-          }, {
-            text: 'травертин',
-            quantity: '38',
-            img: 'gal4.jpg'
-          }, {
-            text: 'агломерат',
-            quantity: '300',
-            img: 'gal5.jpg'
-          }, {
-            text: 'кварцит',
-            quantity: '15',
-            img: 'gal6.jpg'
-          }
-        ]
- %}
-        {% for productItem in productItems %}
-          <div class="product-gallery-col">
-            <a href="#" class="product-gallery-item">
-              <img src="./images/dest/img/{{productItem.img}}" alt="{{productItem.text}}" class="product-gallery-item-img">
-              <p class="product-gallery-item-title">
-                <span class="product-gallery-item-name">{{productItem.text}}</span>
-                <span class="product-gallery-item-title-quantity">{{productItem.quantity}}</span>
-                <br>
-                <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    {{productItem.text}}a
-                  </span>
-                  <svg class="svg-icon svg-icon--product-gallery-item-link">
-                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                  </svg>
-                </span>
-              </p>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-      <a href="#" class="btn btn--big-black">
-        <span>Смотреть весь каталог
-          <svg class="svg-icon svg-icon--btn--big-black">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </section>
-
-  <section class="mp-project">
-    <div class="container">
-      <div class="mp-block-title">
-        <h2 class="h2-base">Проекты</h2>
-      </div>
-      <div class="row row--wrap row--mp-project-top">
-
-        <div class="mp-project-col mp-project-col--big">
-          <div class="mp-project-item mp-project-item--text">
-            <div class="mp-project-item-text-block">
-              <p class="mp-project-item-title">БЦ «Якиманка 26»</p>
-              <p class="mp-project-item-subtitle">Москва​, Большая Якиманка, 26</p>
-            </div>
-            <div class="mp-project-item-text-block">
-              <p class="mp-project-item-subtitle">Пилоны</p>
-              <p class="mp-project-item-text">Португальский песчаник Мока Крем</p>
-            </div>
-            <div class="mp-project-item-text-block">
-              <p class="mp-project-item-subtitle">Общий объём работ</p>
-              <p class="mp-project-item-text">~ 1500 м2</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mp-project-col mp-project-col--big">
-          <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/project1.jpg');"></div>
-        </div>
-      </div>
-      <div class="row row--mp-project-bottom js--mp-project-mobile" id="projectSlider">
-        {% set projectItems = [
-          {
-            img: 'project2.jpg'
-          }, {
-            img: 'project3.jpg'
-          }, {
-            img: 'project4.jpg'
-          }
-        ]
- %}
-        {% for projectItem in projectItems %}
-          <div class="mp-project-col mp-project-col--small">
-            <div class="mp-project-item mp-project-item--img" style="background-image: url('./images/dest/img/{{projectItem.img}}');"></div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="mp-product-gallery">
-    <div class="container container--no-padding">
-      <a href="#" class="mp-block-title mp-block-title--padding">
-        <h2 class="h2-base">Изделия</h2>
-        <svg class="svg-icon svg-icon--title-quantity">
-          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
-        </svg>
-      </a>
-      <div class="row row--wrap row--gal-hover">
-        {% set productItems = [
-          {
-            text: 'стены',
-            quantity: '298',
-            img: 'gal7.jpg'
-          }, {
-            text: 'лестницы',
-            quantity: '176',
-            img: 'gal8.jpg'
-          }, {
-            text: 'камины',
-            quantity: '25',
-            img: 'gal9.jpg'
-          }, {
-            text: 'подоконники',
-            quantity: '38',
-            img: 'gal10.jpg'
-          }, {
-            text: 'полы',
-            quantity: '300',
-            img: 'gal11.jpg'
-          }, {
-            text: 'столешницы',
-            quantity: '15',
-            img: 'gal12.jpg'
-          }
-        ]
- %}
-        {% for productItem in productItems %}
-          <div class="product-gallery-col">
-            <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
-              <img src="./images/dest/img/{{productItem.img}}" alt="{{productItem.text}}" class="product-gallery-item-img">
-              <p class="product-gallery-item-title">
-                <span class="product-gallery-item-name">{{productItem.text}}</span>
-                <span class="product-gallery-item-title-quantity">{{productItem.quantity}}</span>
-                <br>
-                <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
-                  <svg class="svg-icon svg-icon--product-gallery-item-link">
-                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                  </svg>
-                </span>
-              </p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-      <a href="#" class="btn btn--big-black">
-        <span>Смотреть весь каталог
-          <svg class="svg-icon svg-icon--btn--big-black">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </section>
-  <section class="mp-pricing">
-    <div class="container">
-      <div class="mp-block-title">
-        <h2 class="h2-base">Расценки на изделия*</h2>
-      </div>
-      <button class="btn-arrowed btn-arrowed--mp" onclick="onTogglePopUp('popupSlab')">
-        <span>Как правильно выбрать слэб?</span>
-        <svg class="svg-icon svg-icon--btn-arrowed">
-          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
-        </svg>
-      </button>
-      <div class="mp-pricing-inner">
-        {% for i in range(0, 4) %}
-          <div class="mp-pricin-item js--spoiler-pricing-parent">
-            <button class="mp-pricin-btn js--spoiler-pricing" onclick="onToggleSpoilerPricin(this)">
-              <span class="mp-pricin-btn-text">камины</span>
-              <br>
-              <span class="mp-pricin-btn-cost">от 69 000 ₽/шт</span>
-              <svg class="svg-icon svg-icon--mp-pricin-btn">
-                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_more"></use>
-              </svg>
-            </button>
-            <div class="row row--mp-pricin-item">
-              <div class="mp-pricin-item-col">
-                <div class="mp-pricin-item-info">
-                  <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
-                    <span>Заказать расчёт и выезд замерщика</span>
-                    <svg class="svg-icon svg-icon--btn--main-arrow">
-                      <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                    </svg>
-                  </button>
-                  <button class="btn--border btn--border--mp-pricin--top" onclick="onTogglePopUp('popupProfileOption')">
-                    <span>Варианты профилей</span>
-                    <svg class="svg-icon svg-icon--btn--border">
-                      <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                    </svg>
-                  </button>
-                  <p class="mp-pricin-item-text">
-                    Любая форма
-                    <br>
-                    Нестандартные профили
-                    <br>
-                    Подготовка основания
-                    <br>
-                    Расходные материалы с завода изготовителя
-                    <br>
-                    Сложные элементы
-                  </p>
-                  <p class="mp-pricin-item-text">
-                    Укладка крупногабаритными деталями
-                    <br>
-                    Эффект монолитного изделия за счёт сохранения рисунка
-                  </p>
-                  <div class="mp-pricin-item-btn-block">
-                    <button class="btn--border btn--mp-pricin-item">
-                      <span>Расчёт столешницы 2 см</span>
-                    </button>
-                    <button class="btn--border">
-                      <span>Расчёт столешницы 3 см</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="mp-pricin-item-col mp-pricin-item-col--img">
-                <img src="./images/dest/img/pricing1.jpg" alt="Продукция" class="mp-pricin-item-img">
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-      <button class="btn--main btn--main-arrow" onclick="onTogglePopUp('popupCalculationOrder')">
-        <span>Заказать расчёт и выезд замерщика</span>
-        <svg class="svg-icon svg-icon--btn--main-arrow">
+<main class="mp-main">
+  <div class="mp-main-inner">
+    <div class="mp-main-mobile">
+      <p class="mp-main-mobile-title">Мы знаем камень</p>
+      <p class="mp-main-mobile-subtitle">
+        Любых размеров и форм.
+        <br>
+        Так, как нужно вам.
+      </p>
+      <a href="#" class="btn btn--white">
+        Посмотреть каталог
+        <svg class="svg-icon svg-icon--mp-main-left-btn">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
         </svg>
-      </button>
-      <div class="row row--mp-pricing-description">
-        <div class="mp-pricing-description-col">
-          <p class="mp-pricing-description">
-            * — Расценки на изделия указаны только приблизительные, финальный расчет производится исходя из множества факторов, начиная с проекта и заканчивая монтажными работами.
+      </a>
+    </div>
+    <div class="mp-main-left">
+      <p class="mp-main-left-title">
+        Любых размеров и форм.
+        <br>
+        Так, как нужно вам.
+      </p>
+      <a href="#" class="btn btn--white btn--white--mp-main-left">
+        Посмотреть каталог
+        <svg class="svg-icon svg-icon--mp-main-left-btn">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="mp-main-right">
+      <img src="./images/dest/img/stone-text.svg" alt="stone" class="mp-main-right-title-img">
+      <p class="mp-main-right-title">Мы знаем камень</p>
+    </div>
+  </div>
+</main>
+<section class="mp-product-gallery">
+  <div class="container container--no-padding">
+    <a href="#" class="mp-block-title mp-block-title--padding">
+      <h2 class="h2-base">Галерея камня</h2>
+      <span class="mp-block-title-quantity">852</span>
+      <svg class="svg-icon svg-icon--title-quantity">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
+      </svg>
+    </a>
+    <div class="row row--wrap row--gal-hover">
+      {% set productItems = [
+      {
+      text: 'гранит',
+      quantity: '298',
+      img: 'gal1.jpg'
+      }, {
+      text: 'мрамор',
+      quantity: '176',
+      img: 'gal2.jpg'
+      }, {
+      text: 'оникс',
+      quantity: '25',
+      img: 'gal3.jpg'
+      }, {
+      text: 'травертин',
+      quantity: '38',
+      img: 'gal4.jpg'
+      }, {
+      text: 'агломерат',
+      quantity: '300',
+      img: 'gal5.jpg'
+      }, {
+      text: 'кварцит',
+      quantity: '15',
+      img: 'gal6.jpg'
+      }
+      ]
+      %}
+      {% for productItem in productItems %}
+      <div class="product-gallery-col">
+        <a href="#" class="product-gallery-item">
+          <img src="./images/dest/img/{{productItem.img}}" alt="{{productItem.text}}" class="product-gallery-item-img">
+          <p class="product-gallery-item-title">
+            <span class="product-gallery-item-name">{{productItem.text}}</span>
+            <span class="product-gallery-item-title-quantity">{{productItem.quantity}}</span>
             <br>
-            Приведены приблизительные расценки на изделия.
+            <span class="product-gallery-item-link">
+              <span>
+                перейти в каталог
+                {{productItem.text}}a
+              </span>
+              <svg class="svg-icon svg-icon--product-gallery-item-link">
+                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+              </svg>
+            </span>
+          </p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <a href="#" class="btn btn--big-black">
+      <span>Смотреть весь каталог
+        <svg class="svg-icon svg-icon--btn--big-black">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="mp-project">
+  <div class="container">
+    <div class="mp-block-title">
+      <h2 class="h2-base">Проекты</h2>
+    </div>
+    <div class="row row--wrap row--mp-project-top">
+
+      <div class="mp-project-col mp-project-col--big">
+        <div class="mp-project-item mp-project-item--text">
+          <div class="mp-project-item-text-block">
+            <p class="mp-project-item-title">БЦ «Якиманка 26»</p>
+            <p class="mp-project-item-subtitle">Москва​, Большая Якиманка, 26</p>
+          </div>
+          <div class="mp-project-item-text-block">
+            <p class="mp-project-item-subtitle">Пилоны</p>
+            <p class="mp-project-item-text">Португальский песчаник Мока Крем</p>
+          </div>
+          <div class="mp-project-item-text-block">
+            <p class="mp-project-item-subtitle">Общий объём работ</p>
+            <p class="mp-project-item-text">~ 1500 м2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mp-project-col mp-project-col--big">
+        <div class="mp-project-item mp-project-item--img"
+          style="background-image: url('./images/dest/img/project1.jpg');"></div>
+      </div>
+    </div>
+    <div class="row row--mp-project-bottom js--mp-project-mobile" id="projectSlider">
+      {% set projectItems = [
+      {
+      img: 'project2.jpg'
+      }, {
+      img: 'project3.jpg'
+      }, {
+      img: 'project4.jpg'
+      }
+      ]
+      %}
+      {% for projectItem in projectItems %}
+      <div class="mp-project-col mp-project-col--small">
+        <div class="mp-project-item mp-project-item--img"
+          style="background-image: url('./images/dest/img/{{projectItem.img}}');"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="mp-product-gallery">
+  <div class="container container--no-padding">
+    <a href="#" class="mp-block-title mp-block-title--padding">
+      <h2 class="h2-base">Изделия</h2>
+      <svg class="svg-icon svg-icon--title-quantity">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
+      </svg>
+    </a>
+    <div class="row row--wrap row--gal-hover">
+      {% set productItems = [
+      {
+      text: 'стены',
+      quantity: '298',
+      img: 'gal7.jpg'
+      }, {
+      text: 'лестницы',
+      quantity: '176',
+      img: 'gal8.jpg'
+      }, {
+      text: 'камины',
+      quantity: '25',
+      img: 'gal9.jpg'
+      }, {
+      text: 'подоконники',
+      quantity: '38',
+      img: 'gal10.jpg'
+      }, {
+      text: 'полы',
+      quantity: '300',
+      img: 'gal11.jpg'
+      }, {
+      text: 'столешницы',
+      quantity: '15',
+      img: 'gal12.jpg'
+      }
+      ]
+      %}
+      {% for productItem in productItems %}
+      <div class="product-gallery-col">
+        <div class="product-gallery-item" onclick="onShowProjectPopUp('popupProject')">
+          <img src="./images/dest/img/{{productItem.img}}" alt="{{productItem.text}}" class="product-gallery-item-img">
+          <p class="product-gallery-item-title">
+            <span class="product-gallery-item-name">{{productItem.text}}</span>
+            <span class="product-gallery-item-title-quantity">{{productItem.quantity}}</span>
+            <br>
+            <span class="product-gallery-item-link">
+              <span>просмотреть портфолио</span>
+              <svg class="svg-icon svg-icon--product-gallery-item-link">
+                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+              </svg>
+            </span>
           </p>
         </div>
       </div>
+      {% endfor %}
     </div>
-  </section>
-  <section class="mp-contacts">
-    <div class="container">
-      <div class="row row--wrap row--mp-contacts">
-        <div class="mp-contacts-col">
-          <div class="mp-block-title">
-            <h2 class="h2-base">Контакты</h2>
+    <a href="#" class="btn btn--big-black">
+      <span>Смотреть весь каталог
+        <svg class="svg-icon svg-icon--btn--big-black">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+<section class="mp-pricing">
+  <div class="container">
+    <div class="mp-block-title">
+      <h2 class="h2-base">Расценки на изделия*</h2>
+    </div>
+    <button class="btn-arrowed btn-arrowed--mp" onclick="onTogglePopUp('popupSlab')">
+      <span>Как правильно выбрать слэб?</span>
+      <svg class="svg-icon svg-icon--btn-arrowed">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
+      </svg>
+    </button>
+    <div class="mp-pricing-inner">
+      {% for i in range(0, 4) %}
+      <div class="mp-pricin-item js--spoiler-pricing-parent">
+        <button class="mp-pricin-btn js--spoiler-pricing" onclick="onToggleSpoilerPricin(this)">
+          <span class="mp-pricin-btn-text">камины</span>
+          <br>
+          <span class="mp-pricin-btn-cost">от 69 000 ₽/шт</span>
+          <svg class="svg-icon svg-icon--mp-pricin-btn">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_more"></use>
+          </svg>
+        </button>
+        <div class="row row--mp-pricin-item">
+          <div class="mp-pricin-item-col">
+            <div class="mp-pricin-item-info">
+              <button class="btn--main btn--main-arrow btn--main--mp-pricin"
+                onclick="onTogglePopUp('popupCalculationOrder')">
+                <span>Заказать расчёт и выезд замерщика</span>
+                <svg class="svg-icon svg-icon--btn--main-arrow">
+                  <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                </svg>
+              </button>
+              <button class="btn--border btn--border--mp-pricin--top" onclick="onTogglePopUp('popupProfileOption')">
+                <span>Варианты профилей</span>
+                <svg class="svg-icon svg-icon--btn--border">
+                  <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                </svg>
+              </button>
+              <p class="mp-pricin-item-text">
+                Любая форма
+                <br>
+                Нестандартные профили
+                <br>
+                Подготовка основания
+                <br>
+                Расходные материалы с завода изготовителя
+                <br>
+                Сложные элементы
+              </p>
+              <p class="mp-pricin-item-text">
+                Укладка крупногабаритными деталями
+                <br>
+                Эффект монолитного изделия за счёт сохранения рисунка
+              </p>
+              <div class="mp-pricin-item-btn-block">
+                <button class="btn--border btn--mp-pricin-item">
+                  <span>Расчёт столешницы 2 см</span>
+                </button>
+                <button class="btn--border">
+                  <span>Расчёт столешницы 3 см</span>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="mp-contacts-item">
-            <a href="tel:+7(800)4440633" class="mp-contacts-item-link">+7 (800) 444 06 33</a>
+          <div class="mp-pricin-item-col mp-pricin-item-col--img">
+            <img src="./images/dest/img/pricing1.jpg" alt="Продукция" class="mp-pricin-item-img">
           </div>
-          <div class="mp-contacts-item">
-            <a href="mailto:info@cutstone.ru" class="mp-contacts-item-link">info@cutstone.ru</a>
-          </div>
-          <div class="mp-contacts-item">
-            <p class="mp-contacts-item-text">
-              Московская область
-              <br>
-              дер. Грибки,
-              <br>
-              ул. Ангарская, владение 8
-            </p>
-          </div>
-        </div>
-        <div class="mp-contacts-col mp-contacts-col--map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8895220616b000d438ab3786c3ab3886939675156962bd23a8b74c6cc8c4fd19&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
         </div>
       </div>
+      {% endfor %}
     </div>
-  </section>
-  {# popups #}
-  {% include "app/njk/parts/popup_projects.njk" %}
-  {% include "app/njk/parts/popup_slab.njk" %}
-  {% include "app/njk/parts/popup_profile_option.njk" %}
-  {% include "app/njk/parts/popup_calculation_order.njk" %}
+    <button class="btn--main btn--main-arrow" onclick="onTogglePopUp('popupCalculationOrder')">
+      <span>Заказать расчёт и выезд замерщика</span>
+      <svg class="svg-icon svg-icon--btn--main-arrow">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+      </svg>
+    </button>
+    <div class="row row--mp-pricing-description">
+      <div class="mp-pricing-description-col">
+        <p class="mp-pricing-description">
+          * — Расценки на изделия указаны только приблизительные, финальный расчет производится исходя из множества
+          факторов, начиная с проекта и заканчивая монтажными работами.
+          <br>
+          Приведены приблизительные расценки на изделия.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mp-contacts">
+  <div class="container">
+    <div class="row row--wrap row--mp-contacts">
+      <div class="mp-contacts-col">
+        <div class="mp-block-title">
+          <h2 class="h2-base">Контакты</h2>
+        </div>
+        <div class="mp-contacts-item">
+          <a href="tel:+7(800)4440633" class="mp-contacts-item-link">+7 (800) 444 06 33</a>
+        </div>
+        <div class="mp-contacts-item">
+          <a href="mailto:info@cutstone.ru" class="mp-contacts-item-link">info@cutstone.ru</a>
+        </div>
+        <div class="mp-contacts-item">
+          <p class="mp-contacts-item-text">
+            Московская область
+            <br>
+            дер. Грибки,
+            <br>
+            ул. Ангарская, владение 8
+          </p>
+        </div>
+      </div>
+      <div class="mp-contacts-col mp-contacts-col--map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A8895220616b000d438ab3786c3ab3886939675156962bd23a8b74c6cc8c4fd19&amp;source=constructor"
+          width="100%" height="100%" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+{# popups #}
+{% include "app/njk/parts/popup_projects.njk" %}
+{% include "app/njk/parts/popup_slab.njk" %}
+{% include "app/njk/parts/popup_profile_option.njk" %}
+{% include "app/njk/parts/popup_calculation_order.njk" %}
 {% endblock %}

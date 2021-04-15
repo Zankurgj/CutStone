@@ -1,0 +1,106 @@
+.breadcrumbs-watched {
+  padding: 56px 0 48px;
+}
+.watched-products-container {
+  margin-bottom: 80px;
+}
+.watched-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 16px 16px 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.watched-item-img-col {
+  flex-basis: 25%;
+  max-width: 25%;
+  padding-right: 25px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+}
+.watched-item-info-col {
+  flex-basis: 44%;
+  max-width: 44%;
+  padding-right: 32px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+}
+.watched-item-cost-panel-col {
+  flex-basis: 31%;
+  max-width: 31%;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.watched-item-application-col {
+  margin-right: 32px;
+}
+.watched-item-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 70%;
+}
+.watched-item-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba($color: #1d1d1f, $alpha: 0.5);
+}
+.watched-item-name-wrapper {
+  margin-bottom: 44px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 24px;
+  }
+}
+.watched-item-country {
+  font-size: 20px;
+  line-height: 24px;
+}
+.watched-item-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.watched-item-name--gray {
+  color: rgba($color: #000, $alpha: 0.5);
+}
+.watched-item-application-title {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #808080;
+  margin-bottom: 16px;
+}
+.watched-item-application-text {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #1d1d1f;
+}
+.watched-item-cost {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1d1d1d;
+}
+.watched-item-cost-thin {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #808080;
+  margin-bottom: 24px;
+}
+.product-card-info-status-inner--watched {
+  margin-bottom: 24px;
+}

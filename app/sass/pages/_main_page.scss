@@ -3,13 +3,22 @@
   padding-top: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../images/dest/img/main-bg.jpg');
+  background-image: url("../images/dest/img/main-bg.jpg");
+  margin-top: -49px;
   margin-bottom: 160px;
   @media screen and (max-width: $mobile-bp) {
     padding-top: 0;
     height: 440px;
-    background-image: url('../images/dest/img/mp-main-mob.jpg');
+    background-image: url("../images/dest/img/mp-main-mob.jpg");
     margin-bottom: 80px;
+  }
+}
+.mp-main--sroll-animate {
+  .main-header-logo {
+    color: #fff;
+  }
+  .main-header-nav-item {
+    color: #fff;
   }
 }
 .mp-main-inner {
@@ -30,7 +39,7 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../images/dest/img/main-left.png'),
+  background-image: url("../images/dest/img/main-left.png"),
     linear-gradient(
       0deg,
       rgba(28, 28, 28, 0.3) 0%,
@@ -57,12 +66,18 @@
   margin-left: 9%;
   margin-bottom: 8%;
   line-height: 1.3;
+  &:hover {
+    .svg-icon--mp-main-left-btn {
+      transform: translateX(15%);
+    }
+  }
 }
 .svg-icon--mp-main-left-btn {
   width: 0.6em;
   height: 0.6em;
-  min-width: 14px;
-  min-height: 14px;
+  min-width: 15px;
+  min-height: 15px;
+  transition: transform $base-duration $base-timing;
 }
 .mp-main-right-title-img {
   max-width: 100%;
@@ -80,7 +95,7 @@
 }
 .mp-main-right-title {
   font-weight: bold;
-  font-size: 2.2em;
+  font-size: 2em;
   line-height: 1.3;
   letter-spacing: -0.02em;
   margin-left: 3%;
@@ -404,7 +419,7 @@
   overflow: hidden;
   margin-bottom: 24px;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;

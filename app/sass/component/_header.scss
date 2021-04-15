@@ -30,6 +30,36 @@
     }
   }
 }
+.main-header--animate {
+  background-color: transparent;
+  border-color: transparent;
+  transition: border-color $base-duration $base-timing,
+    background-color $base-duration $base-timing;
+  .main-header-logo,
+  .main-header-nav-item {
+    color: #fff;
+  }
+  .main-header-panel {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover,
+  &.animate {
+    background-color: #fff;
+    border-color: #1d1d1d;
+    .main-header-logo,
+    .main-header-nav-item {
+      color: #1d1d1d;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .main-header-panel {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 .main-header-inner {
   display: flex;
   width: 100%;
@@ -122,6 +152,8 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  transition: opacity $base-duration $base-timing,
+    visibility $base-duration $base-timing;
 }
 .header-dropdown-viewed {
   position: relative;
@@ -300,10 +332,14 @@
     margin-right: 0;
     padding: 16px;
   }
-  &:hover,
   &.active {
     background-color: #1d1d1d;
     color: #fff;
+  }
+  &:hover {
+    .svg-icon--header-panel {
+      transform: scale(1.1);
+    }
   }
 }
 .btn--header-panel-counter {
@@ -319,6 +355,7 @@
   font-size: 10px;
   line-height: 14px;
   color: #fff;
+  z-index: 2;
   @media screen and (max-width: $mobile-bp) {
     top: 8px;
   }
@@ -326,6 +363,7 @@
 .svg-icon--header-panel {
   width: 36px;
   height: 36px;
+  transition: transform $base-duration $base-timing;
   @media screen and (max-width: $mobile-bp) {
     width: 24px;
     height: 24px;
@@ -365,12 +403,18 @@
   opacity: 0;
   visibility: hidden;
   &.active {
+    color: #fff;
     .main-header-dropdown-item,
     .main-header-dropdown-link,
     .main-header-dropdown-title {
       color: #fff;
       @media screen and (max-width: $mobile-bp) {
         color: #1d1d1d;
+      }
+    }
+    .main-header-dropdown-item {
+      &.no-hover {
+        color: rgba($color: #fff, $alpha: 0.6);
       }
     }
   }
@@ -428,11 +472,10 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #1d1d1d;
-  border-bottom: 3px solid transparent;
   margin-bottom: 10px;
   transition: color $base-duration $base-timing;
   &:hover {
-    border-color: #fff;
+    color: #1d1d1d;
   }
   @media screen and (max-width: $mobile-bp) {
     font-size: 16px;

@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initPhoneCalc();
   clickOutsideShowViewed();
   aboutSpilerToggle();
+  headerAnimateHandler();
   const initStickyCostHandler = new InitSticky();
   const initFilter = new CatalogFilter();
   const initSelect = new CatalogSelect();
@@ -106,8 +107,11 @@ const getRawTelNumber = (val) => {
 
 const initheaderMenuHandler = () => {
   $(".js--header-dropdown-item").on("mouseenter", function (event) {
+    const allItems = $(".js--header-dropdown-item");
     const imgId = $(event.currentTarget).attr("data-hov-img-id");
     const wrapper = $(".main-header-dropdown");
+    allItems.addClass("no-hover");
+    $(event.currentTarget).removeClass("no-hover");
     wrapper.addClass("active");
     $(".main-header-dropdown-bg").removeClass("show");
     $(`#hov${imgId}`).addClass("show");
@@ -115,6 +119,8 @@ const initheaderMenuHandler = () => {
 
   $(".js--header-dropdown-item").on("mouseleave", function (event) {
     const wrapper = $(".main-header-dropdown");
+    const allItems = $(".js--header-dropdown-item");
+    allItems.removeClass("no-hover");
     $(".main-header-dropdown-bg").removeClass("show");
     wrapper.removeClass("active");
   });
@@ -423,6 +429,9 @@ class CatalogFilter {
   }
 
   init() {
+    if (!this.checkBoxSelectors.length) {
+      return;
+    }
     this.checkBoxHandler();
     this.inputCostHandler();
     this.clearFilterHandler();
@@ -617,4 +626,21 @@ const onToggleFilterPopUp = () => {
   document.querySelector("#catalogFilterPopup").classList.toggle("show");
   document.querySelector(".main-header").classList.toggle("hide");
   $("body").toggleClass("body--no-scroll");
+};
+
+const headerAnimateHandler = () => {
+  const headerEl = $(".js--header-animate");
+  let wScroll = $(window).scrollTop();
+  const checkWindowScroll = () => {
+    wScroll = $(window).scrollTop();
+    if (wScroll >= 1) {
+      headerEl.addClass("animate");
+    } else {
+      headerEl.removeClass("animate");
+    }
+  };
+  if (headerEl) {
+    checkWindowScroll();
+    $(window).scroll(checkWindowScroll);
+  }
 };

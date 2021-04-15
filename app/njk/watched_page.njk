@@ -1,0 +1,120 @@
+{% extends "app/njk/layout/main.njk" %}
+{% block content %}
+<section class="breadcrumbs-watched">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li>
+                <a href="#" class="breadcrumbs-item">Главная</a>
+                <svg class="svg-icon svg-icon--breadcrumbs-item">
+                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                </svg>
+            </li>
+            <li>
+                <span class="breadcrumbs-item-last">Вы смотрели</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="watched-products-container">
+    <div class="container">
+        <div class="watched-item">
+            <div class="watched-item-img-col">
+                <div class="watched-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                </div>
+            </div>
+            <div class="watched-item-info-col">
+                <p class="watched-item-title">гранит</p>
+                <div class="watched-item-name-wrapper">
+                    <span class="watched-item-country">🇧🇷</span>
+                    <span class="watched-item-name">Абролиос</span>
+                    <span class="watched-item-name watched-item-name--gray">Abrolius</span>
+                </div>
+                <div class="row">
+                    <div class="watched-item-application-col">
+                        <p class="watched-item-application-title">Применение внутреннее</p>
+                        <p class="watched-item-application-text">кухонные столешницы</p>
+                        <p class="watched-item-application-text">столешницы в санузел</p>
+                        <p class="watched-item-application-text">плиты на пол</p>
+                        <p class="watched-item-application-text">плиты на стены</p>
+                        <p class="watched-item-application-text">камины</p>
+                        <p class="watched-item-application-text">плинтуса</p>
+                    </div>
+                    <div class="watched-item-application-col">
+                        <p class="watched-item-application-title">Применение наружное</p>
+                        <p class="watched-item-application-text">столешницы барбекю</p>
+                        <p class="watched-item-application-text">лестницы</p>
+                        <p class="watched-item-application-text">ступени</p>
+                        <p class="watched-item-application-text">входные группы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="watched-item-cost-panel-col">
+                <p class="watched-item-cost">от $300 за м2</p>
+                <p class="watched-item-cost-thin">от 23,255.25 ₽ за м2 </p>
+                <div class="product-card-info-status-inner product-card-info-status-inner--watched">
+                    <span class="product-card-info-status product-card-info-status--access">
+                        В наличии
+                    </span>
+                </div>
+                <button class="btn--main btn--main-arrow btn--main--big btn--main--watched-cost"
+                    onclick="onTogglePopUp('popupCalculationOrder')">
+                    <span>Заказать расчёт</span>
+                    <svg class="svg-icon svg-icon--btn--main-arrow">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="watched-item">
+            <div class="watched-item-img-col">
+                <div class="watched-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
+                </div>
+            </div>
+            <div class="watched-item-info-col">
+                <p class="watched-item-title">гранит</p>
+                <div class="watched-item-name-wrapper">
+                    <span class="watched-item-country">🇧🇷</span>
+                    <span class="watched-item-name">Абролиос</span>
+                    <span class="watched-item-name watched-item-name--gray">Abrolius</span>
+                </div>
+                <div class="row">
+                    <div class="watched-item-application-col">
+                        <p class="watched-item-application-title">Применение внутреннее</p>
+                        <p class="watched-item-application-text">кухонные столешницы</p>
+                        <p class="watched-item-application-text">столешницы в санузел</p>
+                        <p class="watched-item-application-text">плиты на пол</p>
+                        <p class="watched-item-application-text">плиты на стены</p>
+                        <p class="watched-item-application-text">камины</p>
+                        <p class="watched-item-application-text">плинтуса</p>
+                    </div>
+                    <div class="watched-item-application-col">
+                        <p class="watched-item-application-title">Применение наружное</p>
+                        <p class="watched-item-application-text">столешницы барбекю</p>
+                        <p class="watched-item-application-text">лестницы</p>
+                        <p class="watched-item-application-text">ступени</p>
+                        <p class="watched-item-application-text">входные группы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="watched-item-cost-panel-col">
+                <p class="watched-item-cost">от $300 за м2</p>
+                <p class="watched-item-cost-thin">от 23,255.25 ₽ за м2 </p>
+                <div class="product-card-info-status-inner product-card-info-status-inner--watched">
+                    <span class="product-card-info-status product-card-info-status--wait">
+                        под заказ
+                    </span>
+                    <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
+                </div>
+                <button class="btn--main btn--main-arrow btn--main--big btn--main--watched-cost"
+                    onclick="onTogglePopUp('popupCalculationOrder')">
+                    <span>Заказать расчёт</span>
+                    <svg class="svg-icon svg-icon--btn--main-arrow">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "app/njk/parts/popup_calculation_order.njk" %}
+{% endblock %}

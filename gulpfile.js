@@ -65,6 +65,7 @@ function scripts() {
       "node_modules/slick-carousel/slick/slick.min.js",
       "node_modules/inputmask/dist/inputmask.js",
       "node_modules/jquery-sticky/jquery.sticky.js",
+      "node_modules/picturefill/dist/picturefill.min.js",
       "app/js/app.js", // app.js. Always at the end
     ])
       .pipe(concat("app.min.js"))

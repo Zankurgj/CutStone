@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header main-header--animate js--header-animate">
         <div class="container container--no-padding main-header-inner">
             <button class="btn--main-header-menu" onclick="onToggleMobileMenu()">
                 <span class="visually-hidden">Мобильное меню</span>
@@ -18,7 +18,7 @@
                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mob_menu"></use>
                 </svg>
             </button>
-            <a href="#" class="main-header-logo">
+            <a href="./main_page.html" class="main-header-logo">
                 <span class="visually-hidden">Логотип CutStone</span>
                 <svg class="svg-icon svg-icon--header-logo">
                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#logo"></use>
@@ -28,12 +28,41 @@
                 <div class="main-header-nav-item-dropdown">
                     <a href="#" class="main-header-nav-item">каталог</a>
                     <div class="main-header-dropdown">
-                        <img src="./images/dest/img/hov1.jpg" alt="гранит" id="hov1" class="main-header-dropdown-bg">
-                        <img src="./images/dest/img/hov2.jpg" alt="гранит" id="hov2" class="main-header-dropdown-bg">
-                        <img src="./images/dest/img/hov3.jpg" alt="гранит" id="hov3" class="main-header-dropdown-bg">
-                        <img src="./images/dest/img/hov4.jpg" alt="гранит" id="hov4" class="main-header-dropdown-bg">
-                        <img src="./images/dest/img/hov5.jpg" alt="гранит" id="hov5" class="main-header-dropdown-bg">
-                        <img src="./images/dest/img/hov6.jpg" alt="гранит" id="hov6" class="main-header-dropdown-bg">
+                        <picture class="main-header-dropdown-bg" id="hov1">
+                            <source srcset="./images/dest/img/menu/menu_hov1.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov1.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov1.jpeg" alt="гранит">
+                        </picture>
+                        <picture class="main-header-dropdown-bg" id="hov2">
+                            <source srcset="./images/dest/img/menu/menu_hov2.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov2.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov2.jpeg" alt="гранит">
+                        </picture>
+                        <picture class="main-header-dropdown-bg" id="hov3">
+                            <source srcset="./images/dest/img/menu/menu_hov3.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov3.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov3.jpeg" alt="гранит">
+                        </picture>
+                        <picture class="main-header-dropdown-bg" id="hov4">
+                            <source srcset="./images/dest/img/menu/menu_hov4.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov4.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov4.jpeg" alt="гранит">
+                        </picture>
+                        <picture class="main-header-dropdown-bg" id="hov1">
+                            <source srcset="./images/dest/img/menu/menu_hov1.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov1.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov1.jpeg" alt="гранит">
+                        </picture>
+                        <picture class="main-header-dropdown-bg" id="hov5">
+                            <source srcset="./images/dest/img/menu/menu_hov5.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov5.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov5.jpeg" alt="гранит">
+                        </picture>
+                        <picture class="main-header-dropdown-bg" id="hov6">
+                            <source srcset="./images/dest/img/menu/menu_hov6.avif" type="image/avif">
+                                <source srcset="./images/dest/img/menu/menu_hov6.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov6.jpeg" alt="гранит">
+                        </picture>
                         <div class="container container--no-padding container--header-dropdown">
                             <div class="row row--wrap">
                                 <div class="main-header-dropdown-col">
@@ -136,7 +165,7 @@
                                 Список просмотренных товаров пока пуст. Вы можете начать свой выбор с каталога камня, если ищете что-то конкретное.
                             </p>
 
-                            <a href="#" class="header-dropdown-viewed-item">
+                            <a href="./watched_page.html" class="header-dropdown-viewed-item">
                                 <div class="header-dropdown-viewed-item-img-col">
                                     <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
                                     </div>
@@ -154,7 +183,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="header-dropdown-viewed-item">
+                            <a href="./watched_page.html" class="header-dropdown-viewed-item">
                                 <div class="header-dropdown-viewed-item-img-col">
                                     <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
                                     </div>
@@ -172,7 +201,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="header-dropdown-viewed-item">
+                            <a href="./watched_page.html" class="header-dropdown-viewed-item">
                                 <div class="header-dropdown-viewed-item-img-col">
                                     <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
                                     </div>
@@ -190,7 +219,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="header-dropdown-viewed-item">
+                            <a href="./watched_page.html" class="header-dropdown-viewed-item">
                                 <div class="header-dropdown-viewed-item-img-col">
                                     <div class="header-dropdown-viewed-item-img" style="background-image: url('./images/dest/img/productSlider.png');">
                                     </div>
@@ -210,7 +239,7 @@
 
                         </div>
                         <div class="header-dropdown-viewed-btn-block">
-                            <a href="#" class="btn--main btn--main-arrow">
+                            <a href="./catalog_page.html" class="btn--main btn--main-arrow">
                                 <span>Перейти в каталог</span>
                                 <svg class="svg-icon svg-icon--btn--main-arrow">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -240,11 +269,11 @@
                         <br>Так, как нужно вам.
                     </p>
                     <a href="#" class="btn btn--white">
-          Посмотреть каталог
-          <svg class="svg-icon svg-icon--mp-main-left-btn">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </a>
+        Посмотреть каталог
+        <svg class="svg-icon svg-icon--mp-main-left-btn">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </a>
                 </div>
                 <div class="mp-main-left">
                     <p class="mp-main-left-title">
@@ -252,11 +281,11 @@
                         <br>Так, как нужно вам.
                     </p>
                     <a href="#" class="btn btn--white btn--white--mp-main-left">
-          Посмотреть каталог
-          <svg class="svg-icon svg-icon--mp-main-left-btn">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </a>
+        Посмотреть каталог
+        <svg class="svg-icon svg-icon--mp-main-left-btn">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </a>
                 </div>
                 <div class="mp-main-right">
                     <img src="./images/dest/img/stone-text.svg" alt="stone" class="mp-main-right-title-img">
@@ -284,10 +313,10 @@
                                 <span class="product-gallery-item-title-quantity">298</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    гранитa
-                  </span>
+              <span>
+                перейти в каталог
+                гранитa
+              </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -304,10 +333,10 @@
                                 <span class="product-gallery-item-title-quantity">176</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    мраморa
-                  </span>
+              <span>
+                перейти в каталог
+                мраморa
+              </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -324,10 +353,10 @@
                                 <span class="product-gallery-item-title-quantity">25</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    ониксa
-                  </span>
+              <span>
+                перейти в каталог
+                ониксa
+              </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -344,10 +373,10 @@
                                 <span class="product-gallery-item-title-quantity">38</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    травертинa
-                  </span>
+              <span>
+                перейти в каталог
+                травертинa
+              </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -364,10 +393,10 @@
                                 <span class="product-gallery-item-title-quantity">300</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    агломератa
-                  </span>
+              <span>
+                перейти в каталог
+                агломератa
+              </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -384,10 +413,10 @@
                                 <span class="product-gallery-item-title-quantity">15</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>
-                    перейти в каталог
-                    кварцитa
-                  </span>
+              <span>
+                перейти в каталог
+                кварцитa
+              </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -399,10 +428,10 @@
                 </div>
                 <a href="#" class="btn btn--big-black">
                     <span>Смотреть весь каталог
-          <svg class="svg-icon svg-icon--btn--big-black">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </span>
+        <svg class="svg-icon svg-icon--btn--big-black">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </span>
                 </a>
             </div>
         </section>
@@ -473,7 +502,7 @@
                                 <span class="product-gallery-item-title-quantity">298</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
+              <span>просмотреть портфолио</span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -490,7 +519,7 @@
                                 <span class="product-gallery-item-title-quantity">176</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
+              <span>просмотреть портфолио</span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -507,7 +536,7 @@
                                 <span class="product-gallery-item-title-quantity">25</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
+              <span>просмотреть портфолио</span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -524,7 +553,7 @@
                                 <span class="product-gallery-item-title-quantity">38</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
+              <span>просмотреть портфолио</span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -541,7 +570,7 @@
                                 <span class="product-gallery-item-title-quantity">300</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
+              <span>просмотреть портфолио</span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -558,7 +587,7 @@
                                 <span class="product-gallery-item-title-quantity">15</span>
                                 <br>
                                 <span class="product-gallery-item-link">
-                  <span>просмотреть портфолио</span>
+              <span>просмотреть портфолио</span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                                 </svg>
@@ -570,10 +599,10 @@
                 </div>
                 <a href="#" class="btn btn--big-black">
                     <span>Смотреть весь каталог
-          <svg class="svg-icon svg-icon--btn--big-black">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </span>
+        <svg class="svg-icon svg-icon--btn--big-black">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </span>
                 </a>
             </div>
         </section>
@@ -1319,7 +1348,7 @@
   </section>
 </div>
 
-  <div class="popup-wrapper popup-wrapper--animate" id="popupSlab">
+<div class="popup-wrapper popup-wrapper--animate" id="popupSlab">
   <div class="popup-overlay" onclick="onTogglePopUp('popupSlab')"></div>
   <section class="slab-popup popup-right popup-right-animate container container--no-padding">
     <div class="base-popup-head">
