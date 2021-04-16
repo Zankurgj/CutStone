@@ -1,237 +1,244 @@
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
-  <section class="breadcrumbs-container">
-    <div class="container">
-      <ul class="breadcrumbs">
-        <li>
-          <a href="#" class="breadcrumbs-item">Каталог</a>
-          <svg class="svg-icon svg-icon--breadcrumbs-item">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </li>
-        <li>
-          <a href="#" class="breadcrumbs-item">Гранит</a>
-          <svg class="svg-icon svg-icon--breadcrumbs-item">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-          </svg>
-        </li>
-        <li>
-          <span class="breadcrumbs-item-last">Абролиос</span >
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="product-nav">
-    <div class="container container--product-nav">
-      <a href="#" class="product-nav-item">
-        <svg class="svg-icon svg-icon--product-nav">
-          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small_prev"></use>
-        </svg>
-        <span class="product-nav-black">австралиен блю</span>
-        <span class="product-nav-gray">— Назад</span>
-      </a>
-
-      <a href="#" class="product-nav-item">
-        <span class="product-nav-gray">далее —</span>
-        <span class="product-nav-black">Абсолют блэк</span>
-        <svg class="svg-icon svg-icon--product-nav">
+<section class="breadcrumbs-container">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li>
+        <a href="#" class="breadcrumbs-item">Каталог</a>
+        <svg class="svg-icon svg-icon--breadcrumbs-item">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
         </svg>
-      </a>
-    </div>
-  </section>
-  <section class="product-card">
-    <div class="container container--product-card">
-      <div class="product-card-slider-col">
-        <div class="product-card-slider js--product-card-slider">
-          {% for i in range(0, 4) %}
-            <div class="product-card-slide" data-image="./images/dest/img/productSlider.png">
-              <img src="./images/dest/img/productSlider.png" alt="продукция">
-            </div>
-          {% endfor %}
-        </div>
-        <p class="product-card-slider-info"></p>
-        <div class="product-card-slider-btns product-card-slider-btns--desktop">
-          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
-            <span>Скачать в большом разрешении</span>
-            <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
-              <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-            </svg>
-          </button>
+      </li>
+      <li>
+        <a href="#" class="breadcrumbs-item">Гранит</a>
+        <svg class="svg-icon svg-icon--breadcrumbs-item">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </li>
+      <li>
+        <span class="breadcrumbs-item-last">Абролиос</span>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="product-nav">
+  <div class="container container--product-nav">
+    <a href="#" class="product-nav-item">
+      <svg class="svg-icon svg-icon--product-nav">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small_prev"></use>
+      </svg>
+      <span class="product-nav-black">австралиен блю</span>
+      <span class="product-nav-gray">— Назад</span>
+    </a>
 
-          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
-            Запросить актуальные фото
-          </button>
+    <a href="#" class="product-nav-item">
+      <span class="product-nav-gray">далее —</span>
+      <span class="product-nav-black">Абсолют блэк</span>
+      <svg class="svg-icon svg-icon--product-nav">
+        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+      </svg>
+    </a>
+  </div>
+</section>
+<section class="product-card">
+  <div class="container container--product-card">
+    <div class="product-card-slider-col">
+      <div class="product-card-slider js--product-card-slider">
+        {% for i in range(0, 4) %}
+        <div class="product-card-slide" data-image="./images/dest/img/productSlider.png">
+          <img src="./images/dest/img/productSlider.png" alt="продукция">
         </div>
+        {% endfor %}
       </div>
+      <p class="product-card-slider-info"></p>
+      <div class="product-card-slider-btns product-card-slider-btns--desktop">
+        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
+          <span>Скачать в большом разрешении</span>
+          <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </button>
 
-      <div class="product-card-info-col">
-        <div class="product-card-head">
-          <div class="product-card-info">
-            <p class="product-card-info-title">
-              <span class="product-card-info-title-black">Имперадор Лайт</span>
-              <span class="product-card-info-title-gray">Emperador pale Lite</span>
-            </p>
-            <div class="product-card-info-status-inner">
+        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
+          Запросить актуальные фото
+        </button>
+      </div>
+    </div>
+
+    <div class="product-card-info-col">
+      <div class="product-card-head">
+        <div class="product-card-info">
+          <p class="product-card-info-title">
+            <span class="product-card-info-title-black">Имперадор Лайт</span>
+            <span class="product-card-info-title-gray">Emperador pale Lite</span>
+          </p>
+          <!-- <div class="product-card-info-status-inner">
               <span class="product-card-info-status product-card-info-status--access">
                 В наличии
               </span>
               <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
-            </div>
-            <div class="product-card-info-status-inner">
-              <span class="product-card-info-status product-card-info-status--wait">
-                под заказ
-              </span>
-              <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
-            </div>
+            </div> -->
+          <div class="product-card-info-status-inner">
+            <span class="product-card-info-status product-card-info-status--wait">
+              под заказ
+            </span>
+            <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
           </div>
         </div>
-        <div class="product-card-slider-btns product-card-slider-btns--mobile">
-          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
-            <span>Скачать в большом разрешении</span>
-            <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
-              <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-            </svg>
-          </button>
+      </div>
+      <div class="product-card-slider-btns product-card-slider-btns--mobile">
+        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
+          <span>Скачать в большом разрешении</span>
+          <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </button>
 
-          <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
-            Запросить актуальные фото
-          </button>
+        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
+          Запросить актуальные фото
+        </button>
+      </div>
+      <div class="product-card-cost-block-wrapper" id="stickyMobile">
+        <div class="product-card-cost-block">
+          <p class="product-card-cost">от $440 за м2</p>
+          <p class="product-card-cost-sub">от 33,535.61 ₽ за м2</p>
         </div>
-        <div class="product-card-cost-block-wrapper" id="stickyMobile">
-          <div class="product-card-cost-block">
-            <p class="product-card-cost">от $440 за м2</p>
-            <p class="product-card-cost-sub">от 33,535.61 ₽ за м2</p>
+        <button class="btn--main btn--main-arrow btn--main--big btn--main--card-cost"
+          onclick="onTogglePopUp('popupCalculationOrder')">
+          <span>Заказать расчёт</span>
+          <svg class="svg-icon svg-icon--btn--main-arrow">
+            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="product-card-description-block">
+        {% set descriptionItem = [
+        [
+        'Страна: ', 'Бразилия 🇧🇷'
+        ],
+        [
+        'Твёрдость:', 'Твёрдый'
+        ],
+        [
+        'Плотность: ', '1.4 г/см2м'
+        ],
+        [
+        'Пористость: ', '0.6 — 3.3 %'
+        ],
+        [
+        'Водопоглощение:', 'Среднее (0.1 — 0.5%)'
+        ],
+        [
+        'Морозостойкость:', '50'
+        ],
+        [
+        'Плотность (кг/м3):', '2600 кг/м3'
+        ],
+        [
+        'Прочность при изгибе (МПа): ', '120'
+        ],
+        [
+        'Прочность при сжатии (МПа): ', '8'
+        ],
+        [
+        'Применение внутреннее', 'кухонные столешницы
+        столешницы в санузел плиты на пол плиты на стены камины плинтуса '
+
+        ],
+        [
+        'Применение наружное', 'столешницы барбекю <br>
+        лестницы<br> ступени<br> входные группы '
+
+        ]
+        ] %}
+        {% for text1, text2 in descriptionItem %}
+        <div class="product-card-description-item">
+          <div class="product-card-description-col">
+            <p class="product-card-description-text">{{text1 | safe}}</p>
           </div>
-          <button class="btn--main btn--main-arrow btn--main--big btn--main--card-cost" onclick="onTogglePopUp('popupCalculationOrder')">
-            <span>Заказать расчёт</span>
+          <div class="product-card-description-col">
+            <p class="product-card-description-text">{{text2 | safe}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="product-card-description-project">
+        <div class="product-card-description-project-img-col">
+          <div class="product-card-description-project-img" onclick="onShowProjectPopUp('popupProject')"
+            style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
+        </div>
+        <div class="product-card-description-project-text-col">
+          <p class="product-card-description-project-title">камень в проекте</p>
+          <p class="product-card-description-project-text">
+            <b>ЖК Имперский на Якиманке,</b>
+            частная квартира, Москва
+          </p>
+          <button class="btn--link btn--product-card-description-project" onclick="onShowProjectPopUp('popupProject')">
+            <span>смотреть проект</span>
             <svg class="svg-icon svg-icon--btn--main-arrow">
               <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
             </svg>
           </button>
         </div>
-
-        <div class="product-card-description-block">
-          {% set descriptionItem = [
-            [
-              'Страна: ', 'Бразилия 🇧🇷'
-            ],
-            [
-              'Твёрдость:', 'Твёрдый'
-            ],
-            [
-              'Плотность: ', '1.4 г/см2м'
-            ],
-            [
-              'Пористость: ', '0.6 — 3.3 %'
-            ],
-            [
-              'Водопоглощение:', 'Среднее (0.1 — 0.5%)'
-            ],
-            [
-              'Морозостойкость:', '50'
-            ],
-            [
-              'Плотность (кг/м3):', '2600 кг/м3'
-            ],
-            [
-              'Прочность при изгибе (МПа): ', '120'
-            ],
-            [
-              'Прочность при сжатии (МПа): ', '8'
-            ],
-            [
-              'Применение внутреннее', 'кухонные столешницы
- столешницы в санузел плиты на пол плиты на стены камины плинтуса '
-
-            ],
-            [
-              'Применение наружное', 'столешницы барбекю <br>
- лестницы<br> ступени<br> входные группы '
-
-            ]
-          ] %}
-          {% for text1, text2 in descriptionItem %}
-            <div class="product-card-description-item">
-              <div class="product-card-description-col">
-                <p class="product-card-description-text">{{text1 | safe}}</p>
-              </div>
-              <div class="product-card-description-col">
-                <p class="product-card-description-text">{{text2 | safe}}</p>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="product-card-description-project">
-          <div class="product-card-description-project-img-col">
-            <div class="product-card-description-project-img" style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
-          </div>
-          <div class="product-card-description-project-text-col">
-            <p class="product-card-description-project-title">камень в проекте</p>
-            <p class="product-card-description-project-text">
-              <b>ЖК Имперский на Якиманке,</b>
-              частная квартира, Москва</p>
-            <button class="btn--link btn--product-card-description-project" onclick="onShowProjectPopUp('popupProject')">
-              <span>смотреть проект</span>
-              <svg class="svg-icon svg-icon--btn--main-arrow">
-                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <p class="product-card-description-text">Австралиан Блю — изысканный лабродарит. Лабрадорит — это минерал, который отражает свет из-за внутренних трещин. Благодаря этому, изделия из Австралиан Блю переливаются в перломутровых оттенках, при рассмотрении с разных углов. Этот камень обладает отличными физико-механическисми свойстваии, прочен и износостоек. Идеально подходит для кухонных и любых других столешниц, а также для декоративного оформления стен. Отличается насыщенными оттенками синего, зеленого, черного и бирюзового.</p>
       </div>
+      <p class="product-card-description-text">Австралиан Блю — изысканный лабродарит. Лабрадорит — это минерал, который
+        отражает свет из-за внутренних трещин. Благодаря этому, изделия из Австралиан Блю переливаются в перломутровых
+        оттенках, при рассмотрении с разных углов. Этот камень обладает отличными физико-механическисми свойстваии,
+        прочен и износостоек. Идеально подходит для кухонных и любых других столешниц, а также для декоративного
+        оформления стен. Отличается насыщенными оттенками синего, зеленого, черного и бирюзового.</p>
     </div>
-  </section>
-  <section class="product-promo-slider-block">
-    <div class="container">
-      <h1 class="product-promo-slider-title">ПОХОЖИЕ КАМНИ</h1>
-      <div class="product-promo-slider-wrapper">
-        <button class="slider-arrow-product slider-arrow-product--prew">
-          <span class="visually-hidden">Назад</span>
-          <svg class="svg-icon svg-icon--slider-arrow-product">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-prew"></use>
-          </svg>
-        </button>
-        <button class="slider-arrow-product slider-arrow-product--next">
-          <span class="visually-hidden">Вперед</span>
-          <svg class="svg-icon svg-icon--slider-arrow-product">
-            <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-next"></use>
-          </svg>
-        </button>
-        <div class="product-promo-slider js--product-promo-slider">
-          {% for i in range(0, 7) %}
-            <div class="product-promo-slide">
-              <a href="#" class="catalog-item">
-                <div class="catalog-item-img" style="background-image: url('./images/dest/img/gal6.jpg');"></div>
-                <div class="catalog-item-text-block">
-                  <p class="catalog-item-name">
-                    <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
-                    <span class="catalog-item-name">айвори</span>
-                    <span class="catalog-item-name catalog-item-name--gray">ivory</span>
-                  </p>
-                  <div class="catalog-item-description">
-                    <div>
-                      <p class="catalog-item-cost">от $ 350 за м2</p>
-                      <p class="catalog-item-cost-gray">от 27 045,02 ₽ за м2</p>
-                    </div>
-                    <p class="catalog-item-status">
-                      В наличии
-                    </p>
-                  </div>
+  </div>
+</section>
+<section class="product-promo-slider-block">
+  <div class="container">
+    <h1 class="product-promo-slider-title">ПОХОЖИЕ КАМНИ</h1>
+    <div class="product-promo-slider-wrapper">
+      <button class="slider-arrow-product slider-arrow-product--prew">
+        <span class="visually-hidden">Назад</span>
+        <svg class="svg-icon svg-icon--slider-arrow-product">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-prew"></use>
+        </svg>
+      </button>
+      <button class="slider-arrow-product slider-arrow-product--next">
+        <span class="visually-hidden">Вперед</span>
+        <svg class="svg-icon svg-icon--slider-arrow-product">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#nav-popap-next"></use>
+        </svg>
+      </button>
+      <div class="product-promo-slider js--product-promo-slider">
+        {% for i in range(0, 7) %}
+        <div class="product-promo-slide">
+          <a href="#" class="catalog-item">
+            <div class="catalog-item-img" style="background-image: url('./images/dest/img/gal6.jpg');"></div>
+            <div class="catalog-item-text-block">
+              <p class="catalog-item-name">
+                <span class="catalog-item-country-icon">
+                  🇮🇹
+                </span>
+                <span class="catalog-item-name">айвори</span>
+                <span class="catalog-item-name catalog-item-name--gray">ivory</span>
+              </p>
+              <div class="catalog-item-description">
+                <div>
+                  <p class="catalog-item-cost">от $ 350 за м2</p>
+                  <p class="catalog-item-cost-gray">от 27 045,02 ₽ за м2</p>
                 </div>
-              </a>
+                <p class="catalog-item-status">
+                  В наличии
+                </p>
+              </div>
             </div>
-          {% endfor %}
+          </a>
         </div>
-
+        {% endfor %}
       </div>
+
     </div>
-  </section>
-  {% include "app/njk/parts/popup_projects.njk" %}
-  {% include "app/njk/parts/popup_get_photo.njk" %}
-  {% include "app/njk/parts/popup_calculation_order.njk" %}
-  {% include "app/njk/parts/popup_get_photo_by_email.njk" %}
+  </div>
+</section>
+{% include "app/njk/parts/popup_projects.njk" %}
+{% include "app/njk/parts/popup_get_photo.njk" %}
+{% include "app/njk/parts/popup_calculation_order.njk" %}
+{% include "app/njk/parts/popup_get_photo_by_email.njk" %}
 {% endblock %}

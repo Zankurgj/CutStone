@@ -276,28 +276,28 @@
                         </svg>
                     </li>
                     <li>
-                        <span class="breadcrumbs-item-last">Абролиос</span >
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="product-nav">
-    <div class="container container--product-nav">
-      <a href="#" class="product-nav-item">
-        <svg class="svg-icon svg-icon--product-nav">
-          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small_prev"></use>
-        </svg>
-        <span class="product-nav-black">австралиен блю</span>
-                        <span class="product-nav-gray">— Назад</span>
-                        </a>
+                        <span class="breadcrumbs-item-last">Абролиос</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="product-nav">
+            <div class="container container--product-nav">
+                <a href="#" class="product-nav-item">
+                    <svg class="svg-icon svg-icon--product-nav">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small_prev"></use>
+                    </svg>
+                    <span class="product-nav-black">австралиен блю</span>
+                    <span class="product-nav-gray">— Назад</span>
+                </a>
 
-                        <a href="#" class="product-nav-item">
-                            <span class="product-nav-gray">далее —</span>
-                            <span class="product-nav-black">Абсолют блэк</span>
-                            <svg class="svg-icon svg-icon--product-nav">
-                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                            </svg>
-                        </a>
+                <a href="#" class="product-nav-item">
+                    <span class="product-nav-gray">далее —</span>
+                    <span class="product-nav-black">Абсолют блэк</span>
+                    <svg class="svg-icon svg-icon--product-nav">
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                    </svg>
+                </a>
             </div>
         </section>
         <section class="product-card">
@@ -324,14 +324,14 @@
                     </div>
                     <p class="product-card-slider-info"></p>
                     <div class="product-card-slider-btns product-card-slider-btns--desktop">
-                        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
+                        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
                             <span>Скачать в большом разрешении</span>
                             <svg class="svg-icon svg-icon--btn--border svg-icon--btn--border-bottom">
                                 <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
                             </svg>
                         </button>
 
-                        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhotoByEmail')">
+                        <button class="btn--border btn--product-card-slider" onclick="onTogglePopUp('popupGetPhoto')">
                             Запросить актуальные фото
                         </button>
                     </div>
@@ -344,16 +344,16 @@
                                 <span class="product-card-info-title-black">Имперадор Лайт</span>
                                 <span class="product-card-info-title-gray">Emperador pale Lite</span>
                             </p>
-                            <div class="product-card-info-status-inner">
-                                <span class="product-card-info-status product-card-info-status--access">
+                            <!-- <div class="product-card-info-status-inner">
+              <span class="product-card-info-status product-card-info-status--access">
                 В наличии
               </span>
-                                <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
-                            </div>
+              <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
+            </div> -->
                             <div class="product-card-info-status-inner">
                                 <span class="product-card-info-status product-card-info-status--wait">
-                под заказ
-              </span>
+              под заказ
+            </span>
                                 <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
                             </div>
                         </div>
@@ -491,13 +491,14 @@
                     </div>
                     <div class="product-card-description-project">
                         <div class="product-card-description-project-img-col">
-                            <div class="product-card-description-project-img" style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
+                            <div class="product-card-description-project-img" onclick="onShowProjectPopUp('popupProject')" style="background-image: url('./images/dest/img/s_project1.jpg');"></div>
                         </div>
                         <div class="product-card-description-project-text-col">
                             <p class="product-card-description-project-title">камень в проекте</p>
                             <p class="product-card-description-project-text">
                                 <b>ЖК Имперский на Якиманке,</b>
-                                частная квартира, Москва</p>
+                                частная квартира, Москва
+                            </p>
                             <button class="btn--link btn--product-card-description-project" onclick="onShowProjectPopUp('popupProject')">
                                 <span>смотреть проект</span>
                                 <svg class="svg-icon svg-icon--btn--main-arrow">
@@ -536,8 +537,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -560,8 +561,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -584,8 +585,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -608,8 +609,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -632,8 +633,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -656,8 +657,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -680,8 +681,8 @@
                                 <div class="catalog-item-text-block">
                                     <p class="catalog-item-name">
                                         <span class="catalog-item-country-icon">
-                      🇮🇹
-                    </span>
+                  🇮🇹
+                </span>
                                         <span class="catalog-item-name">айвори</span>
                                         <span class="catalog-item-name catalog-item-name--gray">ivory</span>
                                     </p>
@@ -1183,7 +1184,7 @@
   </section>
 </div>
 
-  <div class="popup-wrapper" id="popupGetPhoto">
+<div class="popup-wrapper" id="popupGetPhoto">
   <div class="popup-overlay" onclick="onTogglePopUp('popupGetPhoto')"></div>
   <section class="get-photo-popup container container--no-padding">
     <div class="get-photo-popup-head">
@@ -1276,9 +1277,9 @@
             </div>
             <div class="popup-wrapper" id="popupGetPhotoByEmail">
                 <div class="popup-overlay" onclick="onTogglePopUp('popupGetPhotoByEmail')"></div>
-                <section class="get-photo-popup container container--no-padding">
+                <section class="get-photo-popup get-photo-popup--email container container--no-padding">
                     <div class="get-photo-popup-head">
-                        <p class="base-popup-head-title">Получить фото в WhatsApp</p>
+                        <p class="base-popup-head-title">Скачать фото в большом разрешении</p>
                         <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupGetPhotoByEmail')">
                             <span class="visually-hidden">закрыть</span>
                             <svg class="svg-icon svg-icon--btn--popup-close">
