@@ -131,6 +131,11 @@ const initheaderMenuHandler = () => {
 
 const onToggleSpoilerPricin = (el) => {
   const spoilerParent = $(el).parents(".js--spoiler-pricing-parent");
+  if ($(el).hasClass("mp-pricin-btn--opened")) {
+    $(el).addClass("mp-pricin-btn--close");
+  } else {
+    $(el).removeClass("mp-pricin-btn--close");
+  }
   $(el).toggleClass("mp-pricin-btn--opened");
   spoilerParent.toggleClass("mp-pricin-item--opened");
 };
@@ -432,6 +437,9 @@ class CatalogFilter {
     this.clearAllFilterSelector = document.querySelector(
       ".js--clear-all-filter"
     );
+    this.mobileApplySelector = document.querySelector(".js--apply-filter");
+    this.popupSelector = document.querySelector("#catalogFilterPopup");
+    this.mainMenuSelector = document.querySelector(".main-header");
     this.init();
   }
 
@@ -444,6 +452,7 @@ class CatalogFilter {
     this.clearFilterHandler();
     this.clearFilterCostHandler();
     this.clearAllFiltersHandler();
+    this.applyFilterHandler();
   }
 
   checkBoxHandler() {
@@ -515,7 +524,6 @@ class CatalogFilter {
     const parentEl = el.closest(".js--dd-parent");
     const contentEl = parentEl.querySelector(".js--dd-selected-inner");
     const filterType = el.dataset.filterType;
-    console.log(filterItem);
     if (filterItem.length) {
       parentEl.classList.add("active");
       if (filterType === "quantity") {
@@ -533,8 +541,10 @@ class CatalogFilter {
   showAllFiltersClearBtn() {
     if (this.checkEmptyFilters()) {
       this.clearAllFilterSelector.classList.remove("show");
+      this.mobileApplySelector.disabled = true;
     } else {
       this.clearAllFilterSelector.classList.add("show");
+      this.mobileApplySelector.disabled = false;
     }
   }
 
@@ -594,6 +604,7 @@ class CatalogFilter {
       allCheckBox[i].checked = false;
     }
     this.clearFilterCost();
+    this.mobileApplySelector.disabled = true;
   }
 
   clearFilterCost() {
@@ -608,6 +619,18 @@ class CatalogFilter {
     }
     this.filterItemsInput.costStart = "";
     this.filterItemsInput.costEnd = "";
+  }
+
+  applyFilterHandler() {
+    this.mobileApplySelector.addEventListener("click", (event) => {
+      this.togglePopup();
+    });
+  }
+
+  togglePopup() {
+    this.popupSelector.classList.toggle("show");
+    this.mainMenuSelector.classList.toggle("hide");
+    $("body").toggleClass("body--no-scroll");
   }
 }
 

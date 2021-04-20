@@ -121,6 +121,9 @@
     }
     .base-checkbox-text {
       color: #0066cc;
+      @media screen and (max-width: $mobile-bp) {
+        color: inherit;
+      }
     }
   }
 }

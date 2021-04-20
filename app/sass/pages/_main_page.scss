@@ -9,11 +9,13 @@
   padding-top: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   margin-bottom: 160px;
   @media screen and (max-width: $mobile-bp) {
     padding-top: 0;
     height: 440px;
     background-image: url("../images/dest/img/mp-main-mob.jpg");
+    background-position: 0 0;
     margin-bottom: 80px;
   }
 }
@@ -78,7 +80,7 @@
   line-height: 1.3;
   &:hover {
     .svg-icon--mp-main-left-btn {
-      transform: translateX(15%);
+      transform: translateX(40%);
     }
   }
 }
@@ -87,7 +89,8 @@
   height: 0.6em;
   min-width: 15px;
   min-height: 15px;
-  transition: transform $base-duration $base-timing;
+  margin-left: 4px;
+  transition: transform $base-duration $arrow-timing;
 }
 .mp-main-right-title-img {
   max-width: 100%;
@@ -278,7 +281,7 @@
   cursor: pointer;
   transition: color $base-duration $base-timing;
   &:hover {
-    color: rgba($color: #1d1d1d, $alpha: 0.8);
+    color: rgba($color: #1d1d1d, $alpha: 0.6);
   }
 }
 .row--mp-project-top {
@@ -371,7 +374,7 @@
   transition: color $base-duration $base-timing;
   cursor: pointer;
   &:hover {
-    color: rgba($color: #1d1d1d, $alpha: 0.8);
+    color: rgba($color: #1d1d1d, $alpha: 0.6);
   }
   @media screen and (max-width: $mobile-bp) {
     font-size: 36px;
@@ -424,27 +427,60 @@
     width: 100%;
   }
   &:hover {
-    .svg-icon--mp-pricin-btn {
+    .mp-pricin-item-icon {
       color: rgba($color: #1d1d1d, $alpha: 0.5);
     }
   }
 }
 .mp-pricin-btn--opened {
-  .svg-icon--mp-pricin-btn {
+  .mp-pricin-item-icon {
     transform: translateY(-50%) rotate(90deg);
     color: #0066cc;
+    &::before {
+      animation-name: arrowClick;
+    }
   }
 }
-.svg-icon--mp-pricin-btn {
-  width: 24px;
-  height: 24px;
+.mp-pricin-btn--close {
+  .mp-pricin-item-icon {
+    &::before {
+      animation-name: arrowClickOut;
+    }
+  }
+}
+.mp-pricin-item-icon {
+  display: block;
   position: absolute;
   top: 50%;
   right: 10px;
+  width: 24px;
+  height: 24px;
   transform: translateY(-50%);
   color: #1d1d1d;
   transition: color $base-duration $base-timing,
     transform $base-duration $base-timing;
+  &::before {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #f1f1f1;
+    animation-timing-function: $base-timing;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+}
+.svg-icon--mp-pricin-btn {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
 }
 .mp-pricin-btn-text {
   font-weight: bold;
@@ -617,5 +653,32 @@
   min-height: 445px;
   @media screen and (max-width: $mobile-bp) {
     min-height: 300px;
+  }
+}
+
+@keyframes arrowClickOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+@keyframes arrowClick {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
   }
 }

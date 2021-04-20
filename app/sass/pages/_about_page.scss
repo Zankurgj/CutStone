@@ -1,303 +1,304 @@
 .about-head {
-    padding: 114px 0 115px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image:  url('../images/dest/img/about_head.jpg');
-    @media screen and (max-width: $mobile-bp) {
-        padding: 48px 0;
-    }
+  padding: 114px 0 115px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/dest/img/about_head.jpg");
+  @media screen and (max-width: $mobile-bp) {
+    padding: 48px 0;
+  }
 }
 .about-head-h1 {
-    margin-bottom: 24px;
-    font-weight: 800;
-    font-size: 44px;
-    line-height: 53px;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-    @media screen and (max-width: $mobile-bp) {
-        font-size: 32px;
-        line-height: 39px;
-    }
+  margin-bottom: 24px;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 53px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 32px;
+    line-height: 39px;
+  }
 }
 .about-head-text {
-    font-size: 28px;
-    line-height: 34px;
-    color: #FFFFFF;
-    @media screen and (max-width: $mobile-bp) {
-        font-size: 20px;
-        line-height: 24px;
-    }
+  font-size: 28px;
+  line-height: 34px;
+  color: #ffffff;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .about-text-block {
-    padding: 68px 0 64px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image:  url('../images/dest/img/about_block2.jpg');
-    @media screen and (max-width: $mobile-bp) {
-        background-image: none;
-    }
+  padding: 68px 0 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/dest/img/about_block2.jpg");
+  @media screen and (max-width: $mobile-bp) {
+    background-image: none;
+  }
 }
 .about-text-col {
-    flex-basis: 50%;
-    max-width: 50%;
-    @media screen and (max-width: $mobile-bp) {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+  flex-basis: 50%;
+  max-width: 50%;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 .about-text-col--right {
-    padding-top: 42px;
-    @media screen and (max-width: $mobile-bp) {
-        padding-top: 32px;
-    }
+  padding-top: 42px;
+  @media screen and (max-width: $mobile-bp) {
+    padding-top: 32px;
+  }
 }
 .about-head-h2 {
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 77px;
-    letter-spacing: -0.02em;
-    color: #1D1D1F;
-    @media screen and (max-width: $mobile-bp) {
-        font-weight: 800;
-        font-size: 44px;
-        line-height: 53px;
-    }
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 77px;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+  margin-right: 20px;
+  hyphens: auto;
+  @media screen and (max-width: $mobile-bp) {
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 53px;
+  }
 }
 .about-base-text--about {
-    margin-bottom: 24px;
-    &:last-child {
-        margin-bottom: 0;
-    }
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
-
 
 .about-partners {
-    padding: 64px 0 115px;
-    @media screen and (max-width: $mobile-bp) {
-        padding: 0 0 64px 0;
-    }
+  padding: 64px 0 115px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 0 0 64px 0;
+  }
 }
 .about-head-h3 {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: -0.03em;
-    color: #1D1D1D;
-    margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.03em;
+  color: #1d1d1d;
+  margin-bottom: 24px;
 }
 .about-partners-subtitle {
-    font-size: 28px;
-    line-height: 34px;
-    letter-spacing: -0.03em;
-    color: #1D1D1D;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.03em;
+  color: #1d1d1d;
 }
 .about-partners-col {
-    flex-basis: 50%;
-    max-width: 50%;
-    @media screen and (max-width: $mobile-bp) {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+  flex-basis: 50%;
+  max-width: 50%;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 .about-partners-col--left {
-    padding-top: 32px;
-    @media screen and (max-width: $mobile-bp) {
-        padding: 0 0 64px 0;
-    }
+  padding-top: 32px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 0 0 64px 0;
+  }
 }
 .about-partners-col--right {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .about-partners-item-col {
-    flex-basis: calc((100% - 20px * 3) / 4);
-    margin-right: 20px;
-    margin-bottom: 20px;
+  flex-basis: calc((100% - 20px * 3) / 4);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  @media screen and (max-width: $mobile-bp) {
+    display: flex;
+    justify-content: center;
+    flex-basis: calc((100% - 12px * 2) / 3);
+    margin-right: 12px;
+    margin-bottom: 16px;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
     @media screen and (max-width: $mobile-bp) {
-        display: flex;
-        justify-content: center;
-        flex-basis: calc((100% - 12px * 2) / 3);
-        margin-right: 12px;
-        margin-bottom: 16px;
+      margin-right: 12px;
     }
-    &:nth-child(4n) {
-        margin-right: 0;
-        @media screen and (max-width: $mobile-bp) {
-            margin-right: 12px;
-        }
+  }
+  &:nth-child(3n) {
+    @media screen and (max-width: $mobile-bp) {
+      margin-right: 0;
     }
-    &:nth-child(3n) {
-        @media screen and (max-width: $mobile-bp) {
-            margin-right: 0;
-        }
-    }
+  }
 }
 .about-partners-item-img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .about-feature {
-    position: relative;
-    padding: 64px 0 32px;
-    @media screen and (max-width: $mobile-bp) {
-        padding: 64px 0 0 0;
-    }
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image:  url('../images/dest/img/about_block3.jpg');
-        z-index: -1;
-        @media screen and (max-width: $mobile-bp) { 
-            display: none;
-            background-image: none;
-        }
-    }
-}
-.about-feature-col {
-    flex-basis: 50%;
-    max-width: 50%;
-    @media screen and (max-width: $mobile-bp) {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-}
-.about-feature-col--right {
-    padding-left: 24px;
-    @media screen and (max-width: $mobile-bp) {
-        padding: 56px 0 0 0;
-    }
-}
-.about-feature-item {
-    margin-bottom: 64px;
-    @media screen and (max-width: $mobile-bp) {
-        margin-bottom: 24px;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-.about-feature-title {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 39px;
-    letter-spacing: -0.02em;
-    color: #1D1D1D;
-    @media screen and (max-width: $mobile-bp) {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 29px;
-        border-bottom: 1px solid #1D1D1D;
-        margin-bottom: 0;
-        padding-bottom: 16px;
-    }
-    &.opened {
-        border-color: transparent;
-    }
-}
-.about-base-text--feature {
-    @media screen and (max-width: $mobile-bp) {
-        display: none;
-    }
-}
-.about-base-text {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-    color: #1D1D1D;
-}
-
-.about-clients {
-    padding: 102px 0 16px;
-    @media screen and (max-width: $mobile-bp) {
-        padding: 64px 0 0 0;
-    }
-}
-.about-clients-col--right {
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (max-width: $mobile-bp) {
-        padding-top: 18px;
-    }
-}
-.about-clients-col {
-    flex-basis: 50%;
-    max-width: 50%;
-    @media screen and (max-width: $mobile-bp) {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-}
-.about-clients-item-col {
-    flex-basis: calc((100% - 54px * 3) / 4);
-    margin-right: 54px;
-    margin-bottom: 48px;
-    @media screen and (max-width: $mobile-bp) {
-        margin-right: 14px;
-        margin-bottom: 14px;
-        flex-basis: calc((100% - 14px * 2) / 3);
-        display: flex;
-        justify-content: center;
-    }
-    &:nth-child(4n) {
-        margin-right: 0;
-        @media screen and (max-width: $mobile-bp) {
-            margin-right: 14px;
-        }
-    }
-    &:nth-child(3n) {
-        @media screen and (max-width: $mobile-bp) {
-            margin-right: 0;
-        }
-    }
-}
-.about-clients-item-img {
-    display: block;
-    max-width: 100%;
-}
-
-.about-advantage {
-    padding: 24px 0 116px;
-    margin-bottom: 128px;
+  position: relative;
+  padding: 64px 0 32px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 64px 0 0 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image:  url('../images/dest/img/about_block2.jpg');
+    background-image: url("../images/dest/img/about_block3.jpg");
+    z-index: -1;
     @media screen and (max-width: $mobile-bp) {
-        background-image: none;
-        padding: 50px 0 0 0;
-        margin-bottom: 160px;
+      display: none;
+      background-image: none;
     }
+  }
+}
+.about-feature-col {
+  flex-basis: 50%;
+  max-width: 50%;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.about-feature-col--right {
+  padding-left: 24px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 56px 0 0 0;
+  }
+}
+.about-feature-item {
+  margin-bottom: 64px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 24px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.about-feature-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+  @media screen and (max-width: $mobile-bp) {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    border-bottom: 1px solid #1d1d1d;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+  }
+  &.opened {
+    border-color: transparent;
+  }
+}
+.about-base-text--feature {
+  @media screen and (max-width: $mobile-bp) {
+    display: none;
+  }
+}
+.about-base-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+}
+
+.about-clients {
+  padding: 102px 0 16px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 64px 0 0 0;
+  }
+}
+.about-clients-col--right {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $mobile-bp) {
+    padding-top: 18px;
+  }
+}
+.about-clients-col {
+  flex-basis: 50%;
+  max-width: 50%;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.about-clients-item-col {
+  flex-basis: calc((100% - 54px * 3) / 4);
+  margin-right: 54px;
+  margin-bottom: 48px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-right: 14px;
+    margin-bottom: 14px;
+    flex-basis: calc((100% - 14px * 2) / 3);
+    display: flex;
+    justify-content: center;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
+    @media screen and (max-width: $mobile-bp) {
+      margin-right: 14px;
+    }
+  }
+  &:nth-child(3n) {
+    @media screen and (max-width: $mobile-bp) {
+      margin-right: 0;
+    }
+  }
+}
+.about-clients-item-img {
+  display: block;
+  max-width: 100%;
+}
+
+.about-advantage {
+  padding: 24px 0 116px;
+  margin-bottom: 128px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/dest/img/about_block2.jpg");
+  @media screen and (max-width: $mobile-bp) {
+    background-image: none;
+    padding: 50px 0 0 0;
+    margin-bottom: 160px;
+  }
 }
 .about-advantage-col {
-    flex-basis: 50%;
-    max-width: 50%;
-    @media screen and (max-width: $mobile-bp) {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+  flex-basis: 50%;
+  max-width: 50%;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 .about-advantage-col--right {
-    padding-bottom: 42px;
-    @media screen and (max-width: $mobile-bp) {
-       padding: 32px 0 0 0;
-    }
+  padding-top: 42px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 32px 0 0 0;
+  }
 }
 .about-base-text--advantage {
-    margin-bottom: 24px;
-    &:last-child {
-        margin-bottom: 0;
-    }
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

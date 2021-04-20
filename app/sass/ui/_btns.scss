@@ -36,7 +36,7 @@ input[type="submit"] {
 .btn--main-arrow {
   &:hover {
     .svg-icon--btn--main-arrow {
-      transform: translateX(20%);
+      transform: translateX(40%);
     }
   }
 }
@@ -45,7 +45,7 @@ input[type="submit"] {
   height: 10px;
   margin-left: 4px;
   margin-bottom: 2px;
-  transition: transform $base-duration $base-timing;
+  transition: transform $base-duration $arrow-timing;
 }
 .btn--main--big {
   font-size: 16px;
@@ -85,7 +85,7 @@ input[type="submit"] {
 .btn--big-black--arrow {
   &:hover {
     .svg-icon--btn--big-black {
-      transform: translateX(20%);
+      transform: translateX(40%);
     }
   }
 }
@@ -93,7 +93,7 @@ input[type="submit"] {
   width: 12px;
   height: 12px;
   margin-bottom: 4px;
-  transition: transform $base-duration $base-timing;
+  transition: transform $base-duration $arrow-timing;
 }
 .btn-arrowed {
   font-weight: bold;
@@ -126,6 +126,9 @@ input[type="submit"] {
     color: #fff;
     background-color: #0066cc;
     border-color: #0066cc;
+    .svg-icon--btn--border {
+      transform: translateX(40%);
+    }
   }
 }
 .svg-icon--btn--border {
@@ -133,6 +136,7 @@ input[type="submit"] {
   height: 10px;
   margin-left: 4px;
   margin-bottom: 2px;
+  transition: transform $base-duration $arrow-timing;
 }
 .btn--link {
   color: #1d1d1d;

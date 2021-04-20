@@ -21,6 +21,7 @@ $textcolor: #282828; // Text Color
 $mainfamily: GTEestiProDisplay, sans-serif; // Main Font Family
 $base-duration: 0.3s;
 $base-timing: ease-in-out;
+$arrow-timing: cubic-bezier(0.54, -0.5, 0, 2.2);
 $maxWidth: 1400px;
 $contentPadding: 20px;
 $mobile-bp: 992px;

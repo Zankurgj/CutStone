@@ -418,6 +418,9 @@
     .main-header-dropdown-item {
       &.no-hover {
         color: rgba($color: #fff, $alpha: 0.6);
+        @media screen and (max-width: $mobile-bp) {
+          color: #1d1d1d;
+        }
       }
     }
   }
