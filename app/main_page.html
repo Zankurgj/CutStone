@@ -62,27 +62,27 @@
                             <div class="row row--wrap">
                                 <div class="main-header-dropdown-col">
                                     <p class="main-header-dropdown-title">камни</p>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
                                         <span>гранит</span>
                                         <span class="main-header-dropdown-item-quantity">298</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
                                         <span>мрамор</span>
                                         <span class="main-header-dropdown-item-quantity">176</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
                                         <span>оникс</span>
                                         <span class="main-header-dropdown-item-quantity">25</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
                                         <span>кварцит</span>
                                         <span class="main-header-dropdown-item-quantity">15</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
                                         <span>травертин</span>
                                         <span class="main-header-dropdown-item-quantity">38</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
                                         <span>агломерат</span>
                                         <span class="main-header-dropdown-item-quantity">300</span>
                                     </a>
@@ -96,22 +96,22 @@
 
                                 <div class="main-header-dropdown-col">
                                     <p class="main-header-dropdown-title">изделия</p>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="1">
                                         <span>столешницы</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="2">
                                         <span>камины</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="3">
                                         <span>лестницы</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="4">
                                         <span>камины</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="5">
                                         <span>полы</span>
                                     </a>
-                                    <a href="#" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
+                                    <a href="/catalog_page.html" class="main-header-dropdown-item js--header-dropdown-item" data-hov-img-id="6">
                                         <span>подоконники</span>
                                     </a>
                                     <a href="#" class="main-header-dropdown-link">
@@ -909,7 +909,48 @@
                         </div>
                     </div>
                     <div class="mp-contacts-col mp-contacts-col--map">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8895220616b000d438ab3786c3ab3886939675156962bd23a8b74c6cc8c4fd19&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                        <script src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
+                        <div class="mp-contacts-map-container" id="map"></div>
+                        <script>
+                            ymaps.ready(init);
+                    
+                              function init() {
+                                var myMap = new ymaps.Map("map", {
+                                  center: [55.95419530235521, 37.56238781481928],
+                                  zoom: 17
+                                }, {});
+                    
+                                myMap.geoObjects
+                                  .add(new ymaps.Placemark([55.95395453015413, 37.561593880950845], {
+                                    iconCaption: 'Офис',
+                                    balloonContent: `
+                                    <p>
+                                      Московская область </br>
+                                      дер. Грибки, </br>
+                                      ул. Ангарская, владение 8
+                                    </p>
+                                    <p>
+                                      <strong>Телефон: +7 (800) 444 06 33</strong></br>
+                                      <strong>Email: info@cutstone.ru</strong>
+                                    </p>
+                                    `
+                                  }, {
+                                    preset: 'islands#redHomeIcon'
+                                  }))
+                                  .add(new ymaps.Placemark([55.95438791903336, 37.563085189163175], {
+                                    iconCaption: 'Склад',
+                                    balloonContent: `
+                                    <p>
+                                      Нужно уточнить адрес
+                                    </p>
+                                    `
+                                  }, {
+                                    preset: 'islands#redFactoryIcon'
+                                  }))
+                                  ;
+                                myMap.behaviors.disable('scrollZoom');
+                              }
+                        </script>
                     </div>
                 </div>
             </div>

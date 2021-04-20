@@ -650,12 +650,17 @@
   }
 }
 .mp-contacts-col--map {
+  max-width: 100%;
+  flex-basis: 100%;
   min-height: 445px;
   @media screen and (max-width: $mobile-bp) {
     min-height: 300px;
   }
 }
-
+.mp-contacts-map-container {
+  width: 100%;
+  height: 100%;
+}
 @keyframes arrowClickOut {
   0% {
     transform: scale(0);
