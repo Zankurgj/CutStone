@@ -285,6 +285,11 @@
   &:last-child {
     margin-right: 0;
   }
+  &:hover {
+    .svg-icon--btn--border-bottom {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .product-card-slider-btns--mobile {
