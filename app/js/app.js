@@ -16,8 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const initStickyCostHandler = new InitSticky();
   const initFilter = new CatalogFilter();
   const initSelect = new CatalogSelect();
+  mpParallaxInit();
+  dataPickerInit();
 });
 
+const mpParallaxInit = () => {
+  const parallaxSelector = document.querySelector(".js--mp-bg-parallax");
+  if (!parallaxSelector) {
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(parallaxSelector, {
+    y: `${innerHeight / 2}`,
+    ease: "none",
+    scrollTrigger: {
+      trigger: parallaxSelector,
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+};
 class InitSticky {
   constructor() {
     this.isStickyInit = false;
@@ -140,6 +159,16 @@ const onToggleSpoilerPricin = (el) => {
   spoilerParent.toggleClass("mp-pricin-item--opened");
 };
 
+const onShowCalculationPopup = (id, type, nameVal = "") => {
+  onTogglePopUp(id);
+  const inputNameMap = {
+    product: "js--order-name-product",
+    stone: "js--order-name-stone",
+  };
+  $(`.${inputNameMap[type]}`).val(nameVal);
+};
+onclick =
+  "onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')";
 const onShowProjectPopUp = (id) => {
   onTogglePopUp(id);
   let initProjectPopup = null;
@@ -349,6 +378,8 @@ const initPromoProductSlider = () => {
         settings: {
           slidesToShow: 3,
         },
+      },
+      {
         breakpoint: 992,
         settings: {
           slidesToShow: 1,
@@ -757,4 +788,70 @@ const examplePopupImgFancyOpen = (src, webP) => {
       <img src="${src}">
     </picture>`
   );
+};
+
+const dataPickerInit = () => {
+  $.datepicker.regional["ru"] = {
+    prevText: "",
+    nextText: "",
+    monthNames: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+    monthNamesShort: [
+      "Янв",
+      "Фев",
+      "Мар",
+      "Апр",
+      "Май",
+      "Июн",
+      "Июл",
+      "Авг",
+      "Сен",
+      "Окт",
+      "Ноя",
+      "Дек",
+    ],
+    dayNames: [
+      "воскресенье",
+      "понедельник",
+      "вторник",
+      "среда",
+      "четверг",
+      "пятница",
+      "суббота",
+    ],
+    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    dateFormat: "dd-mm-yy",
+    showButtonPanel: true,
+    closeText: "",
+  };
+  $.datepicker.setDefaults($.datepicker.regional["ru"]);
+  $(".js--data-picker")
+    .datepicker({
+      beforeShow: function (input, inst) {
+        setTimeout(function () {
+          inst.dpDiv.css({
+            top:
+              document.querySelector(".js--data-picker").getBoundingClientRect()
+                .top - 278,
+            left: document
+              .querySelector(".js--data-picker")
+              .getBoundingClientRect().left,
+          });
+        }, 0);
+      },
+    })
+    .datepicker("setDate", new Date());
 };

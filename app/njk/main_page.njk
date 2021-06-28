@@ -3,6 +3,7 @@
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
 <main class="mp-main">
+  <div class="mp-main-bg js--mp-bg-parallax"></div>
   <div class="mp-main-inner">
     <div class="mp-main-mobile">
       <p class="mp-main-mobile-title">Мы знаем камень</p>
@@ -40,8 +41,9 @@
 <section class="mp-product-gallery">
   <div class="container--no-padding">
     <a href="#" class="mp-block-title mp-block-title--padding">
-      <h2 class="h2-base">Галерея камня</h2>
-      <span class="mp-block-title-quantity">852</span>
+      <h2 class="h2-base">Галерея камня
+        <span class="mp-block-title-quantity">852</span>
+      </h2>
       <svg class="svg-icon svg-icon--title-quantity">
         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
       </svg>
@@ -49,29 +51,34 @@
     <div class="row row--wrap row--gal-hover">
       {% set productItems = [
       {
-      text: 'гранит',
-      quantity: '298',
-      img: 'menu_hov1'
-      }, {
       text: 'мрамор',
       quantity: '176',
       img: 'menu_hov2'
-      }, {
+      },
+      {
       text: 'оникс',
       quantity: '25',
       img: 'menu_hov3'
-      }, {
-      text: 'травертин',
-      quantity: '38',
-      img: 'menu_hov4'
-      }, {
-      text: 'агломерат',
-      quantity: '300',
-      img: 'menu_hov5'
-      }, {
+      },
+      {
       text: 'кварцит',
       quantity: '15',
       img: 'menu_hov6'
+      },
+      {
+      text: 'гранит',
+      quantity: '298',
+      img: 'menu_hov1'
+      },
+      {
+      text: 'травертин',
+      quantity: '38',
+      img: 'menu_hov4'
+      },
+      {
+      text: 'агломерат',
+      quantity: '300',
+      img: 'menu_hov5'
       }
       ]
       %}
@@ -262,7 +269,7 @@
           <div class="mp-pricin-item-col">
             <div class="mp-pricin-item-info">
               <button class="btn--main btn--main-arrow btn--main--mp-pricin"
-                onclick="onTogglePopUp('popupCalculationOrder')">
+                onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')">
                 <span>Заказать расчёт и выезд замерщика</span>
                 <svg class="svg-icon svg-icon--btn--main-arrow">
                   <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -308,7 +315,8 @@
       </div>
       {% endfor %}
     </div>
-    <button class="btn--main btn--main-arrow" onclick="onTogglePopUp('popupCalculationOrder')">
+    <button class="btn--main btn--main-arrow"
+      onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', '')">
       <span>Заказать расчёт и выезд замерщика</span>
       <svg class="svg-icon svg-icon--btn--main-arrow">
         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -390,6 +398,15 @@
               }))
               ;
             myMap.behaviors.disable('scrollZoom');
+
+            myMap.events.add('balloonopen', function (e) {
+              const mobileWidth = 992;
+              if (window.screen.width <= mobileWidth) {
+                const balloonCoords = e.get('target').geometry.getCoordinates();
+                const appLink = `yandexmaps://maps.yandex.ru/?pt=${balloonCoords[1]},${balloonCoords[0]}&z=17`;
+                window.open(appLink, '_blank');
+              }
+            });
           }
         </script>
       </div>
@@ -401,5 +418,6 @@
 {% include "app/njk/parts/popup_slab.njk" %}
 {% include "app/njk/parts/popup_profile_option.njk" %}
 {% include "app/njk/parts/popup_calculation_order.njk" %}
+{% include "app/njk/parts/popup_calculation_order_product.njk" %}
 {% include "app/njk/parts/popup_calculation_example.njk" %}
 {% endblock %}

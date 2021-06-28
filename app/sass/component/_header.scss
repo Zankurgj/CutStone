@@ -141,8 +141,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #1d1d1d;
-  transition: color $base-duration $base-timing,
-    background-color $base-duration $base-timing;
+  transition: color 0.5s $base-timing, background-color 0.5s $base-timing;
   &:hover {
     background-color: #1d1d1d;
     color: #fff;
@@ -405,6 +404,8 @@
   padding: 24px 0 0 0;
   opacity: 0;
   visibility: hidden;
+  transition: opacity $base-duration $base-timing,
+    visibility $base-duration $base-timing;
   &.active {
     color: #fff;
     .main-header-dropdown-item,
@@ -479,7 +480,7 @@
   text-transform: uppercase;
   color: #1d1d1d;
   margin-bottom: 10px;
-  transition: color $base-duration $base-timing;
+  transition: color 0.5s $base-timing;
   &:hover {
     color: #1d1d1d;
   }
@@ -526,7 +527,7 @@
   min-width: 100%;
   transform: translate(-50%, -50%) scale(1.2);
   object-fit: cover;
-  transition: opacity $base-duration $base-timing;
+  transition: opacity 0.5s 0.3s $base-timing;
   z-index: 1;
   opacity: 0;
   img {
@@ -535,6 +536,7 @@
     width: 100%;
   }
   &.show {
+    transition: opacity 0.5s $base-timing;
     opacity: 1;
   }
   @media screen and (max-width: $mobile-bp) {

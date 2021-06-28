@@ -104,7 +104,7 @@
           <p class="product-card-cost-sub">от 33,535.61 ₽ за м2</p>
         </div>
         <button class="btn--main btn--main-arrow btn--main--big btn--main--card-cost"
-          onclick="onTogglePopUp('popupCalculationOrder')">
+          onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', 'ИМПЕРАДОР ЛАЙТ')">
           <span>Заказать расчёт</span>
           <svg class="svg-icon svg-icon--btn--main-arrow">
             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -240,5 +240,6 @@
 {% include "app/njk/parts/popup_projects.njk" %}
 {% include "app/njk/parts/popup_get_photo.njk" %}
 {% include "app/njk/parts/popup_calculation_order.njk" %}
+{% include "app/njk/parts/popup_calculation_order_product.njk" %}
 {% include "app/njk/parts/popup_get_photo_by_email.njk" %}
 {% endblock %}

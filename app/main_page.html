@@ -256,6 +256,7 @@
     <div class="page page--main">
 
         <main class="mp-main">
+            <div class="mp-main-bg js--mp-bg-parallax"></div>
             <div class="mp-main-inner">
                 <div class="mp-main-mobile">
                     <p class="mp-main-mobile-title">Мы знаем камень</p>
@@ -291,36 +292,15 @@
         <section class="mp-product-gallery">
             <div class="container--no-padding">
                 <a href="#" class="mp-block-title mp-block-title--padding">
-                    <h2 class="h2-base">Галерея камня</h2>
-                    <span class="mp-block-title-quantity">852</span>
+                    <h2 class="h2-base">Галерея камня
+        <span class="mp-block-title-quantity">852</span>
+      </h2>
                     <svg class="svg-icon svg-icon--title-quantity">
                         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#right_arrow_circled"></use>
                     </svg>
                 </a>
                 <div class="row row--wrap row--gal-hover">
 
-
-                    <div class="product-gallery-col">
-                        <a href="#" class="product-gallery-item">
-                            <picture class="product-gallery-item-img">
-                                <source srcset="./images/dest/img/menu/menu_hov1.webp" type="image/webp">
-                                    <img src="./images/dest/img/menu/menu_hov1.jpeg" alt="гранит">
-                            </picture>
-                            <p class="product-gallery-item-title">
-                                <span class="product-gallery-item-name">гранит</span>
-                                <br>
-                                <span class="product-gallery-item-link">
-              <span>
-                перейти в каталог
-                гранитa
-              </span>
-                                <svg class="svg-icon svg-icon--product-gallery-item-link">
-                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                                </svg>
-                                </span>
-                            </p>
-                        </a>
-                    </div>
 
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
@@ -369,6 +349,50 @@
                     <div class="product-gallery-col">
                         <a href="#" class="product-gallery-item">
                             <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov6.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov6.jpeg" alt="кварцит">
+                            </picture>
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">кварцит</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+              <span>
+                перейти в каталог
+                кварцитa
+              </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <picture class="product-gallery-item-img">
+                                <source srcset="./images/dest/img/menu/menu_hov1.webp" type="image/webp">
+                                    <img src="./images/dest/img/menu/menu_hov1.jpeg" alt="гранит">
+                            </picture>
+                            <p class="product-gallery-item-title">
+                                <span class="product-gallery-item-name">гранит</span>
+                                <br>
+                                <span class="product-gallery-item-link">
+              <span>
+                перейти в каталог
+                гранитa
+              </span>
+                                <svg class="svg-icon svg-icon--product-gallery-item-link">
+                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                                </svg>
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="product-gallery-col">
+                        <a href="#" class="product-gallery-item">
+                            <picture class="product-gallery-item-img">
                                 <source srcset="./images/dest/img/menu/menu_hov4.webp" type="image/webp">
                                     <img src="./images/dest/img/menu/menu_hov4.jpeg" alt="травертин">
                             </picture>
@@ -401,28 +425,6 @@
               <span>
                 перейти в каталог
                 агломератa
-              </span>
-                                <svg class="svg-icon svg-icon--product-gallery-item-link">
-                                    <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
-                                </svg>
-                                </span>
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="product-gallery-col">
-                        <a href="#" class="product-gallery-item">
-                            <picture class="product-gallery-item-img">
-                                <source srcset="./images/dest/img/menu/menu_hov6.webp" type="image/webp">
-                                    <img src="./images/dest/img/menu/menu_hov6.jpeg" alt="кварцит">
-                            </picture>
-                            <p class="product-gallery-item-title">
-                                <span class="product-gallery-item-name">кварцит</span>
-                                <br>
-                                <span class="product-gallery-item-link">
-              <span>
-                перейти в каталог
-                кварцитa
               </span>
                                 <svg class="svg-icon svg-icon--product-gallery-item-link">
                                     <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -672,7 +674,7 @@
                         <div class="row row--mp-pricin-item">
                             <div class="mp-pricin-item-col">
                                 <div class="mp-pricin-item-info">
-                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')">
                                         <span>Заказать расчёт и выезд замерщика</span>
                                         <svg class="svg-icon svg-icon--btn--main-arrow">
                                             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -725,7 +727,7 @@
                         <div class="row row--mp-pricin-item">
                             <div class="mp-pricin-item-col">
                                 <div class="mp-pricin-item-info">
-                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')">
                                         <span>Заказать расчёт и выезд замерщика</span>
                                         <svg class="svg-icon svg-icon--btn--main-arrow">
                                             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -778,7 +780,7 @@
                         <div class="row row--mp-pricin-item">
                             <div class="mp-pricin-item-col">
                                 <div class="mp-pricin-item-info">
-                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')">
                                         <span>Заказать расчёт и выезд замерщика</span>
                                         <svg class="svg-icon svg-icon--btn--main-arrow">
                                             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -831,7 +833,7 @@
                         <div class="row row--mp-pricin-item">
                             <div class="mp-pricin-item-col">
                                 <div class="mp-pricin-item-info">
-                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onTogglePopUp('popupCalculationOrder')">
+                                    <button class="btn--main btn--main-arrow btn--main--mp-pricin" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')">
                                         <span>Заказать расчёт и выезд замерщика</span>
                                         <svg class="svg-icon svg-icon--btn--main-arrow">
                                             <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -871,7 +873,7 @@
                     </div>
 
                 </div>
-                <button class="btn--main btn--main-arrow" onclick="onTogglePopUp('popupCalculationOrder')">
+                <button class="btn--main btn--main-arrow" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', '')">
                     <span>Заказать расчёт и выезд замерщика</span>
                     <svg class="svg-icon svg-icon--btn--main-arrow">
                         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -949,6 +951,15 @@
                                   }))
                                   ;
                                 myMap.behaviors.disable('scrollZoom');
+                    
+                                myMap.events.add('balloonopen', function (e) {
+                                  const mobileWidth = 992;
+                                  if (window.screen.width <= mobileWidth) {
+                                    const balloonCoords = e.get('target').geometry.getCoordinates();
+                                    const appLink = `yandexmaps://maps.yandex.ru/?pt=${balloonCoords[1]},${balloonCoords[0]}&z=17`;
+                                    window.open(appLink, '_blank');
+                                  }
+                                });
                               }
                         </script>
                     </div>
@@ -1520,11 +1531,11 @@
                 </section>
             </div>
             <div class="popup-wrapper popup-wrapper--animate" id="popupCalculationOrder">
-                <div class="popup-overlay" onclick="onTogglePopUp('popupCalculationOrder')"></div>
+                <div class="popup-overlay" onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', '')"></div>
                 <form class="calculation-order-popup popup-right popup-right-animate container container--no-padding">
                     <div class="base-popup-head">
                         <p class="base-popup-head-title">Заказ расчёта</p>
-                        <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupCalculationOrder')" type="button">
+                        <button class="btn--popup-close btn--popup-close--base" onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', '')" type="button">
                             <span class="visually-hidden">закрыть</span>
                             <svg class="svg-icon svg-icon--btn--popup-close">
                                 <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
@@ -1540,7 +1551,7 @@
                             </label>
                             <label class="base-input-wrapper base-input-wrapper--calculation-order">
                                 <span class="base-input-title">Телефон</span>
-                                <input type="text" class="base-text-input js--phone-calc" placeholder="+7 (495) 268-06-19">
+                                <input type="text" class="base-text-input js--phone-calc">
                             </label>
                             <label class="base-input-wrapper base-input-wrapper--calculation-order">
                                 <span class="base-input-title">Email</span>
@@ -1554,7 +1565,7 @@
                                 <div class="calculation-order-col2">
                                     <label class="base-input-wrapper base-input-wrapper--calculation-order">
                                         <span class="base-input-title">Камень</span>
-                                        <input type="text" class="base-text-input">
+                                        <input type="text" class="base-text-input js--order-name-stone">
                                     </label>
                                 </div>
                                 <div class="calculation-order-col2">
@@ -1566,7 +1577,64 @@
                                 <div class="calculation-order-col2">
                                     <label class="base-input-wrapper base-input-wrapper--calculation-order">
                                         <span class="base-input-title">Желаемая дата замера</span>
-                                        <input type="text" class="base-text-input">
+                                        <input type="text" class="base-text-input js--data-picker">
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="base-popup-bts-bottom">
+                        <button class="btn--main btn--main-arrow" type="submit">
+                            <span>Заказать расчёт</span>
+                            <svg class="svg-icon svg-icon--btn--main-arrow">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="popup-wrapper popup-wrapper--animate" id="popupCalculationOrderProduct">
+                <div class="popup-overlay" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', '')"></div>
+                <form class="calculation-order-popup popup-right popup-right-animate container container--no-padding">
+                    <div class="base-popup-head">
+                        <p class="base-popup-head-title">Заказ расчёта</p>
+                        <button class="btn--popup-close btn--popup-close--base" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', '')" type="button">
+                            <span class="visually-hidden">закрыть</span>
+                            <svg class="svg-icon svg-icon--btn--popup-close">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="base-popup-inner base-popup-inner--scroll">
+                        <fieldset>
+                            <legend class="base-legend base-legend--calculation-order">контактные данные</legend>
+                            <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                <span class="base-input-title">Имя</span>
+                                <input type="text" class="base-text-input">
+                            </label>
+                            <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                <span class="base-input-title">Телефон</span>
+                                <input type="text" class="base-text-input js--phone-calc">
+                            </label>
+                            <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                <span class="base-input-title">Email</span>
+                                <input type="text" class="base-text-input base-text-input--err">
+                                <span class="base-input-err">Адрес указан неверно, чего-то не хватает</span>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="base-legend base-legend--calculation-order">детали заказа</legend>
+                            <div class="row row--wrap">
+                                <div class="calculation-order-col2">
+                                    <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                        <span class="base-input-title">Изделие</span>
+                                        <input type="text" class="base-text-input js--order-name-product">
+                                    </label>
+                                </div>
+                                <div class="calculation-order-col2">
+                                    <label class="base-input-wrapper base-input-wrapper--calculation-order">
+                                        <span class="base-input-title">Желаемая дата замера</span>
+                                        <input type="text" class="base-text-input js--data-picker">
                                     </label>
                                 </div>
                             </div>
@@ -1685,13 +1753,13 @@
 
             </div>
             <div class="msg-widjet-panel">
-                <a href="https://wa.me/78004440633" class="msg-widjet-item" target="_blank">
+                <a href="https://wa.me/78004440633" class="msg-widjet-item msg-widjet-item-wa" target="_blank">
                     <svg class="svg-icon svg-icon--msg-widjet-item">
-                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#Wwhatsapp"></use>
+                        <use xlink:href="./images/sprites/svg/sprite.symbol.svg#whatsapp"></use>
                     </svg>
                     WhatsApp
                 </a>
-                <a href="mailto:info@cutstone.ru" class="msg-widjet-item" target="_blank">
+                <a href="mailto:info@cutstone.ru" class="msg-widjet-item msg-widjet-item-email" target="_blank">
                     <svg class="svg-icon svg-icon--msg-widjet-item">
                         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#Wemail"></use>
                     </svg>
@@ -1701,7 +1769,11 @@
             <footer class="main-footer">
                 <div class="container">
                     <div class="main-footer-social">
-                        <p class="main-footer-logo">CUTSTONE</p>
+                        <p class="main-footer-logo">
+                            <svg class="svg-icon svg-icon--main-footer-logo">
+                                <use xlink:href="./images/sprites/svg/sprite.symbol.svg#logo"></use>
+                            </svg>
+                        </p>
                         <div class="main-footer-social-inner">
                             <a href="#" class="main-footer-social-item" target="_blank">
                                 <svg class="svg-icon svg-icon--footer-social">

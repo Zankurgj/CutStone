@@ -7,24 +7,36 @@
 .mp-main {
   position: relative;
   padding-top: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   margin-bottom: 160px;
+  overflow: hidden;
   @media screen and (max-width: $mobile-bp) {
     padding-top: 0;
     height: 440px;
-    background-image: url("../images/dest/img/mp-main-mob.jpg");
-    background-position: 0 0;
     margin-bottom: 80px;
   }
 }
-.no-webp .mp-main {
+
+.mp-main-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: $mobile-bp) {
+    background-image: url("../images/dest/img/mp-main-mob.jpg");
+    background-position: 0 0;
+  }
+}
+.no-webp .mp-main-bg {
   background-image: url("../images/dest/img/main-bg.jpeg");
 }
-.webp .mp-main {
+.webp .mp-main-bg {
   background-image: url("../images/dest/img/main-bg.webp");
 }
+
 .mp-main--sroll-animate {
   .main-header-logo {
     color: #fff;
@@ -66,18 +78,18 @@
 }
 .mp-main-left-title {
   font-weight: 500;
-  font-size: 1.2em;
-  line-height: 1.3;
+  font-size: 1.16em;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #ffffff;
-  margin-left: 9%;
-  margin-bottom: 3%;
-}
-.btn--white--mp-main-left {
-  font-size: 0.7em;
+  color: #fff;
   margin-left: 9%;
   margin-bottom: 8%;
-  line-height: 1.3;
+}
+.btn--white--mp-main-left {
+  font-size: 0.62em;
+  margin-left: 9%;
+  margin-bottom: 8%;
+  line-height: 1.1;
   &:hover {
     .svg-icon--mp-main-left-btn {
       transform: translateX(40%);
@@ -148,13 +160,12 @@
   padding-left: 20px;
 }
 .mp-block-title {
-  display: inline-block;
+  display: flex;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 40px;
   @media screen and (max-width: $mobile-bp) {
     margin-bottom: 32px;
-  }
-  .h2-base {
-    vertical-align: middle;
   }
   .mp-block-title-quantity {
     vertical-align: middle;
@@ -177,8 +188,10 @@
   }
 }
 .svg-icon--title-quantity {
-  width: 45px;
-  height: 45px;
+  display: block;
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
   color: #b3b3b3;
   transition: color $base-duration $base-timing;
 }

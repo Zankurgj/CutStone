@@ -1,10 +1,10 @@
 <div class="popup-wrapper popup-wrapper--animate" id="popupCalculationOrder">
-  <div class="popup-overlay" onclick="onTogglePopUp('popupCalculationOrder')"></div>
+  <div class="popup-overlay" onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', '')"></div>
   <form class="calculation-order-popup popup-right popup-right-animate container container--no-padding">
     <div class="base-popup-head">
       <p class="base-popup-head-title">Заказ расчёта</p>
-      <button class="btn--popup-close btn--popup-close--base" onclick="onTogglePopUp('popupCalculationOrder')"
-        type="button">
+      <button class="btn--popup-close btn--popup-close--base"
+        onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', '')" type="button">
         <span class="visually-hidden">закрыть</span>
         <svg class="svg-icon svg-icon--btn--popup-close">
           <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
@@ -20,7 +20,7 @@
         </label>
         <label class="base-input-wrapper base-input-wrapper--calculation-order">
           <span class="base-input-title">Телефон</span>
-          <input type="text" class="base-text-input js--phone-calc" placeholder="+7 (495) 268-06-19">
+          <input type="text" class="base-text-input js--phone-calc">
         </label>
         <label class="base-input-wrapper base-input-wrapper--calculation-order">
           <span class="base-input-title">Email</span>
@@ -34,7 +34,7 @@
           <div class="calculation-order-col2">
             <label class="base-input-wrapper base-input-wrapper--calculation-order">
               <span class="base-input-title">Камень</span>
-              <input type="text" class="base-text-input">
+              <input type="text" class="base-text-input js--order-name-stone">
             </label>
           </div>
           <div class="calculation-order-col2">
@@ -46,7 +46,7 @@
           <div class="calculation-order-col2">
             <label class="base-input-wrapper base-input-wrapper--calculation-order">
               <span class="base-input-title">Желаемая дата замера</span>
-              <input type="text" class="base-text-input">
+              <input type="text" class="base-text-input js--data-picker">
             </label>
           </div>
         </div>

@@ -68,6 +68,8 @@ function scripts() {
       "node_modules/picturefill/dist/picturefill.min.js",
       "app/js/libs/webp.js",
       "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+      "node_modules/gsap/dist/gsap.js",
+      "node_modules/gsap/dist/ScrollTrigger.js",
       "app/js/app.js", // app.js. Always at the end
     ])
       .pipe(concat("app.min.js"))

@@ -57,7 +57,7 @@
                     </span>
                 </div>
                 <button class="btn--main btn--main-arrow btn--main--big btn--main--watched-cost"
-                    onclick="onTogglePopUp('popupCalculationOrder')">
+                    onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', 'Абролиос')">
                     <span>Заказать расчёт</span>
                     <svg class="svg-icon svg-icon--btn--main-arrow">
                         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -106,7 +106,7 @@
                     <span class="product-card-info-status-sub">Дата поставки:25 декабря, 2020</span>
                 </div>
                 <button class="btn--main btn--main-arrow btn--main--big btn--main--watched-cost"
-                    onclick="onTogglePopUp('popupCalculationOrder')">
+                    onclick="onShowCalculationPopup('popupCalculationOrder', 'stone', 'Абролиос')">
                     <span>Заказать расчёт</span>
                     <svg class="svg-icon svg-icon--btn--main-arrow">
                         <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
@@ -117,4 +117,5 @@
     </div>
 </section>
 {% include "app/njk/parts/popup_calculation_order.njk" %}
+{% include "app/njk/parts/popup_calculation_order_product.njk" %}
 {% endblock %}

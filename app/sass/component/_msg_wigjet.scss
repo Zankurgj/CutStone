@@ -19,12 +19,22 @@
   color: #fff;
   padding: 12px 16px;
   border-right: 1px solid #fff;
-  transition: color $base-duration $base-timing;
+  transition: background-color $base-duration $base-timing,
+    color $base-duration $base-timing;
   &:last-child {
     border-right: 0;
   }
+}
+.msg-widjet-item-wa {
   &:hover {
-    color: rgba($color: #fff, $alpha: 0.8);
+    color: #fff;
+    background-color: #4de084;
+  }
+}
+.msg-widjet-item-email {
+  &:hover {
+    color: #fff;
+    background-color: #4d4d4d;
   }
 }
 .svg-icon--msg-widjet-item {

@@ -1,0 +1,58 @@
+<div class="popup-wrapper popup-wrapper--animate" id="popupCalculationOrderProduct">
+  <div class="popup-overlay" onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', '')"></div>
+  <form class="calculation-order-popup popup-right popup-right-animate container container--no-padding">
+    <div class="base-popup-head">
+      <p class="base-popup-head-title">Заказ расчёта</p>
+      <button class="btn--popup-close btn--popup-close--base"
+        onclick="onShowCalculationPopup('popupCalculationOrderProduct', 'product', '')" type="button">
+        <span class="visually-hidden">закрыть</span>
+        <svg class="svg-icon svg-icon--btn--popup-close">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#mdi_close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="base-popup-inner base-popup-inner--scroll">
+      <fieldset>
+        <legend class="base-legend base-legend--calculation-order">контактные данные</legend>
+        <label class="base-input-wrapper base-input-wrapper--calculation-order">
+          <span class="base-input-title">Имя</span>
+          <input type="text" class="base-text-input">
+        </label>
+        <label class="base-input-wrapper base-input-wrapper--calculation-order">
+          <span class="base-input-title">Телефон</span>
+          <input type="text" class="base-text-input js--phone-calc">
+        </label>
+        <label class="base-input-wrapper base-input-wrapper--calculation-order">
+          <span class="base-input-title">Email</span>
+          <input type="text" class="base-text-input base-text-input--err">
+          <span class="base-input-err">Адрес указан неверно, чего-то не хватает</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend class="base-legend base-legend--calculation-order">детали заказа</legend>
+        <div class="row row--wrap">
+          <div class="calculation-order-col2">
+            <label class="base-input-wrapper base-input-wrapper--calculation-order">
+              <span class="base-input-title">Изделие</span>
+              <input type="text" class="base-text-input js--order-name-product">
+            </label>
+          </div>
+          <div class="calculation-order-col2">
+            <label class="base-input-wrapper base-input-wrapper--calculation-order">
+              <span class="base-input-title">Желаемая дата замера</span>
+              <input type="text" class="base-text-input js--data-picker">
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="base-popup-bts-bottom">
+      <button class="btn--main btn--main-arrow" type="submit">
+        <span>Заказать расчёт</span>
+        <svg class="svg-icon svg-icon--btn--main-arrow">
+          <use xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow_small"></use>
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>
