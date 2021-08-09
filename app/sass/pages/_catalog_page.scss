@@ -28,6 +28,9 @@
     display: none;
   }
 }
+.catalog-section-head-container {
+  max-width: 100%;
+}
 .catalog-section-head {
   display: flex;
   justify-content: space-between;
@@ -148,6 +151,7 @@
   height: 24px;
 }
 .catalog-main-inner {
+  max-width: 100%;
   margin-bottom: 120px;
 }
 .row--catalog-main {
@@ -248,6 +252,7 @@
   background-color: #fff;
   border-bottom: 1px solid #1d1d1d;
   z-index: 12;
+  max-width: 100%;
 }
 .catalog-main-nav-filter-wrapper {
   display: flex;
