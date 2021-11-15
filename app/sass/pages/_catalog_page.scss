@@ -48,7 +48,7 @@
 .catalog-search-form {
   display: flex;
   position: relative;
-  z-index: 11;
+  z-index: 13;
   &.opened {
     .catalog-search-inner {
       opacity: 1;
@@ -85,12 +85,12 @@
   }
 }
 .catalog-search-col-img {
-  max-width: 33%;
-  flex-basis: 33%;
+  width: 90px;
+  flex: 0 0 auto;
 }
 .catalog-search-col-text {
-  max-width: 77%;
-  flex-basis: 77%;
+  max-width: calc((100% - 90px));
+  flex-basis: calc((100% - 90px));
   padding-left: 16px;
 }
 .catalog-search-title {
@@ -116,8 +116,8 @@
   display: flex;
   width: 100%;
   img {
-    object-fit: cover;
-    height: auto;
+    object-fit: contain;
+    height: 100%;
     width: 100%;
   }
 }
