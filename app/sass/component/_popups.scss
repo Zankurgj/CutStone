@@ -89,6 +89,11 @@
 }
 .project-popup-nav-slide {
   padding: 0 16px;
+  &.slick-current {
+    .project-popup-nav-slide-text {
+      color: #1d1d1d;
+    }
+  }
 }
 .project-popup-nav-slider-wrapper {
   flex: 0 0 auto;
@@ -131,6 +136,9 @@
   color: #808080;
   @media screen and (max-width: $mobile-bp) {
     display: none;
+  }
+  &.slick-disabled {
+    display: none !important;
   }
 }
 .slider-arrow-project--prew {

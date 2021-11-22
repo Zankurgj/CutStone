@@ -235,9 +235,11 @@ class ProjectPopup {
     this.sliderNavSelector.not(".slick-initialized").slick({
       dots: false,
       slidesToScroll: 1,
-      infinite: false,
+      infinite: true,
       variableWidth: true,
       arrows: true,
+      focusOnSelect: true,
+      centerMode: true,
       prevArrow: $(".slider-arrow-project--prew"),
       nextArrow: $(".slider-arrow-project--next"),
       responsive: [

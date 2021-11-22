@@ -47,7 +47,8 @@
 
     &:hover,
     &.animate {
-      background-color: #fff;
+      background-color: rgba($color: #fff, $alpha: 0.4);
+      backdrop-filter: blur(10px);
       border-color: #1d1d1d;
       .main-header-logo,
       .main-header-nav-item {
@@ -60,6 +61,9 @@
         opacity: 1;
         visibility: visible;
       }
+    }
+    &:hover {
+      background-color: #fff;
     }
   }
 }
