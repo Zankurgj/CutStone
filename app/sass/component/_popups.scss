@@ -11,6 +11,12 @@
     display: block;
   }
 }
+.popup-wrapper_project {
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+  right: auto;
+}
 .popup-wrapper--animate {
   display: block;
   visibility: hidden;
@@ -38,14 +44,21 @@
   bottom: 0;
   background-color: rgba($color: #1d1d1d, $alpha: 0.4);
 }
+.popup-overlay_project {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+  right: auto;
+  z-index: 1;
+}
 .project-popup {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   position: relative;
-  z-index: 1;
-  max-height: 100vh;
+  z-index: 2;
   @media screen and (max-width: $mobile-bp) {
     max-height: none;
     height: 100%;
@@ -256,9 +269,9 @@
   background-size: cover;
 }
 .project-popup-main-slide-title {
-  font-size: 24px;
-  line-height: 30px;
-  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
   @media screen and (max-width: $mobile-bp) {
     margin-bottom: 24px;
   }

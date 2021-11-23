@@ -167,8 +167,7 @@ const onShowCalculationPopup = (id, type, nameVal = "") => {
   };
   $(`.${inputNameMap[type]}`).val(nameVal);
 };
-onclick =
-  "onShowCalculationPopup('popupCalculationOrderProduct', 'product', 'Столешница')";
+
 const onShowProjectPopUp = (id) => {
   onTogglePopUp(id);
   let initProjectPopup = null;
