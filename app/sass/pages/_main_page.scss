@@ -654,13 +654,25 @@
   line-height: 26px;
   color: #1d1d1d;
 }
-.mp-contacts-col {
-  max-width: 50%;
-  flex-basis: 50%;
+.mp-map-col {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(50% - 10px);
+  flex-basis: calc(50% - 10px);
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
   @media screen and (max-width: $mobile-bp) {
     max-width: 100%;
     flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
+}
+.mp-contacts-col {
+  max-width: 100%;
+  flex-basis: 100%;
 }
 .mp-contacts-col--map {
   max-width: 100%;

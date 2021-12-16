@@ -2,6 +2,7 @@
 {% set pageClass= 'page--main' %}
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
+<script src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
 <main class="mp-main">
   <div class="mp-main-bg js--mp-bg-parallax"></div>
   <div class="mp-main-inner">
@@ -341,81 +342,121 @@
 </section>
 <section class="mp-contacts">
   <div class="container">
+    <div class="mp-block-title">
+      <h2 class="h2-base">Контакты</h2>
+    </div>
+    <div class="mp-contacts-item">
+      <a href="tel:+7(800)4440633" class="mp-contacts-item-link">+7 (800) 444 06 33</a>
+    </div>
+    <div class="mp-contacts-item">
+      <a href="mailto:info@cutstone.ru" class="mp-contacts-item-link">info@cutstone.ru</a>
+    </div>
     <div class="row row--wrap row--mp-contacts">
-      <div class="mp-contacts-col">
-        <div class="mp-block-title">
-          <h2 class="h2-base">Контакты</h2>
+      <div class="mp-map-col">
+        <div class="mp-contacts-col">
+          <div class="mp-block-title">
+            <h2 class="h2-base">Офис</h2>
+          </div>
+          <div class="mp-contacts-item">
+            <p class="mp-contacts-item-text">
+              Московская область
+              <br>
+              дер. Грибки,
+              <br>
+              ул. Ангарская, владение 8
+            </p>
+          </div>
         </div>
-        <div class="mp-contacts-item">
-          <a href="tel:+7(800)4440633" class="mp-contacts-item-link">+7 (800) 444 06 33</a>
-        </div>
-        <div class="mp-contacts-item">
-          <a href="mailto:info@cutstone.ru" class="mp-contacts-item-link">info@cutstone.ru</a>
-        </div>
-        <div class="mp-contacts-item">
-          <p class="mp-contacts-item-text">
-            Московская область
-            <br>
-            дер. Грибки,
-            <br>
-            ул. Ангарская, владение 8
-          </p>
+        <div class="mp-contacts-col mp-contacts-col--map">
+          <div class="mp-contacts-map-container" id="map18"></div>
         </div>
       </div>
-      <div class="mp-contacts-col mp-contacts-col--map">
-        <script src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
-        <div class="mp-contacts-map-container" id="map"></div>
-        <script>
-          ymaps.ready(init);
-
-          function init() {
-            var myMap = new ymaps.Map("map", {
-              center: [55.95419530235521, 37.56238781481928],
-              zoom: 17
-            }, {});
-
-            myMap.geoObjects
-              .add(new ymaps.Placemark([55.95395453015413, 37.561593880950845], {
-                iconCaption: 'Офис',
-                balloonContent: `
-                <p>
-                  Московская область </br>
-                  дер. Грибки, </br>
-                  ул. Ангарская, владение 8
-                </p>
-                <p>
-                  <strong>Телефон: +7 (800) 444 06 33</strong></br>
-                  <strong>Email: info@cutstone.ru</strong>
-                </p>
-                `
-              }, {
-                preset: 'islands#redHomeIcon'
-              }))
-              .add(new ymaps.Placemark([55.95438791903336, 37.563085189163175], {
-                iconCaption: 'Склад',
-                balloonContent: `
-                <p>
-                  Нужно уточнить адрес
-                </p>
-                `
-              }, {
-                preset: 'islands#redFactoryIcon'
-              }))
-              ;
-            myMap.behaviors.disable('scrollZoom');
-
-            myMap.events.add('balloonopen', function (e) {
-              const mobileWidth = 992;
-              if (window.screen.width <= mobileWidth) {
-                const balloonCoords = e.get('target').geometry.getCoordinates();
-                const appLink = `yandexmaps://maps.yandex.ru/?pt=${balloonCoords[1]},${balloonCoords[0]}&z=17`;
-                window.open(appLink, '_blank');
-              }
-            });
-          }
-        </script>
+      <div class="mp-map-col">
+        <div class="mp-contacts-col">
+          <div class="mp-block-title">
+            <h2 class="h2-base">Производство</h2>
+          </div>
+          <div class="mp-contacts-item">
+            <p class="mp-contacts-item-text">
+              Московская область
+              <br>
+              рабочий поселок Деденево,
+              <br>
+              Московское шоссе 1А
+            </p>
+          </div>
+        </div>
+        <div class="mp-contacts-col mp-contacts-col--map">
+          <div class="mp-contacts-map-container" id="map779"></div>
+        </div>
       </div>
     </div>
+    <script>
+
+      ymaps.ready(init);
+
+      function init() {
+        var myMap18 = new ymaps.Map("map18", {
+          center: [55.95419530235521, 37.56238781481928],
+          zoom: 17
+        }, {});
+
+        myMap18.geoObjects
+          .add(new ymaps.Placemark([55.954169, 37.561259], {
+            iconCaption: 'Склад',
+            balloonContent: `МО, дер. Грибки,<br>
+                            территория 3-й<br>
+                            Район Автобазы, 52`
+          }, {
+            preset: 'islands#redHomeIcon'
+          }))
+          .add(new ymaps.Placemark([55.954672, 37.563815], {
+            iconCaption: 'Офис',
+            balloonContent: `МО, дер. Грибки,<br>
+                            Ангарская улица, вл8с4`
+          }, {
+            preset: 'islands#redHomeIcon'
+          }))
+          ;
+        myMap18.behaviors.disable('scrollZoom');
+
+        myMap18.events.add('balloonopen', function (e) {
+          const mobileWidth = 992;
+          if (window.screen.width <= mobileWidth) {
+            const balloonCoords = e.get('target').geometry.getCoordinates();
+            const appLink = `yandexmaps://maps.yandex.ru/?pt=${balloonCoords[1]},${balloonCoords[0]}&z=17`;
+            window.open(appLink, '_blank');
+          }
+        });
+
+        var myMap779 = new ymaps.Map("map779", {
+          center: [56.233654, 37.525648],
+          zoom: 17
+        }, {});
+
+        myMap779.geoObjects
+          .add(new ymaps.Placemark([56.233654, 37.525648], {
+            iconCaption: 'Производство',
+            balloonContent: `МО <br>
+                            рабочий поселок Деденево, <br>
+                            Московское шоссе 1А`
+          }, {
+            preset: 'islands#redHomeIcon'
+          }))
+          ;
+        myMap779.behaviors.disable('scrollZoom');
+
+        myMap779.events.add('balloonopen', function (e) {
+          const mobileWidth = 992;
+          if (window.screen.width <= mobileWidth) {
+            const balloonCoords = e.get('target').geometry.getCoordinates();
+            const appLink = `yandexmaps://maps.yandex.ru/?pt=${balloonCoords[1]},${balloonCoords[0]}&z=17`;
+            window.open(appLink, '_blank');
+          }
+        });
+      }
+
+    </script>
   </div>
 </section>
 {# popups #}
